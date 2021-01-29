@@ -31,8 +31,12 @@
 		url(https://www.dommandy.com/super-rect/se.png),
 		url(https://www.dommandy.com/super-rect/sw.png);
 }
+.rounded {
+    position: relative;
+}
 .bordered::before {
-	position: absolute;
+    position: absolute;
+    content: '';
 	bottom: var(--border-size);
 	right: var(--border-size);
 	z-index: -50;
