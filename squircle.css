@@ -1,0 +1,42 @@
+:root {
+	--roundness: 2em;
+	--border-size: 0.5vh;
+	--border-color: #ff499b;
+}
+
+.rounded, .bordered::before {
+	mask-repeat: no-repeat;
+
+	mask-position:
+		top var(--roundness) left 0,
+		top 0 left var(--roundness),
+		top 0 left 0,
+		top 0 right 0,
+		bottom 0 right 0,
+		bottom 0 left 0;
+
+	mask-size: 
+		100% calc(100% - 2 * var(--roundness)), 
+		calc(100% - 2 * var(--roundness)) 100%, 
+		var(--roundness), 
+		var(--roundness), 
+		var(--roundness), 
+		var(--roundness);
+
+	mask-image:
+		url(filler.png),
+		url(filler.png),
+		url(nw.png),
+		url(ne.png),
+		url(se.png),
+		url(sw.png);
+}
+.bordered::before {
+	position: absolute;
+	bottom: var(--border-size);
+	right: var(--border-size);
+	z-index: -50;
+	width: calc(100% + 2 * var(--border-size));
+	height: calc(100% + 2 * var(--border-size));
+	background-color: var(--border-color);
+}
