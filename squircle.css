@@ -24,12 +24,12 @@
 		var(--roundness);
 
 	mask-image:
-		url(filler.png),
-		url(filler.png),
-		url(nw.png),
-		url(ne.png),
-		url(se.png),
-		url(sw.png);
+		url(https://www.dommandy.com/super-rect/filler.png),
+		url(https://www.dommandy.com/super-rect/filler.png),
+		url(https://www.dommandy.com/super-rect/nw.png),
+		url(https://www.dommandy.com/super-rect/ne.png),
+		url(https://www.dommandy.com/super-rect/se.png),
+		url(https://www.dommandy.com/super-rect/sw.png);
 }
 .bordered::before {
 	position: absolute;
