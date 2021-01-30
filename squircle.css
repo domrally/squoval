@@ -3,6 +3,7 @@
 	--border-size: 4px;
     --border-color: #c00;
     --border-background: #333;
+    --overlap: 1px;
 }
 
 .rounded, .bordered::before {
@@ -28,32 +29,32 @@
 }
 .rounded {
 	mask-position:
-		top var(--border-radius) left 0,
-		top 0 left var(--border-radius),
+		top calc(var(--border-radius) - var(--overlap)) left 0,
+		top 0 left calc(var(--border-radius) - var(--overlap)),
 		top 0 left 0,
 		top 0 right 0,
 		bottom 0 right 0,
 		bottom 0 left 0;
 
 	mask-size: 
-		100% calc(100% - 2 * var(--border-radius)), 
-		calc(100% - 2 * var(--border-radius)) 100%, 
+		100% calc(100% - 2 * var(--border-radius) + 2 * var(--overlap)), 
+		calc(100% - 2 * var(--border-radius) + 2 * var(--overlap)) 100%, 
 		var(--border-radius), 
 		var(--border-radius), 
 		var(--border-radius), 
         var(--border-radius);
         
     -webkit-mask-position:
-		top var(--border-radius) left 0,
-		top 0 left var(--border-radius),
+		top calc(var(--border-radius) - var(--overlap)) left 0,
+		top 0 left calc(var(--border-radius) - var(--overlap)),
 		top 0 left 0,
 		top 0 right 0,
 		bottom 0 right 0,
 		bottom 0 left 0;
 
 	-webkit-mask-size: 
-		100% calc(100% - 2 * var(--border-radius)), 
-		calc(100% - 2 * var(--border-radius)) 100%, 
+		100% calc(100% - 2 * var(--border-radius) + 2 * var(--overlap)), 
+		calc(100% - 2 * var(--border-radius) + 2 * var(--overlap)) 100%, 
 		var(--border-radius), 
 		var(--border-radius), 
 		var(--border-radius), 
@@ -77,32 +78,32 @@
     z-index: -10;
 
     mask-position:
-		top calc(var(--border-radius) - var(--border-size)) left 0,
-		top 0 left calc(var(--border-radius) - var(--border-size)),
+		top calc(var(--border-radius) - var(--border-size) - var(--overlap)) left 0,
+		top 0 left calc(var(--border-radius) - var(--border-size) - var(--overlap)),
 		top 0 left 0,
 		top 0 right 0,
 		bottom 0 right 0,
 		bottom 0 left 0;
     
     mask-size: 
-		100% calc(100% - 2 * (var(--border-radius) - var(--border-size))), 
-		calc(100% - 2 * (var(--border-radius) - var(--border-size))) 100%, 
+		100% calc(100% - 2 * (var(--border-radius) - var(--border-size)) + 2 * var(--overlap)), 
+		calc(100% - 2 * (var(--border-radius) - var(--border-size)) + 2 * var(--overlap)) 100%, 
 		calc(var(--border-radius) - var(--border-size)), 
 		calc(var(--border-radius) - var(--border-size)), 
 		calc(var(--border-radius) - var(--border-size)), 
         calc(var(--border-radius) - var(--border-size));
         
     -webkit-mask-position:
-		top calc(var(--border-radius) - var(--border-size)) left 0,
-		top 0 left calc(var(--border-radius) - var(--border-size)),
+		top calc(var(--border-radius) - var(--border-size) - var(--overlap)) left 0,
+		top 0 left calc(var(--border-radius) - var(--border-size) - var(--overlap)),
 		top 0 left 0,
 		top 0 right 0,
 		bottom 0 right 0,
 		bottom 0 left 0;
     
     -webkit-mask-size: 
-		100% calc(100% - 2 * (var(--border-radius) - var(--border-size))), 
-		calc(100% - 2 * (var(--border-radius) - var(--border-size))) 100%, 
+		100% calc(100% - 2 * (var(--border-radius) - var(--border-size)) + 2 * var(--overlap)), 
+		calc(100% - 2 * (var(--border-radius) - var(--border-size)) + 2 * var(--overlap)) 100%, 
 		calc(var(--border-radius) - var(--border-size)), 
 		calc(var(--border-radius) - var(--border-size)), 
 		calc(var(--border-radius) - var(--border-size)), 
