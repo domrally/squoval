@@ -1,3 +1,14 @@
 @import 'clean.css';
 @import 'main.css';
-@import 'https://www.dommandy.com/super-rect/squircle.css';
+@import 'squircle.css';
+
+pre {
+    --border-radius: 2em;
+}
+
+.your-class {
+    --border-radius: 4em;
+    --border-size: 4px;
+    --border-color: #333;
+    --border-background: #c00;
+}

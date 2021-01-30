@@ -10,17 +10,28 @@
 <body>
 
     <header class="rounded"></header>
-    <main class="rounded bordered">
-        <pre class="rounded">
-<code>
+    <main>
+        <pre><code>
 @import 'https://www.dommandy.com/super-rect/squircle.css';
+        </code></pre>
+        <pre class="rounded"><code>
+&ltdiv class="rounded"&gt&lt/div&gt
+        </code></pre>
+        <pre class="rounded bordered"><code>
+&ltdiv class="rounded bordered"&gt&lt/div&gt
+        </code></pre>
+        <pre class="rounded bordered"><code>
+&ltdiv class="rounded bordered your-class"&gt&lt/div&gt
 </code>
         </pre>
-        <pre class="rounded">
-<code>
-asdfasdf
-</code>
-        </pre>
+        <pre class="rounded bordered your-class"><code>
+.your-class {
+    --border-radius: 4em;
+    --border-size: 4px;
+    --border-color: #333;
+    --border-background: #c00;
+}
+        </code></pre>
 
     </main>
     <footer class="rounded"></footer>

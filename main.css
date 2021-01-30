@@ -2,6 +2,7 @@ html {
     background: #f7f7f7;
     color: #f7f7f7;
     font-size: 22px;
+    padding: 1em;
 }
 
 body, main {
@@ -15,7 +16,6 @@ body {
 }
 
 main {
-    background: #f00;
     padding: 2em;
 }
 

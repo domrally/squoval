@@ -1,29 +1,14 @@
 :root {
-	--roundness: 2em;
-	--border-size: 0.5vh;
-	--border-color: #ff499b;
+	--border-radius: 2em;
+	--border-size: 10px;
+    --border-color: #c00;
+    --border-background: #333;
 }
 
 .rounded, .bordered::before {
-	mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
 
-	mask-position:
-		top var(--roundness) left 0,
-		top 0 left var(--roundness),
-		top 0 left 0,
-		top 0 right 0,
-		bottom 0 right 0,
-		bottom 0 left 0;
-
-	mask-size: 
-		100% calc(100% - 2 * var(--roundness)), 
-		calc(100% - 2 * var(--roundness)) 100%, 
-		var(--roundness), 
-		var(--roundness), 
-		var(--roundness), 
-		var(--roundness);
-
-	mask-image:
+    mask-image:
 		url(https://www.dommandy.com/super-rect/filler.png),
 		url(https://www.dommandy.com/super-rect/filler.png),
 		url(https://www.dommandy.com/super-rect/nw.png),
@@ -32,15 +17,52 @@
 		url(https://www.dommandy.com/super-rect/sw.png);
 }
 .rounded {
+	mask-position:
+		top var(--border-radius) left 0,
+		top 0 left var(--border-radius),
+		top 0 left 0,
+		top 0 right 0,
+		bottom 0 right 0,
+		bottom 0 left 0;
+
+	mask-size: 
+		100% calc(100% - 2 * var(--border-radius)), 
+		calc(100% - 2 * var(--border-radius)) 100%, 
+		var(--border-radius), 
+		var(--border-radius), 
+		var(--border-radius), 
+		var(--border-radius);
+}
+.rounded {
     position: relative;
+}
+.bordered {
+    background: var(--border-color);
 }
 .bordered::before {
     position: absolute;
     content: '';
-	bottom: var(--border-size);
-	right: var(--border-size);
-	z-index: -50;
-	width: calc(100% + 2 * var(--border-size));
-	height: calc(100% + 2 * var(--border-size));
-	background-color: var(--border-color);
+	top: var(--border-size);
+	left: var(--border-size);
+	width: calc(100% - 2 * var(--border-size));
+	height: calc(100% - 2 * var(--border-size));
+    background: var(--border-background);
+
+    z-index: -10;
+
+    mask-position:
+		top calc(var(--border-radius) - var(--border-size)) left 0,
+		top 0 left calc(var(--border-radius) - var(--border-size)),
+		top 0 left 0,
+		top 0 right 0,
+		bottom 0 right 0,
+		bottom 0 left 0;
+    
+    mask-size: 
+		100% calc(100% - 2 * (var(--border-radius) - var(--border-size))), 
+		calc(100% - 2 * (var(--border-radius) - var(--border-size))) 100%, 
+		calc(var(--border-radius) - var(--border-size)), 
+		calc(var(--border-radius) - var(--border-size)), 
+		calc(var(--border-radius) - var(--border-size)), 
+		calc(var(--border-radius) - var(--border-size));
 }
