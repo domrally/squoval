@@ -11,27 +11,43 @@
 
     <header class="rounded"></header>
     <main>
+        <p>
+            first, import the super-rect styles in any css file
+        </p>
         <pre><code>
 @import 'https://www.dommandy.com/super-rect/squircle.css';
         </code></pre>
+        <p>
+            add the <b>rounded</b> class to any html element
+        </p>
         <pre class="rounded"><code>
 &ltdiv class="rounded"&gt&lt/div&gt
         </code></pre>
+        <p>
+            add the <b>bordered</b> class to add a super-rect border
+        </p>
         <pre class="rounded bordered"><code>
 &ltdiv class="rounded bordered"&gt&lt/div&gt
         </code></pre>
-        <pre class="rounded bordered"><code>
-&ltdiv class="rounded bordered your-class"&gt&lt/div&gt
-</code>
-        </pre>
-        <pre class="rounded bordered your-class"><code>
+        <p>
+            add any of <b>--border-radius</b>, <b>--border-size</b>, <b>--border-color</b>, or
+            <b>--border-background</b> to your css to customize
+        </p>
+        <pre><code>
 .your-class {
-    --border-radius: 4em;
-    --border-size: 4px;
+    --border-radius: 3em;
+    --border-size: 10px;
     --border-color: #333;
     --border-background: #c00;
 }
         </code></pre>
+        <p>
+            here's that custom styling applied
+        </p>
+        <pre class="rounded bordered your-class"><code>
+&ltdiv class="rounded bordered your-class"&gt&lt/div&gt
+</code>
+        </pre>
 
     </main>
     <footer class="rounded"></footer>

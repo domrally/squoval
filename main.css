@@ -25,3 +25,8 @@ pre {
     padding: 1em;
     background: #333;
 }
+
+p {
+    color: #111;
+    align-self: flex-start;
+}
