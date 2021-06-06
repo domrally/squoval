@@ -45,7 +45,9 @@ registerPaint('corner-shape', class {
 
         console.log(ctx)
 
-        const image = ctx.createImageData(geom.width, geom.height)
+        var offscreen = new OffscreenCanvas(geom.width, geom.height);
+
+        const image = offscreen.getContext("2d").createImageData(geom.width, geom.height)
         var data = image.data // only do this once per page
 
         for (let i = 0; i < geom.width; i++) {
@@ -64,6 +66,6 @@ registerPaint('corner-shape', class {
         }
         //TODO step in from each corner to modify only those parts of the array
 
-        ctx.putImageData(image, 0, 0)
+        ctx.drawImage(offscreen)
     }
 })
