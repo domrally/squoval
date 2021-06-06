@@ -43,6 +43,8 @@ registerPaint('corner-shape', class {
             radius = Math.min(radius * geom.width / 100, geom.width / 2)
         }
 
+        console.log(Object.getOwnPropertyNames(ctx))
+
         const image = ctx.createImageData(geom.width, geom.height)
         var data = image.data // only do this once per page
 
