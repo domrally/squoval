@@ -9,7 +9,7 @@ div {
     background: red;
 }
 @supports (background: paint(id)) {
-  div.is-loaded {
+  div {
     border-radius: 0;
     mask-image: paint(corner-shape);
     --corner-radius: 56px;
