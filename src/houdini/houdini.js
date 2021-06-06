@@ -68,6 +68,6 @@ registerPaint('corner-shape', class {
         }
         //TODO step in from each corner to modify only those parts of the array
 
-        ctx.drawImage(offscreen)
+        // ctx.drawImage(offscreen)
     }
 })
