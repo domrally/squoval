@@ -43,9 +43,9 @@ registerPaint('corner-shape', class {
             radius = Math.min(radius * geom.width / 100, geom.width / 2)
         }
 
-        console.log(ctx)
-
-        var offscreen = new OffscreenCanvas(geom.width, geom.height);
+        let offscreen = document.createElement('canvas')
+        canvas.height = geom.height
+        canvas.width  = geom.width
 
         const image = offscreen.getContext("2d").createImageData(geom.width, geom.height)
         var data = image.data // only do this once per page
