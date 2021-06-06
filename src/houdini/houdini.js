@@ -48,6 +48,9 @@ registerPaint('corner-shape', class {
 
         for (let i = 0; i < geom.width; i++) {
             for (let j = 0; j < geom.height; j++) {
+                const a = j * (geom.width * 4) + i * 4 + 3
+                data[a] = Math.random()
+                continue
                 if (true) {
                     const alpha = getAlpha(i, j)
                     if (alpha) {
