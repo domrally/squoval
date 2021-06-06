@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>corner mask</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="#">
+    <link href="./houdini.css" rel="stylesheet">
+
+    <script>
+        if ('paintWorklet' in CSS) {
+            CSS.paintWorklet.addModule('./houdini.js')
+        }
+    </script>
+</head>
+
+<body>
+    <div>Hello, World!</div>
+</body>
+
+</html>
