@@ -43,17 +43,19 @@ registerPaint('corner-shape', class {
             radius = Math.min(radius * geom.width / 100, geom.width / 2)
         }
 
-        let offscreen = document.createElement('canvas')
-        canvas.height = geom.height
-        canvas.width  = geom.width
+        // let offscreen = document.createElement('canvas')
+        // canvas.height = geom.height
+        // canvas.width  = geom.width
 
-        const image = offscreen.getContext("2d").createImageData(geom.width, geom.height)
-        var data = image.data // only do this once per page
+        // const image = offscreen.getContext("2d").createImageData(geom.width, geom.height)
+        // var data = image.data // only do this once per page
 
         for (let i = 0; i < geom.width; i++) {
             for (let j = 0; j < geom.height; j++) {
                 const a = j * (geom.width * 4) + i * 4 + 3
-                data[a] = Math.random()
+                if (Math.random() < .5) continue
+                ctx.fillStyle = 'red'
+                ctx.fillRect(i, j, 1, 1)
                 continue
                 if (true) {
                     const alpha = getAlpha(i, j)
