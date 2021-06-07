@@ -35,10 +35,10 @@ const getAlpha = (x, y) => {
         const dx = singd(acosgd(x)) - y
         const dy = cosgd(asingd(y)) - x
         // if (dx < 0 && dy < 0) {
-            alpha = 0
+            alpha = acosgd(x)
             // distance field becomes asymptotically correct as points approach curve
-            const d = dx * dy / Math.sqrt(dx * dx + dy * dy)
-            alpha = -d//clamp(d, 0, 1)
+            // const d = dx * dy / Math.sqrt(dx * dx + dy * dy)
+            // alpha = -d//clamp(d, 0, 1)
         // }
     // }
 
@@ -62,7 +62,7 @@ registerPaint('corner-shape', class {
                     const alpha = getAlpha(2 * i / geom.width, 2 * j / geom.height)
                     if (alpha) {
                         ctx.fillStyle = `rgb(0, 0, 0, ${Math.floor(255 * alpha)})`
-                        ctx.fillRect(i, j, 1, 1)
+                        ctx.fillRect(i, j, .5, .5)
                     }
                 }
             }
