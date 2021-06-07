@@ -23,7 +23,7 @@ const clamp = (x, lowerlimit, upperlimit) => {
   return x
 }
 // 
-const getAlpha = (x, y, size) => {
+const getAlpha = (x, y, unit) => {
     let alpha = 1
     // check if outside of minimum radius
     // if (x * x + y * y > 1) {
@@ -31,12 +31,12 @@ const getAlpha = (x, y, size) => {
         x = -Math.abs(x)
         y = -Math.abs(y)
         // since the shape is convex we can be sure which points are inside
-        const dx = singd(acosgd(x)) - y + 1 / size
-        const dy = cosgd(asingd(y)) - x + 1 / size
+        const dx = singd(acosgd(x)) - y + unit
+        const dy = cosgd(asingd(y)) - x + unit
         if (dx > 0 || dy > 0) {
             // distance field becomes asymptotically correct as points approach curve
             const d = dx * dy / Math.sqrt(dx * dx + dy * dy)
-            alpha = smoothstep(2 / size, 0, d)
+            alpha = smoothstep(2 * unit, 0, d)
         }
     // }
 
@@ -95,25 +95,32 @@ registerPaint('corner-shape', class {
         ctx.closePath()
         ctx.fill()
 
+        const unit = 1 / radius
+
         for (let i = 0; i < radius; i += .5) {
             for (let j = 0; j <= i; j += .5) {
-                const alpha = getAlpha(.5 * Math.PI * (1 - i / (radius - 1)), .5 * Math.PI * (1 - j / (radius - 1)), radius)
+                const alpha = getAlpha(.5 * Math.PI * (1 - i / (radius - 1)), .5 * Math.PI * (1 - j / (radius - 1)), unit)
                 if (alpha) {
                     ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
 
                     const s = .75
                     const u = .5
                     ctx.fillRect(i, j, s, s)
-                    ctx.fillRect(j, i, s, s)
+                    if (j !== i) ctx.fillRect(j, i, s, s)
 
-                    ctx.fillRect(geom.width - i - u, geom.height - j - u, s, s)
-                    ctx.fillRect(geom.width - j - u, geom.height - i - u, s, s)
+                    const a = geom.width - i - u
+                    const b = geom.height - j - u
+                    const c = geom.width - j - u
+                    const d = geom.height - i - u
 
-                    ctx.fillRect(i, geom.height - j - u, s, s)
-                    ctx.fillRect(geom.width - j - u, i, s, s)
+                    ctx.fillRect(a, b, s, s)
+                    ctx.fillRect(c, d, s, s)
+
+                    ctx.fillRect(i, b, s, s)
+                    ctx.fillRect(c, i, s, s)
                     
-                    ctx.fillRect(geom.width - i - u, j, s, s)
-                    ctx.fillRect(j, geom.height - i - u, s, s)
+                    ctx.fillRect(a, j, s, s)
+                    ctx.fillRect(j, d, s, s)
                 }
             }
         }
