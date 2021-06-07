@@ -89,17 +89,18 @@ registerPaint('corner-shape', class {
                 if (alpha) {
                     ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
 
-                    ctx.fillRect(i, j, 1, 1)
-                    ctx.fillRect(j, i, 1, 1)
+                    const s = .5
+                    ctx.fillRect(i, j, s, s)
+                    ctx.fillRect(j, i, s, s)
 
-                    ctx.fillRect(geom.width - i - 1, geom.height - j - 1, 1, 1)
-                    ctx.fillRect(geom.width - j - 1, geom.height - i - 1, 1, 1)
+                    ctx.fillRect(geom.width - i - 1, geom.height - j - 1, s, s)
+                    ctx.fillRect(geom.width - j - 1, geom.height - i - 1, s, s)
 
-                    ctx.fillRect(i, geom.height - j - 1, 1, 1)
-                    ctx.fillRect(geom.width - j - 1, i, 1, 1)
+                    ctx.fillRect(i, geom.height - j - 1, s, s)
+                    ctx.fillRect(geom.width - j - 1, i, s, s)
                     
-                    ctx.fillRect(geom.width - i - 1, j, 1, 1)
-                    ctx.fillRect(j, geom.height - i - 1, 1, 1)
+                    ctx.fillRect(geom.width - i - 1, j, s, s)
+                    ctx.fillRect(j, geom.height - i - 1, s, s)
                 }
             }
         }
