@@ -67,19 +67,19 @@ registerPaint('corner-shape', class {
 
         ctx.fillStyle = `rgb(0, 0, 0, 1)`
         ctx.beginPath()
-        ctx.moveTo(radius, 0)
+        // ctx.moveTo(radius, 0)
 
-        ctx.lineTo(geom.width - radius, 0)
-        ctx.arc(geom.width - radius, radius, radius, Math.PI / 2, 0)
+        // ctx.lineTo(geom.width - radius, 0)
+        ctx.arc(geom.width - radius, radius, radius, 0, Math.PI / 2, true)
+        ctx.arc(radius, radius, radius, Math.PI / 2, Math.PI, true)
+        ctx.arc(radius, geom.height - radius, radius, Math.PI, 3 * Math.PI / 2, true)
+        ctx.arc(geom.width - radius, geom.height - radius, radius, 3 * Math.PI / 2, 2 * Math.PI, true)
         
-        ctx.lineTo(geom.width, geom.height - radius)
-        ctx.arc(geom.width - radius, geom.height - radius, radius, 0, -Math.PI / 2)
+        // ctx.lineTo(geom.width, geom.height - radius)
 
-        ctx.lineTo(radius, geom.height)
-        ctx.arc(radius, geom.height - radius, radius, -Math.PI / 2, Math.PI)
+        // ctx.lineTo(radius, geom.height)
 
-        ctx.lineTo(0, radius)
-        ctx.arc(radius, radius, radius, Math.PI, Math.PI / 2)
+        // ctx.lineTo(0, radius)
 
         ctx.closePath()
         ctx.fill()
@@ -91,7 +91,7 @@ registerPaint('corner-shape', class {
                 const z = 1 - i / (radius - 1)
                 const w = 1 - j / (radius - 1)
                 // check if outside of minimum radius
-                if (z * z + w * w > 1) {
+                if (z * z + w * w > .99) {
                     const alpha = getAlpha(.5 * Math.PI * z, .5 * Math.PI * w, unit)
                     if (alpha) {
                         ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
