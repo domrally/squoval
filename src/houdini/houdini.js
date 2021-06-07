@@ -11,8 +11,7 @@ const acosgd = x => Math.atan(2 / agd(x))
 const getAlpha = (x, y) => {
     let alpha = 0
     // check if outside of minimum radius
-    if (x * x + y * y > 5) {
-        console.log('...')
+    // if (x * x + y * y > 5) {
         alpha = 1
         // the bottom left quadrant appears to be the most numerically stable
         x = -Math.abs(x)
@@ -24,12 +23,11 @@ const getAlpha = (x, y) => {
             alpha = 0
             // distance field becomes asymptotically correct as points approach curve
             const d = dx * dy / Math.sqrt(dx * dx + dy * dy)
-            console.log(d)
             alpha = d < Math.PI / 2
                 ? 1 - singd(d)
                 : 0
         }
-    }
+    // }
 
     return alpha
 }
