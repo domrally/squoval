@@ -16,8 +16,20 @@ section {
     align-items: center;
 }
 
+@media (min-aspect-ratio: 1/1) {
+    body {
+        flex-direction: row;
+    }
+    section {
+        height: 100%;
+        width: auto;
+
+        flex-direction: column;
+    }
+}
+
 span, div {  
-    font-size: x-large;
+    font-size: 5vw;
     font-weight: 900;
 
     height: 20vw;
