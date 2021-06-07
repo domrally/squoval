@@ -97,7 +97,7 @@ registerPaint('corner-shape', class {
         for (let i = 0; i < radius; i += .5) {
             for (let j = 0; j <= i; j += .5) {
                 const z = 1 - i / (radius - 1)
-                const w = 1 - i / (radius - 1)
+                const w = 1 - j / (radius - 1)
                 // check if outside of minimum radius
                 if (z * z + w * w > 1) {
                     const alpha = getAlpha(.5 * Math.PI * z, .5 * Math.PI * w, unit)
