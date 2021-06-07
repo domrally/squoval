@@ -16,7 +16,7 @@ section {
     align-items: center;
 }
 
-@media (min-aspect-ratio: 1/1) {
+@media (max-aspect-ratio: 1/1) {
     body {
         flex-direction: row;
     }
