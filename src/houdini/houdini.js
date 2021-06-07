@@ -57,7 +57,7 @@ registerPaint('corner-shape', class {
 
         for (let i = 0; i < radius; i++) {
             for (let j = 0; j <= i; j++) {
-                const alpha = getAlpha(.5 * Math.PI * i / radius, .5 * Math.PI * j / radius)
+                const alpha = getAlpha(.5 * Math.PI * (1 - i / radius), .5 * Math.PI * (1 - j / radius))
                 if (alpha) {
                     ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
 
@@ -65,13 +65,13 @@ registerPaint('corner-shape', class {
                     ctx.fillRect(j, i, 1, 1)
 
                     ctx.fillRect(geom.width - i, geom.height - j, 1, 1)
-                    ctx.fillRect(geom.height - j, geom.width - i, 1, 1)
+                    ctx.fillRect(geom.width - j, geom.height - i, 1, 1)
 
                     ctx.fillRect(i, geom.height - j, 1, 1)
-                    ctx.fillRect(geom.height - j, i, 1, 1)
+                    ctx.fillRect(geom.width - j, i, 1, 1)
                     
                     ctx.fillRect(geom.width - i, j, 1, 1)
-                    ctx.fillRect(j, geom.width - i, 1, 1)
+                    ctx.fillRect(j, geom.height - i, 1, 1)
                 }
             }
         }
