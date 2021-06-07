@@ -7,6 +7,11 @@ div {
     border-radius: 64px;
     padding: 10em;
     background: red;
+
+    transition: border-radius 1s;
+}
+div:hover {
+    border-radius: 32px;
 }
 @supports (background: paint(id)) {
   div {
@@ -14,5 +19,11 @@ div {
     --corner-radius: 82px;
     mask-image: paint(corner-shape);
     -webkit-mask-image: paint(corner-shape);
+
+    transition: --corner-radius 1s;
+  }
+  div:hover {
+    border-radius: 0;
+    --corner-radius: 41px;
   }
 }
