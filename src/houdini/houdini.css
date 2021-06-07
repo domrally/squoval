@@ -15,8 +15,10 @@ section {
     justify-content: space-around;
     align-items: center;
 }
-span, div {  
+span {
     display: block;
+}
+span, div {  
     padding: 5em;
     background: #111;
 }
