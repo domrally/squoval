@@ -83,8 +83,8 @@ registerPaint('corner-shape', class {
         ctx.closePath()
         ctx.fill()
 
-        for (let i = 0; i < radius; i++) {
-            for (let j = 0; j <= i; j++) {
+        for (let i = 0; i < radius; i += .5) {
+            for (let j = 0; j <= i; j += .5) {
                 const alpha = getAlpha(.5 * Math.PI * (1 - i / (radius - 1)), .5 * Math.PI * (1 - j / (radius - 1)), radius)
                 if (alpha) {
                     ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
