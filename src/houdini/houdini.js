@@ -65,6 +65,8 @@ registerPaint('corner-shape', class {
             {x: 0, y: radius},
         ]
 
+        console.log(ctx)
+
         ctx.fillStyle = `rgb(0, 0, 0, 1)`
         ctx.beginPath()
         ctx.moveTo(points[0].x, points[0].y)
