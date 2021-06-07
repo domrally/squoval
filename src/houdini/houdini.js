@@ -67,27 +67,19 @@ registerPaint('corner-shape', class {
 
         ctx.fillStyle = `rgb(0, 0, 0, 1)`
         ctx.beginPath()
-        ctx.moveTo(points[0].x, points[0].y)
+        ctx.moveTo(radius, 0)
+
+        ctx.lineTo(geom.width - radius, 0)
+        ctx.arc(geom.width - radius, radius, radius, Math.PI / 2, 0)
         
-        ctx.lineTo(points[1].x, points[1].y)
-        ctx.lineTo(points[1].x, points[2].y)
+        ctx.lineTo(geom.width, geom.height - radius)
+        ctx.arc(geom.width - radius, geom.height - radius, radius, 0, -Math.PI / 2)
 
-        ctx.lineTo(points[2].x, points[2].y)
+        ctx.lineTo(radius, geom.height)
+        ctx.arc(radius, geom.height - radius, radius, -Math.PI / 2, Math.PI)
 
-        ctx.lineTo(points[3].x, points[3].y)
-        ctx.lineTo(points[4].x, points[3].y)
-
-        ctx.lineTo(points[4].x, points[4].y)
-
-        ctx.lineTo(points[5].x, points[5].y)
-        ctx.lineTo(points[5].x, points[6].y)
-
-        ctx.lineTo(points[6].x, points[6].y)
-
-        ctx.lineTo(points[7].x, points[7].y)
-        ctx.lineTo(points[0].x, points[7].y)
-
-        ctx.lineTo(points[0].x, points[0].y)
+        ctx.lineTo(0, radius)
+        ctx.arc(radius, radius, radius, Math.PI, Math.PI / 2)
 
         ctx.closePath()
         ctx.fill()
