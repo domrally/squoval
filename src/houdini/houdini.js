@@ -23,7 +23,7 @@ const clamp = (x, lowerlimit, upperlimit) => {
   return x
 }
 // 
-const getAlpha = (x, y, width, height) => {
+const getAlpha = (x, y, size) => {
     let alpha = 1
     // check if outside of minimum radius
     if (x * x + y * y > 1) {
@@ -37,7 +37,7 @@ const getAlpha = (x, y, width, height) => {
         if (dx < 0) {
             // distance field becomes asymptotically correct as points approach curve
             const d = dx * dy / Math.sqrt(dx * dx + dy * dy)
-            alpha = clamp(d, 0, 1)
+            alpha = clamp(d * size / 2, 0, 1)
         }
     }
 
@@ -86,7 +86,7 @@ registerPaint('corner-shape', class {
 
         for (let i = 0; i < radius; i++) {
             for (let j = 0; j <= i; j++) {
-                const alpha = getAlpha(.5 * Math.PI * (1 - i / (radius - 1)), .5 * Math.PI * (1 - j / (radius - 1)))
+                const alpha = getAlpha(.5 * Math.PI * (1 - i / (radius - 1)), .5 * Math.PI * (1 - j / (radius - 1)), radius)
                 if (alpha) {
                     ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
 
