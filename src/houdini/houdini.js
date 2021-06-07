@@ -29,8 +29,8 @@ const getAlpha = (x, y) => {
     // if (x * x + y * y > 5) {
         alpha = 1
         // the bottom left quadrant appears to be the most numerically stable
-        x = Math.abs(x)
-        y = Math.abs(y)
+        x = -Math.abs(x)
+        y = -Math.abs(y)
         // since the shape is convex we can be sure which points are inside
         const dx = singd(acosgd(x)) - y
         const dy = cosgd(asingd(y)) - x
