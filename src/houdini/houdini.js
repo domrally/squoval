@@ -56,7 +56,6 @@ registerPaint('corner-shape', class {
         // } else {
         //     radius = Number(properties.get('--corner-radius').toString().replace('px', ''))
         // }
-        console.log(radius)
 
         const points = [
             {x: radius, y: 0},
