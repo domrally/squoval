@@ -5,7 +5,7 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 section {
@@ -23,36 +23,32 @@ span, div {
     background: #111;
 }
 span:nth-of-type(1) {
-    border-radius: 50%;
-}
-span:nth-of-type(2) {
     border-radius: 25%;
 }
-span:nth-of-type(3) {
+span:nth-of-type(2) {
     border-radius: 12.5%;
 }
-span:nth-of-type(4) {
+span:nth-of-type(3) {
     border-radius: 6.25%;
 }
+span:nth-of-type(4) {
+    border-radius: 3.125%;
+}
 @supports (background: paint(id)) {
-    div:nth-of-type(1) {
-        --corner-radius: 50%;
+    div {
         mask-image: paint(corner-shape);
         -webkit-mask-image: paint(corner-shape);
+    }
+    div:nth-of-type(1) {
+        --corner-radius: 50%;
     }
     div:nth-of-type(2) {
         --corner-radius: 25%;
-        mask-image: paint(corner-shape);
-        -webkit-mask-image: paint(corner-shape);
     }
     div:nth-of-type(3) {
         --corner-radius: 12.5%;
-        mask-image: paint(corner-shape);
-        -webkit-mask-image: paint(corner-shape);
     }
     div:nth-of-type(4) {
         --corner-radius: 6.25%;
-        mask-image: paint(corner-shape);
-        -webkit-mask-image: paint(corner-shape);
     }
 }
