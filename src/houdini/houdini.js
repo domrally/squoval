@@ -24,10 +24,10 @@ const clamp = (x, lowerlimit, upperlimit) => {
 }
 // 
 const getAlpha = (x, y, width, height) => {
-    let alpha = 0
+    let alpha = 1
     // check if outside of minimum radius
-    // if (x * x + y * y > 5) {
-        // alpha = 1
+    if (x * x + y * y > 1) {
+        alpha = 0
         // the bottom left quadrant appears to be the most numerically stable
         x = -Math.abs(x)
         y = -Math.abs(y)
@@ -39,7 +39,7 @@ const getAlpha = (x, y, width, height) => {
             const d = dx * dy / Math.sqrt(dx * dx + dy * dy)
             alpha = clamp(d, 0, 1)
         }
-    // }
+    }
 
     return alpha
 }
