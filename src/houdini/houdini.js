@@ -69,15 +69,19 @@ registerPaint('corner-shape', class {
         ctx.beginPath()
 
         ctx.arc(geom.width - radius, radius, radius, 0, Math.PI / 2, true)
+        ctx.moveTo(geom.width - radius, 0)
         ctx.lineTo(radius, 0)
 
         ctx.arc(radius, radius, radius, Math.PI / 2, Math.PI, true)
+        ctx.moveTo(0, radius)
         ctx.lineTo(0, geom.height - radius)
 
         ctx.arc(radius, geom.height - radius, radius, Math.PI, 3 * Math.PI / 2, true)
+        ctx.moveTo(radius, geom.height)
         ctx.lineTo(geom.width - radius, geom.height)
 
         ctx.arc(geom.width - radius, geom.height - radius, radius, 3 * Math.PI / 2, 2 * Math.PI, true)
+        ctx.moveTo(geom.width, geom.height - radius)
         ctx.lineTo(geom.width, radius)
         
 
