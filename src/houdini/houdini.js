@@ -36,7 +36,7 @@ const getAlpha = (x, y, size) => {
         if (dx > 0 || dy > 0) {
             // distance field becomes asymptotically correct as points approach curve
             const d = dx * dy / Math.sqrt(dx * dx + dy * dy)
-            alpha = smoothstep(2 / size, 0, d)
+            alpha = smoothstep(4 / size, 0, d)
         }
     // }
 
@@ -92,8 +92,8 @@ registerPaint('corner-shape', class {
         ctx.closePath()
         ctx.fill()
 
-        for (let i = .5; i < radius; i += .5) {
-            for (let j = .5; j <= i; j += .5) {
+        for (let i = 0; i < radius; i += .5) {
+            for (let j = 0; j <= i; j += .5) {
                 const alpha = getAlpha(.5 * Math.PI * (1 - i / (radius - 1)), .5 * Math.PI * (1 - j / (radius - 1)), radius)
                 if (alpha) {
                     ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
