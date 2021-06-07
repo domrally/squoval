@@ -53,6 +53,7 @@ registerPaint('corner-shape', class {
         if (properties.get('--corner-radius').unit === 'percent') {
             radius = Math.min(radius * geom.width / 100, geom.width / 2)
         }
+        console.log(radius)
 
         const points = [
             {x: radius, y: 0},
