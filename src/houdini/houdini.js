@@ -65,29 +65,35 @@ registerPaint('corner-shape', class {
             {x: 0, y: radius},
         ]
 
-        ctx.imageSmoothingEnabled = false
-        console.log(ctx)
-
         ctx.fillStyle = `rgb(0, 0, 0, 1)`
         ctx.beginPath()
         ctx.moveTo(points[0].x, points[0].y)
+        
         ctx.lineTo(points[1].x, points[1].y)
         ctx.lineTo(points[1].x, points[2].y)
+
         ctx.lineTo(points[2].x, points[2].y)
+
         ctx.lineTo(points[3].x, points[3].y)
         ctx.lineTo(points[4].x, points[3].y)
+
         ctx.lineTo(points[4].x, points[4].y)
+
         ctx.lineTo(points[5].x, points[5].y)
         ctx.lineTo(points[5].x, points[6].y)
+
         ctx.lineTo(points[6].x, points[6].y)
+
         ctx.lineTo(points[7].x, points[7].y)
         ctx.lineTo(points[0].x, points[7].y)
+
         ctx.lineTo(points[0].x, points[0].y)
+
         ctx.closePath()
         ctx.fill()
 
-        for (let i = 0; i < radius; i += .5) {
-            for (let j = 0; j <= i; j += .5) {
+        for (let i = .5; i < radius; i += .5) {
+            for (let j = .5; j <= i; j += .5) {
                 const alpha = getAlpha(.5 * Math.PI * (1 - i / (radius - 1)), .5 * Math.PI * (1 - j / (radius - 1)), radius)
                 if (alpha) {
                     ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
