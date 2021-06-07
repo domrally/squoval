@@ -26,19 +26,19 @@ const clamp = (x, lowerlimit, upperlimit) => {
 const getAlpha = (x, y, unit) => {
     let alpha = 1
     // check if outside of minimum radius
-    // if (x * x + y * y > 1) {
+    if (x * x + y * y > 1.5) {
         // the bottom left quadrant appears to be the most numerically stable
         x = -Math.abs(x)
         y = -Math.abs(y)
         // since the shape is convex we can be sure which points are inside
         const dx = singd(acosgd(x)) - y + unit
-        const dy = cosgd(asingd(y)) - x + unit
-        if (dx > 0 || dy > 0) {
+        if (dx > 0) {
+            const dy = cosgd(asingd(y)) - x + unit
             // distance field becomes asymptotically correct as points approach curve
             const d = dx * dy / Math.sqrt(dx * dx + dy * dy)
             alpha = smoothstep(2 * unit, 0, d)
         }
-    // }
+    }
 
     return alpha
 }
