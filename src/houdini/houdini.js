@@ -46,7 +46,7 @@ registerPaint('corner-shape', class {
         for (let i = 0; i < geom.width; i++) {
             for (let j = 0; j < geom.height; j++) {
                 if (true) {
-                    const alpha = getAlpha(i, j)
+                    const alpha = getAlpha(i / geom.width, j / geom.height)
                     if (alpha) {
                         ctx.fillStyle = `rgb(0, 0, 0, ${Math.floor(255 * alpha)})`
                         ctx.fillRect(i, j, 1, 1)
