@@ -8,6 +8,21 @@ const asingd = y => Math.atan(agd(y) / 2)
 const cosgd = t => gd(2 / Math.tan(t))
 const acosgd = x => Math.atan(2 / agd(x))
 // 
+const smoothstep = (edge0, edge1, x) => {
+  // Scale, bias and saturate x to 0..1 range
+  x = clamp((x - edge0) / (edge1 - edge0), 0.0, 1.0)
+  // Evaluate polynomial
+  return x * x * (3 - 2 * x)
+}
+
+const clamp = (x, lowerlimit, upperlimit) => {
+  if (x < lowerlimit)
+    x = lowerlimit
+  if (x > upperlimit)
+    x = upperlimit
+  return x
+}
+// 
 const getAlpha = (x, y) => {
     let alpha = 0
     // check if outside of minimum radius
@@ -19,14 +34,12 @@ const getAlpha = (x, y) => {
         // since the shape is convex we can be sure which points are inside
         const dx = singd(acosgd(x)) - y
         const dy = cosgd(asingd(y)) - x
-        if (dx < 0 && dy < 0) {
+        // if (dx < 0 && dy < 0) {
             alpha = 0
             // distance field becomes asymptotically correct as points approach curve
             const d = dx * dy / Math.sqrt(dx * dx + dy * dy)
-            alpha = d < Math.PI / 2
-                ? 1 - 2 * singd(d) / Math.PI
-                : 0
-        }
+            alpha = clamp(2 * d, 0, 1)
+        // }
     // }
 
     return alpha
