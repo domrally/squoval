@@ -99,7 +99,7 @@ registerPaint('corner-shape', class {
                 const z = 1 - i / (radius - 1)
                 const w = 1 - i / (radius - 1)
                 // check if outside of minimum radius
-                if (z * z + w * w > 4) {
+                if (z * z + w * w > 2) {
                     const alpha = getAlpha(.5 * Math.PI * z, .5 * Math.PI * w, unit)
                     if (alpha) {
                         ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
