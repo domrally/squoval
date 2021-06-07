@@ -81,13 +81,14 @@ registerPaint('corner-shape', class {
                 if (z * z + w * w > .99) {
                     const alpha = getAlpha(half * z, half * w, unit)
                     if (alpha) {
-                        ctx.globalAlpha = alpha
-                        // ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
+                        if (alpha === 1 && Math.round(alpha) !== alpha) continue
 
+                        ctx.globalAlpha = alpha
+                        
                         const s = .75
                         const u = .5
                         ctx.fillRect(i, j, s, s)
-                        if (j !== i) ctx.fillRect(j, i, s, s)
+                        ctx.fillRect(j, i, s, s)
 
                         const a = geom.width - i - u
                         const b = geom.height - j - u
