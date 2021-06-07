@@ -11,7 +11,8 @@ const acosgd = x => Math.atan(2 / agd(x))
 const getAlpha = (x, y) => {
     let alpha = 0
     // check if outside of minimum radius
-    if (x * x + y * y > 2) {
+    if (x * x + y * y > 5) {
+        console.log('...')
         alpha = 1
         // the bottom left quadrant appears to be the most numerically stable
         x = -Math.abs(x)
@@ -19,10 +20,11 @@ const getAlpha = (x, y) => {
         // since the shape is convex we can be sure which points are inside
         const dx = singd(acosgd(x)) - y
         const dy = cosgd(asingd(y)) - x
-        if (!dx && !dy) {
+        if (dx < 0 && dy < 0) {
             alpha = 0
             // distance field becomes asymptotically correct as points approach curve
             const d = dx * dy / Math.sqrt(dx * dx + dy * dy)
+            console.log(d)
             alpha = d < Math.PI / 2
                 ? 1 - singd(d)
                 : 0
@@ -46,7 +48,7 @@ registerPaint('corner-shape', class {
         for (let i = 0; i < geom.width; i++) {
             for (let j = 0; j < geom.height; j++) {
                 if (true) {
-                    const alpha = getAlpha(i / geom.width, j / geom.height)
+                    const alpha = getAlpha(2 * i / geom.width, 2 * j / geom.height)
                     if (alpha) {
                         ctx.fillStyle = `rgb(0, 0, 0, ${Math.floor(255 * alpha)})`
                         ctx.fillRect(i, j, 1, 1)
