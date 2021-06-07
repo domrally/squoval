@@ -90,7 +90,7 @@ registerPaint('corner-shape', class {
                     ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
 
                     const s = .5
-                    const u = 1.1 * s
+                    const u = 1.25 * s
                     ctx.fillRect(i, j, s, s)
                     ctx.fillRect(j, i, s, s)
 
