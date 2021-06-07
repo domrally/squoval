@@ -15,24 +15,33 @@ section {
     justify-content: space-around;
     align-items: center;
 }
-span {
-    display: block;
-}
+
 span, div {  
-    padding: 5em;
+    font-size: x-large;
+    font-weight: 900;
+
+    width: 3em;
+    height: 3em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: #f7f7f7;
     background: #111;
 }
 span:nth-of-type(1) {
-    border-radius: 25%;
+    border-radius: 24%;
 }
 span:nth-of-type(2) {
-    border-radius: 12.5%;
+    border-radius: 12%;
 }
 span:nth-of-type(3) {
-    border-radius: 6.25%;
+    border-radius: 6%;
 }
 span:nth-of-type(4) {
-    border-radius: 3.125%;
+    border-radius: 3%;
 }
 @supports (background: paint(id)) {
     div {
@@ -40,15 +49,15 @@ span:nth-of-type(4) {
         -webkit-mask-image: paint(corner-shape);
     }
     div:nth-of-type(1) {
-        --corner-radius: 50%;
+        --corner-radius: 48%;
     }
     div:nth-of-type(2) {
-        --corner-radius: 25%;
+        --corner-radius: 24%;
     }
     div:nth-of-type(3) {
-        --corner-radius: 12.5%;
+        --corner-radius: 12%;
     }
     div:nth-of-type(4) {
-        --corner-radius: 6.25%;
+        --corner-radius: 6%;
     }
 }
