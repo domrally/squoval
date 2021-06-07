@@ -29,8 +29,8 @@ span, div {
     align-items: center;
     text-align: center;
     
-    color: #db6;
-    background: #055;
+    color: #db7;
+    background: #022;
 }
 @media (max-aspect-ratio: 1/1) {
     body {
