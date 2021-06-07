@@ -1,29 +1,52 @@
 body {
+    width: 100%;
+    height: 100%;
+    background: #f7f7f7;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-div {  
-    border-radius: 64px;
-    padding: 10em;
-    background: red;
-
-    transition: border-radius 1s;
+span, div {  
+    display: block;
+    padding: 5em;
+    background: #111;
 }
-div:hover {
-    border-radius: 32px;
+span:nth-of-type(1) {
+    border-radius: 50%;
+}
+span:nth-of-type(2) {
+    border-radius: 25%;
+}
+span:nth-of-type(3) {
+    border-radius: 12.5%;
+}
+span:nth-of-type(4) {
+    border-radius: 6.25%;
 }
 @supports (background: paint(id)) {
-  div {
-    border-radius: 0;
-    --corner-radius: 82px;
-    mask-image: paint(corner-shape);
-    -webkit-mask-image: paint(corner-shape);
-
-    transition: --corner-radius 1s;
-  }
-  div:hover {
-    border-radius: 0;
-    --corner-radius: 41px;
-  }
+    div {
+        border-radius: 0;
+        --corner-radius: 82px;
+        mask-image: paint(corner-shape);
+        -webkit-mask-image: paint(corner-shape);
+    }
+    div:nth-of-type(1) {
+        --corner-radius: 50%;
+    }
+    div:nth-of-type(2) {
+        --corner-radius: 25%;
+    }
+    div:nth-of-type(3) {
+        --corner-radius: 12.5%;
+    }
+    div:nth-of-type(4) {
+        --corner-radius: 6.25%;
+    }
 }
