@@ -71,6 +71,7 @@ registerPaint('corner-shape', class {
 
         const unit = 1 / radius
         const half = .5 * Math.PI
+        ctx.fillStyle = '#000'
 
         for (let i = 0; i < radius; i += .5) {
             for (let j = 0; j <= i; j += .5) {
@@ -80,7 +81,8 @@ registerPaint('corner-shape', class {
                 if (z * z + w * w > .99) {
                     const alpha = getAlpha(half * z, half * w, unit)
                     if (alpha) {
-                        ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
+                        ctx.globalAlpha = alpha
+                        // ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
 
                         const s = .75
                         const u = .5
