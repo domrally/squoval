@@ -49,9 +49,12 @@ registerPaint('corner-shape', class {
         return ['--corner-radius']
     }
     paint(ctx, geom, properties) {
-        let radius = Number(properties.get('--corner-radius').toString().replace('px', ''))
+        let radius = geom.width / 2 - 1
         if (properties.get('--corner-radius').unit === 'percent') {
+            radius = Number(properties.get('--corner-radius').toString().replace('%', ''))
             radius = Math.min(radius * geom.width / 100, geom.width / 2)
+        } else {
+            radius = Number(properties.get('--corner-radius').toString().replace('px', ''))
         }
         console.log(radius)
 
