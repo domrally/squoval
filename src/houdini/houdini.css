@@ -33,12 +33,6 @@ span:nth-of-type(4) {
     border-radius: 6.25%;
 }
 @supports (background: paint(id)) {
-    div {
-        border-radius: 0;
-        --corner-radius: 82px;
-        mask-image: paint(corner-shape);
-        -webkit-mask-image: paint(corner-shape);
-    }
     div:nth-of-type(1) {
         --corner-radius: 50%;
         mask-image: paint(corner-shape);
