@@ -4,7 +4,7 @@ body {
     align-items: center;
 }
 div {  
-    border-radius: 56px;
+    border-radius: 64px;
     padding: 10em;
     background: red;
 }
@@ -13,7 +13,7 @@ div {
     border-radius: 0;
     mask-image: paint(corner-shape);
     -webkit-mask-image: paint(corner-shape);
-    --corner-radius: 56px;
+    --corner-radius: 100px;
     --corner-shape: scoop;
   }
 }
