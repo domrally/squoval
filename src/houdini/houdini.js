@@ -55,6 +55,33 @@ registerPaint('corner-shape', class {
             radius = Math.min(radius * geom.width / 100, geom.width / 2)
         }
 
+        const points = [
+            {x: radius, y: 0},
+            {x: geom.width - radius, y: 0},
+            {x: geom.width, y: radius},
+            {x: geom.width, y: geom.height - radius},
+            {x: geom.width - radius, y: geom.height},
+            {x: radius, y: geom.height},
+            {x: 0, y: geom.height - radius},
+            {x: 0, y: radius},
+        ]
+        ctx.beginPath()
+        ctx.moveTo(points[0].x, points[0].y)
+        ctx.lineTo(points[1].x, points[1].y)
+        ctx.lineTo(points[1].x, points[2].y)
+        ctx.lineTo(points[2].x, points[2].y)
+        ctx.lineTo(points[3].x, points[3].y)
+        ctx.lineTo(points[4].x, points[3].y)
+        ctx.lineTo(points[4].x, points[4].y)
+        ctx.lineTo(points[5].x, points[5].y)
+        ctx.lineTo(points[5].x, points[6].y)
+        ctx.lineTo(points[6].x, points[6].y)
+        ctx.lineTo(points[7].x, points[7].y)
+        ctx.lineTo(points[0].x, points[7].y)
+        ctx.lineTo(points[0].x, points[0].y)
+        ctx.closePath()
+        ctx.fill()
+
         for (let i = 0; i < radius; i++) {
             for (let j = 0; j <= i; j++) {
                 const alpha = getAlpha(.5 * Math.PI * (1 - i / radius), .5 * Math.PI * (1 - j / radius))
