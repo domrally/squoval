@@ -32,12 +32,12 @@ const getAlpha = (x, y, size) => {
         x = -Math.abs(x)
         y = -Math.abs(y)
         // since the shape is convex we can be sure which points are inside
-        const dx = singd(acosgd(x)) - y - 16 / size
-        const dy = cosgd(asingd(y)) - x - 16 / size
+        const dx = singd(acosgd(x)) - y - 32 / size
+        const dy = cosgd(asingd(y)) - x - 32 / size
         if (dx < 0 || dy < 0) {
             // distance field becomes asymptotically correct as points approach curve
             const d = dx * dy / Math.sqrt(dx * dx + dy * dy)
-            alpha = smoothstep(0, 1, d * size / 4)
+            alpha = smoothstep(0, 1, d * size / 2)
         }
     }
 
