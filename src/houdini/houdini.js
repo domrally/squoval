@@ -57,12 +57,12 @@ registerPaint('corner-shape', class {
 
         const points = [
             {x: radius, y: 0},
-            {x: geom.width - radius - 1, y: 0},
-            {x: geom.width - 1, y: radius},
-            {x: geom.width - 1, y: geom.height - radius - 1},
-            {x: geom.width - radius - 1, y: geom.height - 1},
-            {x: radius, y: geom.height - 1},
-            {x: 0, y: geom.height - radius - 1},
+            {x: geom.width - radius, y: 0},
+            {x: geom.width, y: radius},
+            {x: geom.width, y: geom.height - radius},
+            {x: geom.width - radius, y: geom.height},
+            {x: radius, y: geom.height},
+            {x: 0, y: geom.height - radius},
             {x: 0, y: radius},
         ]
 
