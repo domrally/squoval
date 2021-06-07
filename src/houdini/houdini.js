@@ -14,8 +14,8 @@ const getAlpha = (x, y) => {
     // if (x * x + y * y > 5) {
         alpha = 1
         // the bottom left quadrant appears to be the most numerically stable
-        x = -Math.abs(x)
-        y = -Math.abs(y)
+        x = Math.abs(x)
+        y = Math.abs(y)
         // since the shape is convex we can be sure which points are inside
         const dx = singd(acosgd(x)) - y
         const dy = cosgd(asingd(y)) - x
@@ -24,7 +24,7 @@ const getAlpha = (x, y) => {
             // distance field becomes asymptotically correct as points approach curve
             const d = dx * dy / Math.sqrt(dx * dx + dy * dy)
             alpha = d < Math.PI / 2
-                ? 1 - singd(d)
+                ? 1 - 2 * singd(d) / Math.PI
                 : 0
         }
     // }
