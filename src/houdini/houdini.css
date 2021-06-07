@@ -30,7 +30,9 @@ span, div {
     text-align: center;
     
     color: #f7f7f7;
-    background: #111;
+    background: #e06;
+
+    box-shadow: 0 0 1vw 1vw #111;
 }
 @media (max-aspect-ratio: 1/1) {
     body {
