@@ -20,9 +20,8 @@ span, div {
     font-size: x-large;
     font-weight: 900;
 
-    height: 0;
-    width: 20%;
-    padding-top: 20%;
+    height: 20vw;
+    width: 20vw;
 
     display: flex;
     justify-content: center;
