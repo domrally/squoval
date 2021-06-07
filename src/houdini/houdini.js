@@ -57,12 +57,12 @@ registerPaint('corner-shape', class {
 
         const points = [
             {x: radius, y: 0},
-            {x: geom.width - radius, y: 0},
-            {x: geom.width, y: radius},
-            {x: geom.width, y: geom.height - radius},
-            {x: geom.width - radius, y: geom.height},
-            {x: radius, y: geom.height},
-            {x: 0, y: geom.height - radius},
+            {x: geom.width - radius - 1, y: 0},
+            {x: geom.width - 1, y: radius},
+            {x: geom.width - 1, y: geom.height - radius - 1},
+            {x: geom.width - radius - 1, y: geom.height - 1},
+            {x: radius, y: geom.height - 1},
+            {x: 0, y: geom.height - radius - 1},
             {x: 0, y: radius},
         ]
 
@@ -86,21 +86,21 @@ registerPaint('corner-shape', class {
 
         for (let i = 0; i < radius; i++) {
             for (let j = 0; j <= i; j++) {
-                const alpha = getAlpha(.5 * Math.PI * (1 - i / radius), .5 * Math.PI * (1 - j / radius))
+                const alpha = getAlpha(.5 * Math.PI * (1 - i / (radius - 1)), .5 * Math.PI * (1 - j / (radius - 1)))
                 if (alpha) {
                     ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
 
                     ctx.fillRect(i, j, 1, 1)
                     ctx.fillRect(j, i, 1, 1)
 
-                    ctx.fillRect(geom.width - i, geom.height - j, 1, 1)
-                    ctx.fillRect(geom.width - j, geom.height - i, 1, 1)
+                    ctx.fillRect(geom.width - i - 1, geom.height - j - 1, 1, 1)
+                    ctx.fillRect(geom.width - j - 1, geom.height - i - 1, 1, 1)
 
-                    ctx.fillRect(i, geom.height - j, 1, 1)
-                    ctx.fillRect(geom.width - j, i, 1, 1)
+                    ctx.fillRect(i, geom.height - j - 1, 1, 1)
+                    ctx.fillRect(geom.width - j - 1, i, 1, 1)
                     
-                    ctx.fillRect(geom.width - i, j, 1, 1)
-                    ctx.fillRect(j, geom.height - i, 1, 1)
+                    ctx.fillRect(geom.width - i - 1, j, 1, 1)
+                    ctx.fillRect(j, geom.height - i - 1, 1, 1)
                 }
             }
         }
