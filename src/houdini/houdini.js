@@ -40,6 +40,20 @@ const getAlpha = (x, y, unit) => {
     return alpha
 }
 
+const roundRect = (ctx, x, y, w, h, r) => {
+    ctx.fillStyle = `rgb(0, 0, 0, 1)`
+    if (w < 2 * r) r = w / 2
+    if (h < 2 * r) r = h / 2
+    ctx.beginPath()
+    ctx.moveTo(x+r, y)
+    ctx.arcTo(x+w, y,   x+w, y+h, r)
+    ctx.arcTo(x+w, y+h, x,   y+h, r)
+    ctx.arcTo(x,   y+h, x,   y,   r)
+    ctx.arcTo(x,   y,   x+w, y,   r)
+    ctx.closePath()
+    ctx.fill()
+}
+
 registerPaint('corner-shape', class {
     constructor() {}
     static get inputProperties() {
@@ -53,43 +67,7 @@ registerPaint('corner-shape', class {
         // } else {
         //     radius = Number(properties.get('--corner-radius').toString().replace('px', ''))
         // }
-
-        const points = [
-            {x: radius, y: 0},
-            {x: geom.width - radius, y: 0},
-            {x: geom.width, y: radius},
-            {x: geom.width, y: geom.height - radius},
-            {x: geom.width - radius, y: geom.height},
-            {x: radius, y: geom.height},
-            {x: 0, y: geom.height - radius},
-            {x: 0, y: radius},
-        ]
-
-        ctx.fillStyle = `rgb(0, 0, 0, 1)`
-        ctx.beginPath()
-
-        ctx.arc(geom.width - radius, radius, radius, 0, Math.PI / 2, true)
-        ctx.moveTo(geom.width - radius, 0)
-        ctx.lineTo(radius, 0)
-
-        ctx.arc(radius, radius, radius, Math.PI / 2, Math.PI, true)
-        ctx.moveTo(0, radius)
-        ctx.lineTo(0, geom.height - radius)
-
-        ctx.arc(radius, geom.height - radius, radius, Math.PI, 3 * Math.PI / 2, true)
-        ctx.moveTo(radius, geom.height)
-        ctx.lineTo(geom.width - radius, geom.height)
-
-        ctx.arc(geom.width - radius, geom.height - radius, radius, 3 * Math.PI / 2, 2 * Math.PI, true)
-        ctx.moveTo(geom.width, geom.height - radius)
-        ctx.lineTo(geom.width, radius)
-        
-
-        // ctx.lineTo(radius, geom.height)
-
-
-        ctx.closePath()
-        ctx.fill()
+        roundRect(ctx, 0, 0, geom.width, geom.height, radius)
 
         const unit = 1 / radius
 
