@@ -34,10 +34,10 @@ const getAlpha = (x, y, size) => {
         // since the shape is convex we can be sure which points are inside
         const dx = singd(acosgd(x)) - y
         const dy = cosgd(asingd(y)) - x
-        if (dx < 0) {
+        if (dx < 2 / size || dy < 2 / size) {
             // distance field becomes asymptotically correct as points approach curve
             const d = dx * dy / Math.sqrt(dx * dx + dy * dy)
-            alpha = clamp(d * size / 2, 0, 1)
+            alpha = clamp(d * size / 4, 0, 1)
         }
     }
 
