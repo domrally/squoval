@@ -55,17 +55,25 @@ registerPaint('corner-shape', class {
             radius = Math.min(radius * geom.width / 100, geom.width / 2)
         }
 
-        for (let i = 0; i < geom.width; i++) {
-            for (let j = 0; j < geom.height; j++) {
-                if (true) {
-                    const alpha = getAlpha(2 * i / geom.width, 2 * j / geom.height)
-                    if (alpha) {
-                        ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
-                        ctx.fillRect(i, j, 1, 1)
-                    }
+        for (let i = 0; i < radius; i++) {
+            for (let j = 0; j <= i; j++) {
+                const alpha = getAlpha(.5 * Math.PI * i / radius, .5 * Math.PI * j / radius)
+                if (alpha) {
+                    ctx.fillStyle = `rgb(0, 0, 0, ${alpha})`
+
+                    ctx.fillRect(i, j, 1, 1)
+                    ctx.fillRect(j, i, 1, 1)
+
+                    ctx.fillRect(geom.width - i, geom.height - j, 1, 1)
+                    ctx.fillRect(geom.height - j, geom.width - i, 1, 1)
+
+                    ctx.fillRect(i, geom.height - j, 1, 1)
+                    ctx.fillRect(geom.height - j, i, 1, 1)
+                    
+                    ctx.fillRect(geom.width - i, j, 1, 1)
+                    ctx.fillRect(j, geom.width - i, 1, 1)
                 }
             }
         }
-        //TODO step in from each corner to modify only those parts of the array
     }
 })
