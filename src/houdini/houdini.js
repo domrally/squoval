@@ -36,7 +36,7 @@ const getAlpha = (x, y, size) => {
         if (dx > 0 || dy > 0) {
             // distance field becomes asymptotically correct as points approach curve
             const d = dx * dy / Math.sqrt(dx * dx + dy * dy)
-            alpha = smoothstep(2 / size, 0, d)
+            alpha = smoothstep(4 / size, 0, d)
         }
     // }
 
