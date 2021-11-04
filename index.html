@@ -3,55 +3,75 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>squircles</title>
+    <title>guder oval</title>
     <link href="index.css" rel="stylesheet">
 </head>
 
 <body>
+    <script>
+        customElements.define(
+  "guder-oval",
+  class extends HTMLElement {
+    constructor() {
+      super();
 
-    <header class="rounded"></header>
-    <main>
-        <p>
-            first, import the super-rect styles in any css file
-        </p>
-        <pre><code>
-@import 'https://www.dommandy.com/super-rect/squircle.css';
-        </code></pre>
-        <p>
-            add the <b>rounded</b> class to any html element
-        </p>
-        <pre class="rounded"><code>
-&ltdiv class="rounded"&gt&lt/div&gt
-        </code></pre>
-        <p>
-            add the <b>bordered</b> class to add a super-rect border
-        </p>
-        <pre class="rounded bordered"><code>
-&ltdiv class="rounded bordered"&gt&lt/div&gt
-        </code></pre>
-        <p>
-            add any of <b>--border-radius</b>, <b>--border-size</b>, <b>--border-color</b>, or
-            <b>--border-background</b> to your css to customize
-        </p>
-        <pre><code>
-.your-class {
-    --border-radius: 3em;
-    --border-size: 10px;
-    --border-color: #333;
-    --border-background: #c00;
-}
-        </code></pre>
-        <p>
-            here's that custom styling applied
-        </p>
-        <pre class="rounded bordered your-class"><code>
-&ltdiv class="rounded bordered your-class"&gt&lt/div&gt
-</code>
-        </pre>
+      const shadow = this.attachShadow({ mode: "closed" });
+      shadow.innerHTML = `<canvas style="display: none;"></canvas><style>:host {display: block;}</style>`;
 
-    </main>
-    <footer class="rounded"></footer>
+      const canvas = shadow.firstElementChild;
+      const context = canvas.getContext("2d");
 
+      const gudermannian = (t) => {
+        const sinh = Math.sinh(t);
+        return Math.atan(sinh);
+      };
+      const x = (t) => {
+        return gudermannian(2 * Math.cos(t) / Math.abs(Math.sin(t)));
+      };
+      const y = (t) => {
+        return gudermannian(2 * Math.sin(t) / Math.abs(Math.cos(t)));
+      };
+      const r = x(0.001);
+      context.fillStyle = "#ffff";
+      let url = "";
+      const resizeObserver = new ResizeObserver(() => {
+        const width = this.clientWidth;
+        const height = this.clientHeight;
+        canvas.width = width;
+        canvas.height = height;
+
+        const centerX = width / 2;
+        const centerY = height / 2;
+        const centerMin = Math.min(centerX, centerY);
+        const offsetX = centerX - centerMin;
+        const offsetY = centerY - centerMin;
+
+        context.beginPath();
+        context.moveTo(width, centerY);
+
+        for (let t = 0.01; t < 2 * Math.PI; t += 0.01) {
+            const X = x(t)
+            const Y = y(t)
+            const i = centerX + offsetX * Math.sign(X) + centerMin * X / r;
+            const j = centerY + offsetY * Math.sign(Y) + centerMin * Y / r;
+            context.lineTo(i, j);
+        }
+
+        context.closePath();
+        context.fill();
+
+        const maskImage = canvas.toDataURL();
+        this.style.maskImage = `url(${maskImage})`;
+      });
+
+      resizeObserver.observe(this);
+    }
+  },
+);
+    </script>
+<div>
+    <guder-oval></guder-oval>
+</div>
 </body>
 
 </html>

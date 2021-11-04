@@ -1,31 +1,21 @@
-html {
-    background: #f7f7f7;
-    color: #f7f7f7;
-    font-size: 22px;
-    padding: 1em;
-}
-
-body, main {
-    display: flex;
-    flex-direction: column;
-}
-main {
-    align-items: stretch;
-    padding: 2em;
-}
-
 body {
-    align-items: center;
-    margin: auto;
+    background: #f7f7f7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    place-content: center;
 }
 
-pre {
-    margin: 1em 0;
-    padding: 1em;
-    background: #333;
+guder-oval {
+    background: linear-gradient(.45turn, #f90, #000); 
+    width: 50vw; 
+    height: 50vh;
 }
 
-p {
-    color: #111;
-    align-self: flex-start;
+div {
+    filter: drop-shadow(0 0 1vh #0008) drop-shadow(2vh 4vh 4vh #000) drop-shadow(4vh 8vh 8vh #0004);
+    box-shadow: 20vh 70vh 50vh #f904;
 }
