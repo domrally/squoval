@@ -62,6 +62,7 @@
 
         const maskImage = canvas.toDataURL();
         this.style.maskImage = `url(${maskImage})`;
+        this.style.webkitMaskImage = `url(${maskImage})`;
       });
 
       resizeObserver.observe(this);

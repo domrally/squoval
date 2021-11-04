@@ -17,5 +17,4 @@ guder-oval {
 
 div {
     filter: drop-shadow(0 0 1vh #0008) drop-shadow(2vh 4vh 4vh #000) drop-shadow(4vh 8vh 8vh #0004);
-    box-shadow: 20vh 70vh 50vh #f904;
 }
