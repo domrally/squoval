@@ -1,12 +1,16 @@
-function erf(t: number) {
-  t *= t * Math.PI
-  return 3 /
-    (2 * Math.sqrt(t) + Math.sqrt(t + 9))
+const sqrtPI = 2 * Math.sqrt(Math.PI)
+
+function erf(t: number) {  
+  return 3 / (t * sqrtPI + Math.sqrt(9 + t * t * Math.PI))
 }
 
 function oval(t: number) {
-  const x = erf(Math.cos(t) / Math.abs(Math.sin(t)))
-  const y = erf(Math.sin(t) / Math.abs(Math.cos(t)))
+  const cos = Math.cos(t)
+  const sin = Math.sin(t)
+  
+  const x = erf(cos / Math.abs(sin))
+  const y = erf(sin / Math.abs(cos))
+  
   return { x, y }
 }
 
