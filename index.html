@@ -21,16 +21,15 @@
       const canvas = shadow.firstElementChild;
       const context = canvas.getContext("2d");
 
-      const gudermannian = (t) => {
-        const sinh = Math.sinh(t);
-        return Math.atan(sinh);
-      };
-      const x = (t) => {
-        return gudermannian(2 * Math.cos(t) / Math.abs(Math.sin(t)));
-      };
-      const y = (t) => {
-        return gudermannian(2 * Math.sin(t) / Math.abs(Math.cos(t)));
-      };
+      const sqrtPI = 2 * Math.sqrt(Math.PI)
+
+        function erf(t: number) {  
+          return 3 / (t * sqrtPI + Math.sqrt(9 + t * t * Math.PI))
+        }
+
+          const x = t => erf(Math.cos(t) / Math.abs(Math.sin(t)))
+          const y = t => erf(Math.sin(t) / Math.abs(Math.cos(t)))
+        
       const r = x(0.001);
       context.fillStyle = "#ffff";
       let url = "";
