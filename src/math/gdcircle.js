@@ -1,5 +1,8 @@
-const gudermannian = x => arctan(sinh(x))
-const inverseGudermannian = x => arctanh(sin(x))
+function erf(t: number) {
+  t *= t * Math.PI
+  return 3 /
+    (2 * Math.sqrt(t) + Math.sqrt(t + 9))
+}
 
 // plot x = erf(cos t |csc t|), y = erf(sin t |sec t|)
 
