@@ -23,14 +23,13 @@
 
       const sqrtPI = 2 * Math.sqrt(Math.PI)
 
-        function erf(t: number) {  
+        function erf() {  
           return 3 / (t * sqrtPI + Math.sqrt(9 + t * t * Math.PI))
         }
 
           const x = t => erf(Math.cos(t) / Math.abs(Math.sin(t)))
           const y = t => erf(Math.sin(t) / Math.abs(Math.cos(t)))
         
-      const r = x(0.001);
       context.fillStyle = "#ffff";
       let url = "";
       const resizeObserver = new ResizeObserver(() => {
@@ -51,8 +50,8 @@
         for (let t = 0.01; t < 2 * Math.PI; t += 0.1) {
             const X = x(t)
             const Y = y(t)
-            const i = centerX + offsetX * Math.sign(X) + centerMin * X / r;
-            const j = centerY + offsetY * Math.sign(Y) + centerMin * Y / r;
+            const i = centerX + offsetX * Math.sign(X) + centerMin * X;
+            const j = centerY + offsetY * Math.sign(Y) + centerMin * Y;
             context.lineTo(i, j);
         }
 
