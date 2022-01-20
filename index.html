@@ -22,11 +22,11 @@
       const context = canvas.getContext("2d");
 
       const sqrtPI = 2 * Math.sqrt(Math.PI)
+      const ex2erfc = t => 3 / (t * sqrtPI + Math.sqrt(9 + t * t * Math.PI))
+      const erf = t => 1 - ex2erfc(t) * Math.exp(-t * t)
 
-        const erf = t => 3 / (t * sqrtPI + Math.sqrt(9 + t * t * Math.PI))
-
-        const x = t => erf(Math.cos(t) / Math.abs(Math.sin(t)))
-        const y = t => erf(Math.sin(t) / Math.abs(Math.cos(t)))
+      const x = t => erf(Math.cos(t) / Math.abs(Math.sin(t)))
+      const y = t => erf(Math.sin(t) / Math.abs(Math.cos(t)))
         
       context.fillStyle = "#ffff";
       let url = "";
