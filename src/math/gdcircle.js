@@ -1,8 +1,8 @@
 const gudermannian = x => arctan(sinh(x))
 const inverseGudermannian = x => arctanh(sin(x))
 
-// plot x = gd(2 | csc t | cos t), y = gd(2 | sec t | sin t)
+// plot x = erf(cos t |csc t|), y = erf(sin t |sec t|)
 
-`((x), (y)) = "gd"((2 |csc t| cos t),(2 |sec t| sin t))`
+`((x), (y)) = "erf" ((cos t |csc t|), (sin t |sec t|)`
 
-// i was going in circles rewriting the eq but then i found gudermannian 
+// the never ending search
