@@ -48,7 +48,7 @@
         context.beginPath();
         context.moveTo(width, centerY);
 
-        for (let t = 0.01; t < 2 * Math.PI; t += 0.01) {
+        for (let t = 0.01; t < 2 * Math.PI; t += 0.1) {
             const X = x(t)
             const Y = y(t)
             const i = centerX + offsetX * Math.sign(X) + centerMin * X / r;
