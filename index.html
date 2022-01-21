@@ -6,8 +6,13 @@
     <title>squoval</title>
     <link href="./style.css" rel="stylesheet">
     <script type="module" src="./code/squoval-mask.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    MathJax = {
+        loader: {load: ['input/asciimath', 'output/chtml']}
+    }
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js"></script>
 </head>
 
 <body>
