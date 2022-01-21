@@ -23,21 +23,19 @@ class SquovalMask extends HTMLElement {
         canvas.width = clientWidth;
         canvas.height = clientHeight;
         
-        const { moveTo, lineTo, fill } = context;
-
         context.beginPath();
-        moveTo(clientWidth, clientHeight / 2);
+        context.moveTo(clientWidth, clientHeight / 2);
     
         const curve = squoval(clientWidth, clientHeight),
             step = 2 * PI / (clientWidth + clientHeight);
 
         for (let t = step / 2; t < 2 * PI; t += step) {
             const { x, y } = curve(t);
-            lineTo(x, y);
+            context.lineTo(x, y);
         }
     
-        closePath();
-        fill();
+        context.closePath();
+        context.fill();
     
         const maskImage = `url(${ canvas.toDataURL() })`;
     
