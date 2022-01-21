@@ -5,30 +5,37 @@
     <meta charset="utf-8" />
     <title>squoval</title>
     <link href="./style.css" rel="stylesheet">
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="module" src="./code/squoval-mask.js"></script>
 </head>
 
 <body>
     <squoval-mask></squoval-mask>
 
-    <span style="color: grey">
-
     circle
     <br>
-    `((x), (y)) = ((),():}`<span style="color: darkorange">`{:(cos t), (sin t):}`</span>`{:(),())`
+    `((x), (y)) =`
+        `((),():}`<span class="circular"></span>`{:(),())`
 
     <br>
+
     square
     <br>
-    `((x), (y)) = ((),():}`<span style="color: darkorange">`{:(cos t), (sin t):}`</span>`{:(),())`<span style="color: black"> `min`</span>` {(),():}`<span style="color: royalblue">`|(csc t), (sec t)|`</span>
+    `((x), (y)) =`
+        `((),():}`<span class="circular"></span>`{:(),())`
+        <span class="function">`min`</span>`{(),():}`
+            <span class="hyperbolic"></span>
 
     <br>
 
     squoval
     <br>
-    `((x), (y)) =`<span style="color: black">`" erf"`</span>`((),():}`<span style="color: darkorange">`{:(cos t), (sin t):}`</span> <span style="color: royalblue">`|(csc t), (sec t)|`</span>`{:(),())`</span>
-    <br><br>
+    `((x), (y)) =`
+        <span class="function">`" erf"`</span>`((),():}`
+            <span class="circular">`{:(cos t), (sin t):}`</span>
+            <span class="hyperbolic"></span>
+        `{:(),())`  
+    
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </body>
 
 </html>

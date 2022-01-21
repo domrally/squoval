@@ -1,16 +1,16 @@
-import { squoval } from "./squoval.js"
+import { squoval } from './squoval.js'
 
 class SquovalMask extends HTMLElement {
     constructor() {
         super();
 
-        const shadow = this.attachShadow({ mode: "closed" });
+        const shadow = this.attachShadow({ mode: 'closed' });
         shadow.innerHTML = `<canvas style="display: none;"></canvas><style>:host {display: block;}</style>`;
 
         const { firstElementChild } = shadow,
-            context = firstElementChild.getContext("2d");
+            context = firstElementChild.getContext('2d');
         
-        context.fillStyle = "#ffff";
+        context.fillStyle = '#ffff';
 
         const onResize = new ResizeObserver(this.resize.bind(this, firstElementChild));
         onResize.observe(this);
@@ -38,13 +38,14 @@ class SquovalMask extends HTMLElement {
         closePath();
         fill();
     
-        let { style } = this,
-            maskImage = canvas.toDataURL(),
-            maskImage = `url(${ maskImage })`;
+        const { style } = this,
+            maskImage = canvas.toDataURL();
+
+        maskImage = `url(${ maskImage })`;
     
         style.maskImage = maskImage;
         style.webkitMaskImage = maskImage;
     }
 }
 
-customElements.define("squoval-mask", SquovalMask);
+customElements.define('squoval-mask', SquovalMask);

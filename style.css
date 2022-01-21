@@ -1,4 +1,5 @@
 body {
+    color: grey;
     background: snow;
 }
 
@@ -10,4 +11,14 @@ squoval-mask {
     width: 50vmin; 
     height: 50vmin;
     background: black; 
+}
+
+.circular::after {
+    color: darkorange;
+    content: '`{:(cos t), (sin t):}`';
+}
+
+.hyperbolic::after {
+    color: royalblue;
+    content: '`|(csc t), (sec t)|`';
 }
