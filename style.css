@@ -1,0 +1,13 @@
+body {
+    background: snow;
+}
+
+squoval-mask {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+
+    width: 50vmin; 
+    height: 50vmin;
+    background: black; 
+}

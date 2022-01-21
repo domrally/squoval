@@ -3,72 +3,32 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>guder oval</title>
-    <link href="index.css" rel="stylesheet">
+    <title>squoval</title>
+    <link href="./style.css" rel="stylesheet">
+    <script src="./code/squoval-mask.js"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
-    <script>
-        customElements.define(
-  "guder-oval",
-  class extends HTMLElement {
-    constructor() {
-      super();
+    <squoval-mask></squoval-mask>
 
-      const shadow = this.attachShadow({ mode: "closed" });
-      shadow.innerHTML = `<canvas style="display: none;"></canvas><style>:host {display: block;}</style>`;
+    <span style="color: grey">
 
-      const canvas = shadow.firstElementChild;
-      const context = canvas.getContext("2d");
+    circle
+    <br>
+    `((x), (y)) = ((),():}`<span style="color: darkorange">`{:(cos t), (sin t):}`</span>`{:(),())`
 
-      const sqrtPI = 2 * Math.sqrt(Math.PI)
-      const ex2erfc = t => 3 / (t * sqrtPI + Math.sqrt(9 + t * t * Math.PI))
-      const erf = t => 1 - ex2erfc(t) * Math.exp(-t * t)
+    <br>
+    square
+    <br>
+    `((x), (y)) = ((),():}`<span style="color: darkorange">`{:(cos t), (sin t):}`</span>`{:(),())`<span style="color: black"> `min`</span>` {(),():}`<span style="color: royalblue">`|(csc t), (sec t)|`</span>
 
-      const x = t => erf(Math.cos(t) / Math.abs(Math.sin(t)))
-      const y = t => erf(Math.sin(t) / Math.abs(Math.cos(t)))
-        
-      context.fillStyle = "#ffff";
-      let url = "";
-      const resizeObserver = new ResizeObserver(() => {
-        const width = this.clientWidth;
-        const height = this.clientHeight;
-        canvas.width = width;
-        canvas.height = height;
+    <br>
 
-        const centerX = width / 2;
-        const centerY = height / 2;
-        const centerMin = Math.min(centerX, centerY);
-        const offsetX = centerX - centerMin;
-        const offsetY = centerY - centerMin;
-
-        context.beginPath();
-        context.moveTo(width, centerY);
-
-        for (let t = 0.01; t < 2 * Math.PI; t += 0.1) {
-            const X = x(t)
-            const Y = y(t)
-            const i = centerX + offsetX * Math.sign(X) + centerMin * X;
-            const j = centerY + offsetY * Math.sign(Y) + centerMin * Y;
-            context.lineTo(i, j);
-        }
-
-        context.closePath();
-        context.fill();
-
-        const maskImage = canvas.toDataURL();
-        this.style.maskImage = `url(${maskImage})`;
-        this.style.webkitMaskImage = `url(${maskImage})`;
-      });
-
-      resizeObserver.observe(this);
-    }
-  },
-);
-    </script>
-<div>
-    <guder-oval></guder-oval>
-</div>
+    squoval
+    <br>
+    `((x), (y)) =`<span style="color: black">`" erf"`</span>`((),():}`<span style="color: darkorange">`{:(cos t), (sin t):}`</span> <span style="color: royalblue">`|(csc t), (sec t)|`</span>`{:(),())`</span>
+    <br><br>
 </body>
 
 </html>
