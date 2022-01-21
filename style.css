@@ -13,12 +13,14 @@ squoval-mask {
     background: black; 
 }
 
-.circular::after {
+.circular {
     color: darkorange;
-    content: '`{:(cos t), (sin t):}`';
 }
 
-.hyperbolic::after {
+.hyperbolic {
     color: royalblue;
-    content: '`|(csc t), (sec t)|`';
+}
+
+.function {
+    color: black;
 }
