@@ -12,11 +12,11 @@ class SquovalMask extends HTMLElement {
         
         context.fillStyle = '#ffff';
 
-        const onResize = new ResizeObserver(this.resize.bind(this, firstElementChild));
+        const onResize = new ResizeObserver(this.resize.bind(this, firstElementChild, context));
         onResize.observe(this);
     }
     
-    resize(canvas) {
+    resize(canvas, context) {
         const { clientWidth, clientHeight } = this;
 
         canvas.width = clientWidth;
