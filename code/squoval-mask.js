@@ -25,7 +25,7 @@ class SquovalMask extends HTMLElement {
         const { moveTo, lineTo, fill } = context;
 
         context.beginPath();
-        moveTo(clientWidth, height / 2);
+        moveTo(clientWidth, clientHeight / 2);
     
         const curve = squoval(clientWidth, clientHeight),
             step = 2 * PI / (clientWidth + clientHeight);
