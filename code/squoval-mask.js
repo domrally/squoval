@@ -17,7 +17,8 @@ class SquovalMask extends HTMLElement {
     }
     
     resize(canvas, context) {
-        const { clientWidth, clientHeight } = this;
+        const { PI } = Math,
+            { clientWidth, clientHeight, style } = this;
 
         canvas.width = clientWidth;
         canvas.height = clientHeight;
@@ -38,10 +39,7 @@ class SquovalMask extends HTMLElement {
         closePath();
         fill();
     
-        const { style } = this,
-            maskImage = canvas.toDataURL();
-
-        maskImage = `url(${ maskImage })`;
+        const maskImage = `url(${ canvas.toDataURL() })`;
     
         style.maskImage = maskImage;
         style.webkitMaskImage = maskImage;
