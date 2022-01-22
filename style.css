@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap';
 @import 'anicons.css';
 
 body {
@@ -34,7 +34,7 @@ main {
     font-size: 7vh;
     width: 6em;
     height: 2em;
-    font-weight: 900;
+    font-weight: 800;
     letter-spacing: .1em;
     background: darkred;
     color: snow;
