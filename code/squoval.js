@@ -7,8 +7,8 @@ export const Squoval = (aspectRatio = 1) => (t = 0) => {
     const { x: sine, y: cosine } = circle(t),
         { x: cosecant, y: secant } = hyperbola(t),
 
-        // x = errorFunction(cosine * cosecant),
-        x = cosine,
+        x = errorFunction(cosine * cosecant),
+        // x = cosine,
         y = errorFunction(sine * secant)
 
     return cover(aspectRatio, x, y);
