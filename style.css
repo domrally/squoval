@@ -5,13 +5,24 @@ body {
     color: grey;
     background: skyblue;
 
-    filter: drop-shadow(40px 60px 80px black);
+    filter: drop-shadow(1vh 2vh 3vh);
 
     display: grid;
     grid: 
         'search menu' 1fr
         '.      .   ' 1fr
         '.      .   ' 1fr;
+    place-items: center;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 33vh;
+    background: linear-gradient(inherit, #000);
 }
 
 .ui {
