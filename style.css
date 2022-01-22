@@ -31,6 +31,8 @@ main {
 .enter {
     grid-area: eq;
     font-size: 7vh;
+    width: 6em;
+    height: 2em;
     font-weight: 900;
     letter-spacing: .2em;
     background: darkred;
