@@ -11,20 +11,24 @@ body {
     color: grey;
     background: skyblue;
 
-    
     display: grid;
     grid: 
-    'nav nav' 1fr
-    '.   .   ' 1fr
-    '.   .   ' 1fr;
+        'nav nav' 1fr
+        'eq  eq ' 1fr
+        'eq  eq ' 1fr;
     place-items: center;
     
     margin: 0;
 }
 
+body > * {
+    grid-area: eq;
+}
+
 nav {
     grid-area: nav;
-    filter: drop-shadow(.5vh 1vh 2vh #024c);
+    filter: drop-shadow(.5vh 1vh 2vh #0248);
+    text-shadow: .1em .2em 1.2em #024a;
     width: 100%;
     height: 100%;
     display: grid;
@@ -47,7 +51,6 @@ body::after {
     font-size: 12vh;
     position: relative;
     background: snow;
-    text-shadow: .1em .2em .5em #024c;
     transition: .4s;
     transition-property: background, font-variation-settings;
     font-family: Anicons Regular;
@@ -56,7 +59,7 @@ body::after {
 
 .ui > squoval-mask {
     position: absolute;
-    inset: 1vh;
+    inset: .6vh;
     background: skyblue;
 }
 
