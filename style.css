@@ -2,7 +2,6 @@
 
 :root {
     background: snow;
-    padding: 1vh;
 }
 
 body {
@@ -12,20 +11,22 @@ body {
     color: grey;
     background: skyblue;
 
-    filter: drop-shadow(1vh 1vh 2vh black);
-
+    
     display: grid;
     grid: 
-        'nav nav' 1fr
-        '.   .   ' 1fr
-        '.   .   ' 1fr;
+    'nav nav' 1fr
+    '.   .   ' 1fr
+    '.   .   ' 1fr;
     place-items: center;
-
+    
     margin: 0;
 }
 
 nav {
     grid-area: nav;
+    filter: drop-shadow(1vh 1vh 2vh black);
+    width: 100%;
+    height: 100%;
     display: grid;
     grid: 'search menu' 1fr;
     place-items: center;
