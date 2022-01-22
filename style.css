@@ -38,8 +38,7 @@ header::before {
     filter: blur(.8vh);
     z-index: -2;
     overflow: hidden;
-    bottom: 2vh;
-
+    
     /* https://projects.verou.me/css3patterns/#madras */
     /* Divya Manian */
     background-color: hsl(34, 53%, 82%);
