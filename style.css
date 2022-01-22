@@ -30,12 +30,12 @@ header {
     place-content: center;
     position: relative;
 }
-header::after {
+header::before {
     content: '';
     position: absolute;
     inset: 0;
     filter: blur(.8vh);
-    z-index: -1;
+    z-index: -2;
 
     /* https://projects.verou.me/css3patterns/#madras */
     /* Divya Manian */
@@ -54,6 +54,13 @@ header::after {
     hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
     hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 140px, hsla(197, 62%, 11%, 0.5) 140px, hsla(197, 62%, 11%, 0.5) 160px
     );
+}
+header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: lineargradient(#fff0, snow);
 }
 h1::after {
     content: 'squoval';
