@@ -23,7 +23,7 @@ body {
 main {
     color: grey;
     grid-area: eq;
-    font-size: 1.6em;
+    font-size: 3vh;
 }
 
 nav {
@@ -38,8 +38,8 @@ nav {
 }
 
 .ui {
-    width: 20vh;
-    height: 20vh;
+    width: 18vh;
+    height: 18vh;
     color: #111;
     font-size: 12vh;
     position: relative;
@@ -58,7 +58,6 @@ nav {
 
 .ui:hover {
     color: black;
-    background: white;
     font-variation-settings: "TIME" 100;
     cursor: pointer;
 }
