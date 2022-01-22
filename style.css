@@ -55,13 +55,14 @@ main {
 }
 
 .enter:hover {
-    color: white;
-    background: firebrick;
+    color: black;
+    background: salmon;
     cursor: pointer;
 }
 
 .enter:active {
     background: black;
+    color: white;
 }
 
 nav {
@@ -103,7 +104,8 @@ nav {
 }
 
 .ui:active {
-    background: lightsalmon;
+    background: black;
+    color: white;
     font-variation-settings: "TIME" 0;
 }
 
