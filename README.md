@@ -5,9 +5,9 @@ flatter and smoother rounded corners
 ## use
 
 ```html
-<squoval-mask>
-    <button></button>
-</squoval-mask>
+<button>
+    <squoval-mask></squoval-mask>
+</button>
 ```
 
 
