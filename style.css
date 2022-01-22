@@ -37,13 +37,18 @@ main {
     font-weight: 900;
     letter-spacing: .2em;
     background: darkred;
-    color: white;
+    color: snow;
     position: relative;
     font-family: 'Rubik', sans-serif;
     transition: color .4s;
 }
 
-.enter {
+.enter:hover {
+    color: white;
+    background: firebrick;
+}
+
+.enter:active {
     background: black;
 }
 
