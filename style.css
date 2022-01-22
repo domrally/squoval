@@ -47,6 +47,12 @@ header {
     hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 140px, hsla(197, 62%, 11%, 0.5) 140px, hsla(197, 62%, 11%, 0.5) 160px
     );
 }
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    filter: blur(1vh);
+}
 h1::after {
     content: 'squoval';
     font-family: 'Rubik', sans-serif;
