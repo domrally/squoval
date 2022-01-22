@@ -1,3 +1,5 @@
+@import 'anicons.css';
+
 body {
     position: fixed;
     inset: 0;
@@ -31,6 +33,15 @@ body::after {
     color: black;
     font-size: 10vh;
     background: lightcyan;
+    transition: .4s;
+    transition-property: background, font-variation-settings;
+    font-family: Anicons Regular;
+    font-variation-settings: "TIME" 1;
+}
+
+.ui:hover {
+    background: white;
+    font-variation-settings: "TIME" 100;
 }
 
 .menu {
