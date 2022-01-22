@@ -40,7 +40,8 @@ main {
     color: snow;
     position: relative;
     font-family: 'Rubik', sans-serif;
-    transition: color .4s;
+    transition: .4s;
+    transition-property: color, background;
 }
 
 .enter:hover {
