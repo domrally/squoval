@@ -40,6 +40,11 @@ main {
     color: white;
     position: relative;
     font-family: 'Rubik', sans-serif;
+    transition: color .4s;
+}
+
+.enter {
+    background: black;
 }
 
 nav {
