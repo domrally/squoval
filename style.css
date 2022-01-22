@@ -40,8 +40,17 @@ body::after {
 }
 
 .ui:hover {
+    color: blue;
     background: white;
     font-variation-settings: "TIME" 100;
+}
+
+button {
+    all: unset;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
 }
 
 .menu {
