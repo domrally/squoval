@@ -26,7 +26,7 @@ body::after {
     position: fixed;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(#87ceeb00, #0004);
+    background: linear-gradient(#87ceeb00, #024c);
 }
 
 .ui {
@@ -37,6 +37,7 @@ body::after {
     position: relative;
     background: lightcyan;
     transition: .4s;
+    transform-origin: center;
     transition-property: background, font-variation-settings, transform;
     font-family: Anicons Regular;
     font-variation-settings: "TIME" 1;
@@ -47,7 +48,7 @@ body::after {
     background: white;
     font-variation-settings: "TIME" 100;
     cursor: pointer;
-    transform: translateY(-1vh);
+    transform: scale(1.2);
 }
 
 button {
