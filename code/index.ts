@@ -1,1 +1,1 @@
-export { SquovalMask } from './modules/squoval-mask.js';
+export {SquovalMask} from './modules/squoval-mask.js';

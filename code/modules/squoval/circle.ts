@@ -1,8 +1,7 @@
 export const circle = (t = 0) => {
-    const { cos, sin } = Math,
+  const {cos, sin} = Math,
+    x = cos(t),
+    y = sin(t);
 
-        x = cos(t),
-        y = sin(t)
-
-    return { x, y }
-}
+  return {x, y};
+};
