@@ -20,7 +20,7 @@ class SquovalMask extends HTMLElement {
         for (let t = step / 2; t < 2 * PI; t += step) {
             const { x, y } = curve(t);
 
-            polygon += `, ${ x.toFixed(0) }% ${ y.toFixed(0) }%`;b2 
+            polygon += `, ${ x.toFixed(0) }% ${ y.toFixed(0) }%`;
         }
 
         style.clipPath = `polygon(${ polygon })`;
