@@ -4,6 +4,9 @@ flatter and smoother rounded corners
 
 ## use
 ```html
+<img is="squoval-img">
+<input is="squoval-input">
+<label is="squoval-label"></label>
 <button is="squoval-button"></button>
 ```
 
