@@ -30,9 +30,12 @@ main {
 
 .enter {
     grid-area: eq;
-    font-size: 4vh;
+    font-size: 16vh;
+    font-weight: 900;
+    letter-spacing: .2em;
     background: darkred;
     color: white;
+    padding: .9em 2.9em;
 }
 
 nav {
