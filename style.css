@@ -5,18 +5,20 @@ body {
     inset: 0;
 
     background: snow;
-    border: 2vh solid darkslategrey;
+    border: 2vh solid black;
     
     display: grid;
     grid: 
-    'nav nav' 1fr
     'eq  eq ' 1fr
-    'eq  eq ' 1fr;
+    'eq  eq ' 1fr
+    'nav nav' 1fr
+    ;
+
     place-items: center;
     
     margin: 0;
 
-    animation: blur 1s both;
+    animation: blur .4s both;
 }
 
 main {
@@ -27,21 +29,21 @@ main {
 
 nav {
     grid-area: nav;
-    filter: drop-shadow(.2vh .4vh 1vh darkslategrey);
     width: 100%;
     height: 100%;
     display: grid;
     grid: 'search menu' 1fr;
     place-items: center;
+    background: #CC7722;
 }
 
 .ui {
     width: 18vh;
     height: 18vh;
-    color: whitesmoke;
+    color: #111;
     font-size: 10vh;
     position: relative;
-    background: darkslategrey;
+    background: snow;
     transition: .4s;
     transition-property: background, font-variation-settings, color;
     font-family: Anicons Regular;
