@@ -30,11 +30,12 @@ header {
     place-content: center;
     position: relative;
 }
-header::before {
+header::after {
     content: '';
     position: absolute;
     inset: 0;
     filter: blur(1vh);
+    z-index: -1;
 
     /* https://projects.verou.me/css3patterns/#madras */
     /* Divya Manian */
