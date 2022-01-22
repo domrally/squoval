@@ -1,7 +1,7 @@
 @import 'anicons.css';
 
 :root {
-    background: black;
+    background: darkslategrey;
 }
 
 body {
@@ -39,17 +39,34 @@ nav {
 .ui {
     width: 18vh;
     height: 18vh;
-    color: snow;
+    color: whitesmoke;
     font-size: 10vh;
     position: relative;
-    background: black;
+    background: darkslategrey;
     transition: .4s;
-    transition-property: background, font-variation-settings;
+    transition-property: background, font-variation-settings, color;
     font-family: Anicons Regular;
     font-variation-settings: "TIME" 1;
+
+    animation: grow .4s .2s both;
+}
+
+.ui:first-of-type {
+    animation-delay: 0;
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(0) translateY(18vh);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
 }
 
 .ui:hover {
+    background: black;
+    color: white;
     font-variation-settings: "TIME" 100;
     cursor: pointer;
 }
