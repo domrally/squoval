@@ -4,10 +4,16 @@ flatter and smoother rounded corners
 
 ## use
 
+### wrapper
 ```html
-<button>
-    <squoval-mask></squoval-mask>
-</button>
+<squoval-mask>
+    <button></button>
+</squoval-mask>
+```
+
+### extended utility elements
+```html
+<button is="squoval-button"></button>
 ```
 
 
