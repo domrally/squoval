@@ -6,9 +6,9 @@ flatter and smoother rounded corners
 
 ### wrapper
 ```html
-<squoval-mask>
+<squoval-element>
     <button></button>
-</squoval-mask>
+</squoval-element>
 ```
 
 ### extended utility elements
