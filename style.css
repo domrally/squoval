@@ -8,20 +8,20 @@ body {
     position: fixed;
     inset: 1vh;
 
-    color: grey;
     background: skyblue;
-
+    
     display: grid;
     grid: 
-        'nav nav' 1fr
-        'eq  eq ' 1fr
-        'eq  eq ' 1fr;
+    'nav nav' 1fr
+    'eq  eq ' 1fr
+    'eq  eq ' 1fr;
     place-items: center;
     
     margin: 0;
 }
 
-body > * {
+main {
+    color: grey;
     grid-area: eq;
 }
 
