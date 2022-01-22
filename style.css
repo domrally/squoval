@@ -32,13 +32,12 @@ body::after {
 .ui {
     width: 20vh;
     height: 20vh;
-    color: snow;
+    color: #111;
     font-size: 12vh;
     position: relative;
-    background: lightcyan;
+    background: snow;
     transition: .4s;
-    transform-origin: center;
-    transition-property: background, font-variation-settings, transform;
+    transition-property: background, font-variation-settings;
     font-family: Anicons Regular;
     font-variation-settings: "TIME" 1;
     padding: 1vh;
@@ -55,7 +54,6 @@ body::after {
     background: white;
     font-variation-settings: "TIME" 100;
     cursor: pointer;
-    transform: scale(1.2);
 }
 
 button {
