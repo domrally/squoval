@@ -1,14 +1,14 @@
 @import 'anicons.css';
 
 :root {
-    background: snow;
+    background: #111;
 }
 
 body {
     position: fixed;
     inset: 1vh;
 
-    background: skyblue;
+    background: snow;
     
     display: grid;
     grid: 
@@ -23,25 +23,18 @@ body {
 main {
     color: grey;
     grid-area: eq;
+    font-size: 1.6em;
 }
 
 nav {
     grid-area: nav;
     filter: drop-shadow(.5vh 1vh 2vh #0248);
-    text-shadow: .1em .2em 1.2em #024a;
+    text-shadow: .1em .2em 1.2em #0248;
     width: 100%;
     height: 100%;
     display: grid;
     grid: 'search menu' 1fr;
     place-items: center;
-}
-
-body::after {
-    content: "";
-    position: fixed;
-    inset: 1vh;
-    z-index: -1;
-    background: linear-gradient(#87ceeb00, #024c);
 }
 
 .ui {
@@ -50,7 +43,7 @@ body::after {
     color: #111;
     font-size: 12vh;
     position: relative;
-    background: snow;
+    background: #0248;
     transition: .4s;
     transition-property: background, font-variation-settings;
     font-family: Anicons Regular;
@@ -60,7 +53,7 @@ body::after {
 .ui > squoval-mask {
     position: absolute;
     inset: .6vh;
-    background: skyblue;
+    background: snow;
 }
 
 .ui:hover {
