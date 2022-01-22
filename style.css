@@ -50,7 +50,6 @@ nav {
 }
 
 .ui:hover {
-    color: black;
     font-variation-settings: "TIME" 100;
     cursor: pointer;
 }
