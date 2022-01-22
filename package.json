@@ -7,6 +7,9 @@
   "files": [
     "build"
   ],
+  "exports": {
+    ".": "./build/code/index.js"
+  },
   "license": "Fair",
   "keywords": [],
   "scripts": {
