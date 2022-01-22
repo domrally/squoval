@@ -15,9 +15,9 @@ class SquovalMask extends HTMLElement {
         const curve = Squoval(clientWidth, clientHeight),
             step = 2 * PI / (clientWidth + clientHeight);
 
-        const initial = curve(-step / 2)
+        const initial = curve(step / 2)
         let polygon = `${ initial.x.toFixed(0) }% ${ initial.y.toFixed(0) }%`;
-        for (let t = step / 2; t < 2 * PI; t += step) {
+        for (let t = -3 * step / 2; t < 2 * PI; t -= step) {
             const { x, y } = curve(t);
 
             polygon += `, ${ x.toFixed(0) }% ${ y.toFixed(0) }%`;
