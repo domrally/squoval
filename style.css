@@ -39,7 +39,7 @@ nav {
 .ui {
     width: 18vh;
     height: 18vh;
-    color: #111;
+    color: snow;
     font-size: 10vh;
     position: relative;
     background: black;
@@ -47,12 +47,6 @@ nav {
     transition-property: background, font-variation-settings;
     font-family: Anicons Regular;
     font-variation-settings: "TIME" 1;
-}
-
-.ui > squoval-mask {
-    position: absolute;
-    inset: .6vh;
-    background: snow;
 }
 
 .ui:hover {
