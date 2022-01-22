@@ -36,6 +36,7 @@ header::before {
     inset: 0;
     filter: blur(.8vh);
     z-index: -2;
+    overflow: hidden;
 
     /* https://projects.verou.me/css3patterns/#madras */
     /* Divya Manian */
@@ -60,7 +61,7 @@ header::after {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: lineargradient(#fff0, snow);
+    background: linear-gradient(#fff0, snow);
 }
 h1::after {
     content: 'squoval';
