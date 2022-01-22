@@ -28,7 +28,7 @@ main {
 
 nav {
     grid-area: nav;
-    filter: drop-shadow(.2vh .4vh 1vh #0008);
+    filter: drop-shadow(.2vh .4vh 1vh slategrey);
     width: 100%;
     height: 100%;
     display: grid;
