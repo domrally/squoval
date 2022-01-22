@@ -15,15 +15,17 @@ class SquovalMask extends HTMLElement {
         const curve = Squoval(clientWidth, clientHeight),
             step = 2 * PI / (clientWidth + clientHeight);
 
-        const initial = curve(step / 2)
-        let polygon = `${ initial.x.toFixed(1) }% ${ initial.y.toFixed(1) }%`;
+        const initial = curve(step / 2),
+            digits = 3
+
+        let path = `m ${ initial.x.toFixed(digits) } ${ initial.y.toFixed(digits) }`;
         for (let t = -3 * step / 2; t < 2 * PI; t -= step) {
             const { x, y } = curve(t);
 
-            polygon += `, ${ x.toFixed(1) }% ${ y.toFixed(1) }%`;
+            path += `l ${ x.toFixed(digits) } ${ y.toFixed(digits) }`;
         }
 
-        style.clipPath = `polygon(${ polygon })`;
+        style.clipPath = `path(${ path })`;
     }
 }
 
