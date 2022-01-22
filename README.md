@@ -8,6 +8,7 @@ flatter and smoother rounded corners
 <input is="squoval-input">
 <label is="squoval-label"></label>
 <button is="squoval-button"></button>
+<squoval-element></squoval-element>
 ```
 
 
