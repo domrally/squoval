@@ -1,3 +1,4 @@
+@import 'https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,900&display=swap';
 @import 'anicons.css';
 
 body {
@@ -38,6 +39,7 @@ main {
     background: darkred;
     color: white;
     position: relative;
+    font-family: 'Rubik', sans-serif;
 }
 
 nav {
