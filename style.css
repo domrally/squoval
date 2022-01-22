@@ -26,7 +26,7 @@ h1 {
     font-family: 'Rubik', sans-serif;
     font-size: 1vh;
     position: fixed;
-    left: 1vh;
+    left: 0;
     top: -2vh;
     font-weight: 300;
     color: white;
