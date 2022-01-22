@@ -1,6 +1,6 @@
 import { Squoval } from './squoval.js'
 
-class SquovalMask extends HTMLElement {
+export class SquovalMask extends HTMLElement {
     constructor() {
         super();
 
