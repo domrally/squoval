@@ -70,6 +70,7 @@ h1::after {
     font-size: 7vh;
     font-weight: 300;
     color: white;
+    text-shadow: 0 0 1vh #0003;
 }
 
 main {
