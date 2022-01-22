@@ -3,15 +3,6 @@ flatter and smoother rounded corners
 
 
 ## use
-
-### wrapper
-```html
-<squoval-element>
-    <button></button>
-</squoval-element>
-```
-
-### extended utility elements
 ```html
 <button is="squoval-button"></button>
 ```
