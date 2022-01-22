@@ -35,10 +35,10 @@ header::before {
     content: '';
     position: absolute;
     inset: 0;
-    filter: blur(.8vh);
+    filter: blur(.5vh);
     z-index: -2;
     overflow: hidden;
-    
+
     /* https://projects.verou.me/css3patterns/#madras */
     /* Divya Manian */
     background-color: hsl(34, 53%, 82%);
