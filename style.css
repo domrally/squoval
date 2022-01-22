@@ -48,11 +48,11 @@ nav {
     font-family: Anicons Regular;
     font-variation-settings: "TIME" 1;
 
-    animation: grow .4s .2s both;
+    animation: grow 1s 2.2s both;
 }
 
 .ui:first-of-type {
-    animation-delay: 0s;
+    animation-delay: 2s;
 }
 
 @keyframes grow {
