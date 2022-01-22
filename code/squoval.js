@@ -1,7 +1,15 @@
 import { cover } from "./squoval/cover.js"
 import { hyperbola } from "./squoval/hyperbola.js"
-import { errorFunction as erf } from "./squoval/error-function.js"
+import { errorFunction } from "./squoval/error-function.js"
+import { circle } from "./squoval/circle.js"
 
-export const Squoval = (width = 0, height = 0) => {
-    return cover(width, height, hyperbola(erf));
+export const Squoval = (aspectRatio = 1) => (t = 0) => {
+    const { x: sine, y: cosine } = circle(t),
+        { x: cosecant, y: secant } = hyperbola(t),
+
+        // x = errorFunction(cosine * cosecant),
+        x = cosine,
+        y = errorFunction(sine * secant)
+
+    return cover(aspectRatio, x, y);
 }

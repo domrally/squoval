@@ -1,18 +1,12 @@
-export const cover = (width = 0, height = 0, curve = () => ({ x: 0, y: 0})) => t => {
-    let { x, y } = curve(t);
-
+export const cover = (aspectRatio = 1) => (x = 0, y = 0) => {
     const { sign } = Math;
 
-    const ratioX = width / height;
-    if (ratioX > 1) {
-        x += sign(x) * (ratioX - 1);
-        x /= ratioX;
-    }
-
-    const ratioY = height / width;
-    if (ratioY > 1) {
-        y += sign(y) * (ratioY - 1);
-        y /= ratioY;
+    if (aspectRatio > 1) {
+        x += sign(x) * (aspectRatio - 1);
+        x /= aspectRatio;
+    } else {
+        y += sign(y) * (1 / aspectRatio - 1);
+        y *= aspectRatio;
     }
 
     x++, y++;

@@ -12,7 +12,7 @@ class SquovalMask extends HTMLElement {
         const { PI } = Math,
             { clientWidth, clientHeight, style } = this;
     
-        const curve = Squoval(clientWidth, clientHeight),
+        const curve = Squoval(clientWidth / clientHeight),
             step = 2 * PI / (clientWidth + clientHeight);
 
         const initial = curve(step / 2),
