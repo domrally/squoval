@@ -6,7 +6,6 @@ class SquovalMask extends HTMLElement {
 
         const onResize = new ResizeObserver(this.resize.bind(this));
         onResize.observe(this);
-        this.resize();
     }
     
     resize() {
@@ -16,11 +15,12 @@ class SquovalMask extends HTMLElement {
         const curve = Squoval(clientWidth, clientHeight),
             step = 2 * PI / (clientWidth + clientHeight);
 
-        let polygon = ''
+        const initial = curve(-step / 2)
+        let polygon = `${ initial.x.toFixed(0) }% ${ initial.y.toFixed(0) }%`;
         for (let t = step / 2; t < 2 * PI; t += step) {
             const { x, y } = curve(t);
 
-            polygon += `${ x.toFixed(0) }% ${ y.toFixed(0) }%, `;
+            polygon += `, ${ x.toFixed(0) }% ${ y.toFixed(0) }%`;b2 
         }
 
         style.clipPath = `polygon(${ polygon })`;
