@@ -1,4 +1,4 @@
-export const cover = (aspectRatio = 1) => (x = 0, y = 0) => {
+export const cover = (aspectRatio = 1, x = 0, y = 0) => {
     const { sign } = Math;
 
     if (aspectRatio > 1) {
