@@ -46,6 +46,7 @@ main {
 .enter:hover {
     color: white;
     background: firebrick;
+    cursor: pointer;
 }
 
 .enter:active {
