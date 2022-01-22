@@ -1,5 +1,10 @@
 @import 'anicons.css';
 
+:root {
+    background: snow;
+    padding: 1vh;
+}
+
 body {
     position: fixed;
     inset: 0;
@@ -7,18 +12,23 @@ body {
     color: grey;
     background: skyblue;
 
-    filter: drop-shadow(1vh 2vh 3vh);
+    filter: drop-shadow(1vh 1vh 2vh black);
 
     display: grid;
     grid: 
-        'search menu' 1fr
-        '.      .   ' 1fr
-        '.      .   ' 1fr;
+        'nav nav' 1fr
+        '.   .   ' 1fr
+        '.   .   ' 1fr;
     place-items: center;
 
-    border: 1vh solid snow;
-
     margin: 0;
+}
+
+nav {
+    grid-area: nav;
+    display: grid;
+    grid: 'search menu' 1fr;
+    place-items: center;
 }
 
 body::after {
@@ -40,12 +50,11 @@ body::after {
     transition-property: background, font-variation-settings;
     font-family: Anicons Regular;
     font-variation-settings: "TIME" 1;
-    padding: 1vh;
 }
 
 .ui > squoval-mask {
     position: absolute;
-    inset: 0;
+    inset: 1vh;
     background: skyblue;
 }
 
