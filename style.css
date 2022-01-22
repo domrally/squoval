@@ -22,6 +22,16 @@ body {
     animation: blur .4s both;
 }
 
+h1 {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1vh;
+    position: fixed;
+    left: .5vh;
+    top: .5vh;
+    font-weight: 800;
+    color: white;
+}
+
 main {
     color: grey;
     grid-area: eq;
