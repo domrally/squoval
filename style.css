@@ -29,6 +29,7 @@ header {
     display: grid;
     place-content: center;
     position: relative;
+    overflow: hidden;
 }
 header::before {
     content: '';
@@ -37,6 +38,7 @@ header::before {
     filter: blur(.8vh);
     z-index: -2;
     overflow: hidden;
+    margin-bottom: 2vh;
 
     /* https://projects.verou.me/css3patterns/#madras */
     /* Divya Manian */
@@ -61,7 +63,7 @@ header::after {
     position: absolute;
     inset: 0;
     z-index: -1;
-    background: linear-gradient(#fff0, snow);
+    background: linear-gradient(#fff7, snow);
 }
 h1::after {
     content: 'squoval';
