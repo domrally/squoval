@@ -1,8 +1,7 @@
 import {observeResizing} from './observe-resizing.js';
 
-
 export class SquovalImg extends HTMLImageElement {
-    constructor() {
+  constructor() {
     super();
 
     observeResizing(this);

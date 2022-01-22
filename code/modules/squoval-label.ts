@@ -1,11 +1,11 @@
 import {observeResizing} from './observe-resizing.js';
 
 export class SquovalLabel extends HTMLLabelElement {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        observeResizing(this);
-    }
+    observeResizing(this);
+  }
 }
 
 customElements.define('squoval-label', SquovalLabel, {extends: 'label'});
