@@ -4,7 +4,7 @@ import { errorFunction } from "./squoval/error-function.js"
 import { circle } from "./squoval/circle.js"
 
 export const Squoval = (aspectRatio = 1) => (t = 0) => {
-    const { x: sine, y: cosine } = circle(t),
+    const { x: cosine, y: sine } = circle(t),
         { x: cosecant, y: secant } = hyperbola(t),
 
         x = errorFunction(cosine * cosecant),
