@@ -32,7 +32,7 @@ body::after {
 .ui {
     width: 20vh;
     height: 20vh;
-    color: darkgrey;
+    color: snow;
     font-size: 12vh;
     position: relative;
     background: lightcyan;
@@ -41,6 +41,13 @@ body::after {
     transition-property: background, font-variation-settings, transform;
     font-family: Anicons Regular;
     font-variation-settings: "TIME" 1;
+    padding: 1vh;
+}
+
+.ui > squoval-mask {
+    position: absolute;
+    inset: 0;
+    background: skyblue;
 }
 
 .ui:hover {
