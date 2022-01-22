@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;800&display=swap';
 @import 'anicons.css';
 
 body {
@@ -26,9 +26,9 @@ h1 {
     font-family: 'Rubik', sans-serif;
     font-size: 1vh;
     position: fixed;
-    left: 2vh;
-    top: .5vh;
-    font-weight: 800;
+    left: 1vh;
+    top: -2vh;
+    font-weight: 300;
     color: white;
 }
 
