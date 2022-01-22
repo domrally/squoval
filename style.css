@@ -86,14 +86,14 @@ nav {
 }
 
 .ui:hover {
-    background: lightsalmon;
+    background: salmon;
     color: black;
     font-variation-settings: "TIME" 100;
     cursor: pointer;
 }
 
 .ui:active {
-    background: salmon;
+    background: lightsalmon;
     font-variation-settings: "TIME" 0;
 }
 
