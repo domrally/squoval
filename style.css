@@ -28,6 +28,12 @@ header {
     height: 100%;
     display: grid;
     place-content: center;
+}
+header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    filter: blur(1vh);
 
     /* https://projects.verou.me/css3patterns/#madras */
     /* Divya Manian */
@@ -46,12 +52,6 @@ header {
     hsla(35, 91%, 65%, 0) 80px, hsla(35, 91%, 65%, 0) 90px, hsla(5, 53%, 63%, 0.5) 90px, hsla(5, 53%, 63%, 0.5) 110px,
     hsla(5, 53%, 63%, 0) 110px, hsla(5, 53%, 63%, 0) 140px, hsla(197, 62%, 11%, 0.5) 140px, hsla(197, 62%, 11%, 0.5) 160px
     );
-}
-header::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    filter: blur(1vh);
 }
 h1::after {
     content: 'squoval';
