@@ -1,14 +1,11 @@
 @import 'anicons.css';
 
-:root {
-    background: darkslategrey;
-}
-
 body {
     position: fixed;
-    inset: 1vh;
+    inset: 0;
 
     background: snow;
+    border: 2vh solid darkslategrey;
     
     display: grid;
     grid: 
@@ -53,11 +50,11 @@ nav {
 
 @keyframes blur {
     0% {
-        filter: blur(12vh);
+        filter: blur(6vh) opacity(0);
     }
 
     100% {
-        filter: blur(0);
+        filter: blur(0) opacity(1);
     }
 }
 
