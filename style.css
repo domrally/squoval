@@ -34,16 +34,14 @@ nav {
     display: grid;
     grid: 'search menu' 1fr;
     place-items: center;
-    background: #CC7722;
 }
 
 .ui {
     width: 18vh;
     height: 18vh;
-    color: #111;
+    color: darkslategrey;
     font-size: 10vh;
     position: relative;
-    background: snow;
     transition: .4s;
     transition-property: background, font-variation-settings, color;
     font-family: Anicons Regular;
@@ -61,15 +59,15 @@ nav {
 }
 
 .ui:hover {
-    background: black;
-    color: white;
+    background: lightsalmon;
+    color: black;
     font-variation-settings: "TIME" 100;
     cursor: pointer;
 }
 
 .ui:active {
-    background: sienna;
-    font-variation-settings: "TIME" 50;
+    background: salmon;
+    font-variation-settings: "TIME" 0;
 }
 
 button {
