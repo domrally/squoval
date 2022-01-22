@@ -24,11 +24,9 @@ body {
 body::after {
     content: "";
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 33vh;
-    background: linear-gradient(#87ceeb00, #000);
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(#87ceeb00, #0004);
 }
 
 .ui {
