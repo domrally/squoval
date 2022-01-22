@@ -1,16 +1,33 @@
 body {
-    color: grey;
-    background: snow;
-}
-
-squoval-mask {
     position: fixed;
     inset: 0;
-    margin: auto;
 
-    width: 50vmin; 
-    height: 50vmin;
-    background: black; 
+    color: grey;
+    background: skyblue;
+
+    filter: drop-shadow(40px 60px 80px black);
+
+    display: grid;
+    grid: 
+        'search menu' 1fr
+        '.      .   ' 1fr
+        '.      .   ' 1fr;
+}
+
+.ui {
+    width: 20vh;
+    height: 20vh;
+    color: black;
+    font-size: 10vh;
+    background: lightcyan;
+}
+
+.menu {
+    grid-area: menu;
+}
+
+.search {
+    grid-area: search;
 }
 
 .circular {

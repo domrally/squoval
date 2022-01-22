@@ -19,8 +19,8 @@ class SquovalMask extends HTMLElement {
             digits = 3
 
         let polygon = `${ initial.x.toFixed(digits) }% ${ initial.y.toFixed(digits) }%`;
-        for (let t = -3 * step / 2; t > -2 * PI; t -= step) {
-            const { x, y } = curve(t);
+        for (let t = 3 * step / 2; t < 2 * PI; t += step) {
+            const { x, y } = curve(-t);
 
             polygon += `, ${ x.toFixed(digits) }% ${ y.toFixed(digits) }%`;
         }
