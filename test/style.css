@@ -97,6 +97,8 @@ main {
     font-family: 'Rubik', sans-serif;
     transition: .4s;
     transition-property: color, background;
+    display: grid;
+    place-content: center;
 }
 
 .enter::after {
