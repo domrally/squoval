@@ -6,13 +6,12 @@ body {
     inset: 0;
 
     background: snow;
-    border: 2vh solid black;
-    
+
     display: grid;
     grid: 
-    'eq  eq ' 1fr
-    'eq  eq ' 1fr
-    'nav nav' 1fr
+    'head head' 1fr
+    'eq   eq  ' 1fr
+    'nav  nav ' 1fr
     ;
 
     place-items: center;
@@ -23,13 +22,11 @@ body {
 }
 
 h1 {
+    grid-area: head;
     font-family: 'Rubik', sans-serif;
-    font-size: 1vh;
-    position: fixed;
-    left: 0;
-    top: -2vh;
+    font-size: 7vh;
     font-weight: 300;
-    color: white;
+    color: darkslategrey;
 }
 
 main {
