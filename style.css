@@ -9,10 +9,9 @@ body {
 
     display: grid;
     grid: 
-    'head nav' 1fr
-    'eq   eq ' 1fr
-    'eq   eq ' 1fr
-    'eq   eq ' 1fr
+    'head head' 1fr
+    'eq   eq  ' 1fr
+    'nav  nav ' 1fr
     ;
 
     place-items: center;
