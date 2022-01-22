@@ -21,8 +21,7 @@ body {
     animation: blur .4s both;
 }
 
-h1::after {
-    content: 'squoval';
+h1 {
     grid-area: head;
     font-family: 'Rubik', sans-serif;
     font-size: 7vh;
@@ -50,10 +49,6 @@ main {
     font-family: 'Rubik', sans-serif;
     transition: .4s;
     transition-property: color, background;
-}
-
-.enter button::after {
-    content: 'Enter.';
 }
 
 .enter:hover {
@@ -124,15 +119,9 @@ button {
 .menu {
     grid-area: menu;
 }
-.menu button::after {
-    content: 'E';
-}
 
 .search {
     grid-area: search;
-}
-.search button::after {
-    content: '9';
 }
 
 .circular {
