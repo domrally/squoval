@@ -25,6 +25,14 @@ main {
     color: grey;
     grid-area: eq;
     font-size: 2vh;
+    display: none;
+}
+
+.enter {
+    grid-area: eq;
+    font-size: 4vh;
+    background: darkred;
+    color: white;
 }
 
 nav {
