@@ -11,6 +11,7 @@ body {
     grid: 
     'head head' 1fr
     'eq   eq  ' 1fr
+    'eq   eq  ' 1fr
     'nav  nav ' 1fr
     ;
 
@@ -21,13 +22,20 @@ body {
     animation: blur .4s both;
 }
 
+header {
+    grid-area: head;
+    background: darkslategrey;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
 h1::after {
     content: 'squoval';
-    grid-area: head;
     font-family: 'Rubik', sans-serif;
     font-size: 7vh;
     font-weight: 300;
-    color: darkslategrey;
+    color: white;
 }
 
 main {
