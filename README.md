@@ -3,7 +3,7 @@ flatter and smoother rounded corners
 
 <br>
 
-### Use on built-in elements
+#### Use on built-in elements
 ```html
 <img is="squoval-img">
 <input is="squoval-input">
@@ -14,14 +14,14 @@ flatter and smoother rounded corners
 
 <br>
 
-### If using in html
+#### If using in html
 ```html
 <script src="https://cdn.skypack.dev/squoval?min" type="module"></script>
 ```
 
 <br>
 
-### If using in node
+#### If using in node
 ```sh
 npm i squoval
 ```
