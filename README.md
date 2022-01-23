@@ -20,7 +20,7 @@ Use on built-in elements
 
 If using in html
 ```html
-<script type="module" src="https://cdn.skypack.dev/squoval?min"></script>
+<script src="https://cdn.skypack.dev/squoval?min" type="module"></script>
 ```
 
 <br>
