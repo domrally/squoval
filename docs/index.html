@@ -2,59 +2,20 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
     <title>squoval</title>
-    <link href="./pages/style.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <link href="./web/style.css" rel="stylesheet">
     <script type="module" src="https://cdn.skypack.dev/texte?min"></script>
     <script type="module" src="https://cdn.skypack.dev/squoval?min"></script>
-
-    <script>
-    MathJax = {
-        loader: {load: ['input/asciimath', 'output/chtml']}
-    }
-    </script>
-    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/startup.js"></script>
 </head>
 
 <body>
     <header>
-        <h1></h1>
+        <button is="squoval-button" class="enter"></button>
     </header>
-
-    <button is="squoval-button" class="enter"></button>
-
-    <nav>
-        <button is="squoval-button" class="ui search"></button>
-
-        <button is="squoval-button" class="ui menu"></button>
-    </nav>
 
     <main>
         <pre is="texte-pre" src="essay.texte"></pre>
-
-        circle
-        <br>
-        `((x), (y)) =`
-            `((),():}`<span class="circular">`{:(cos t), (sin t):}`</span>`{:(),())`
-
-        <br>
-
-        square
-        <br>
-        `((x), (y)) =`
-            `((),():}`<span class="circular">`{:(cos t), (sin t):}`</span>`{:(),())`
-            <span class="function">`min`</span>`{(),():}`
-                <span class="hyperbolic">`|(csc t), (sec t)|`</span>
-
-        <br>
-
-        squoval
-        <br>
-        `((x), (y)) =`
-            <span class="function">`" erf"`</span>`((),():}`
-                <span class="circular">`{:(cos t), (sin t):}`</span>
-                <span class="hyperbolic">`|(csc t), (sec t)|`</span>
-            `{:(),())`  
     </main>
 
     <footer>

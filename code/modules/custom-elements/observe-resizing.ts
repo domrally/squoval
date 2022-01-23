@@ -1,4 +1,4 @@
-import {Squoval} from './squoval.js';
+import {SquovalCurve} from '../squoval-curve.js';
 
 export function observeResizing(htmlElement: HTMLElement) {
   const onResize = new ResizeObserver(resize(htmlElement));
@@ -8,7 +8,7 @@ export function observeResizing(htmlElement: HTMLElement) {
 const resize = (htmlElement: HTMLElement) => () => {
   const {PI} = Math,
     {clientWidth, clientHeight, style} = htmlElement,
-    curve = Squoval(clientWidth / clientHeight),
+    curve = SquovalCurve(clientWidth / clientHeight),
     step = (2 * PI) / (clientWidth + clientHeight),
     initial = curve(step / 2),
     digits = 3;

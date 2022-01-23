@@ -1,9 +1,9 @@
-import {cover} from './squoval/cover.js';
-import {hyperbola} from './squoval/hyperbola.js';
-import {errorFunction} from './squoval/error-function.js';
-import {circle} from './squoval/circle.js';
+import {cover} from './squoval-curve/cover.js';
+import {hyperbola} from './squoval-curve/hyperbola.js';
+import {errorFunction} from './squoval-curve/error-function.js';
+import {circle} from './squoval-curve/circle.js';
 
-export const Squoval =
+export const SquovalCurve =
   (aspectRatio = 1) =>
   (t = 0) => {
     const {x: cosine, y: sine} = circle(t),

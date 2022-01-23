@@ -10,6 +10,8 @@
     "declarationDir": "build/types"
   },
   "include": [
-    "code/**/*.ts"
+    "code/**/*.ts",
+    "code/**/*.css",
+    "code/**/*.html"
   ]
 }

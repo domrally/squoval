@@ -1,8 +1,31 @@
-The Circle and the Square had Babies
-—or:
-The Birth of the SuperRect
+        circle
+        <br>
+        `((x), (y)) =`
+            `((),():}`<span class="circular">`{:(cos t), (sin t):}`</span>`{:(),())`
+
+        <br>
+
+        square
+        <br>
+        `((x), (y)) =`
+            `((),():}`<span class="circular">`{:(cos t), (sin t):}`</span>`{:(),())`
+            <span class="function">`min`</span>`{(),():}`
+                <span class="hyperbolic">`|(csc t), (sec t)|`</span>
+
+        <br>
+
+        squoval
+        <br>
+        `((x), (y)) =`
+            <span class="function">`" erf"`</span>`((),():}`
+                <span class="circular">`{:(cos t), (sin t):}`</span>
+                <span class="hyperbolic">`|(csc t), (sec t)|`</span>
+            `{:(),())`  
+
+#
+Searching for the Squoval
+
 by Dom Mandy
-A Geometric Interpretation of What We Think of What We See
 
 The circle and the square each communicate fundamental yet divergent visual information. Although designers sometimes use them for the same purpose, they do not carry the same meaning. We perceive the circle as a symbol of beauty; the square, utility. 
 
@@ -21,7 +44,7 @@ The circle’s smoothness makes it easy on the eyes. The visual cortex processes
 Our brains use salience to tell us what we need to pay attention to, and our brains deem any old corners worthy of our time. We evolved this function to protect us from death by sharp corners. Our brains have a nostalgic view of the world, and they often give us warnings in the absence of real threats. By recalling our genetic memories we can design our world to work in harmony with our minds. 
 
 Squares won’t stop being useful, and humanity will continue to use them. But sighted humans understand information more effectively when communicated without corners. We can make better squares by making squares without corners.
-Timeline
+#Timeline
 1818—Superellipse
 
 
