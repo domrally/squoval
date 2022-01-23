@@ -1,6 +1,6 @@
 # Squoval
 
-![](https://img.shields.io/npm/v/squoval?style=for-the-badge&label=alpha&logo=npm) ![](https://img.shields.io/badge/format-prettier-yellow?style=for-the-badge&logo=prettier) ![](https://img.shields.io/npm/l/squoval?style=for-the-badge&color=darkgreen) ![](https://img.shields.io/badge/language-ts-3178c6?logo=typescript&style=for-the-badge) ![](https://img.shields.io/badge/lint-es-4B32C3?logo=eslint&style=for-the-badge) ![](https://img.shields.io/badge/code%20style-google-blueviolet.svg?style=for-the-badge&logo=google&label=style)
+![](https://img.shields.io/npm/v/squoval?style=for-the-badge&label=alpha&logo=npm) ![](https://img.shields.io/badge/format-prettier-yellow?style=for-the-badge&logo=prettier) ![](https://img.shields.io/npm/l/squoval?style=for-the-badge&color=darkgreen&logo=git) ![](https://img.shields.io/badge/language-ts-3178c6?logo=typescript&style=for-the-badge) ![](https://img.shields.io/badge/lint-es-4B32C3?logo=eslint&style=for-the-badge) ![](https://img.shields.io/badge/code%20style-google-blueviolet.svg?style=for-the-badge&logo=google&label=style)
 
 flatter and smoother rounded corners
 
