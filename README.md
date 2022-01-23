@@ -26,7 +26,7 @@ flatter and smoother rounded corners
 npm i squoval
 ```
 
-<br>
+<br><br>
 
 [![](https://img.shields.io/npm/v/squoval?style=for-the-badge&label=version&logo=npm&color=CB3837)](./package.json
 ) [![](https://img.shields.io/badge/markup-html-e44d26?logo=html5&style=for-the-badge)](./code/modules/squoval-element/squoval-element.html
