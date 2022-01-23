@@ -7,7 +7,7 @@ flatter and smoother rounded corners
 
 <br>
 
-Use on built in elements
+Use on built-in elements
 ```html
 <img is="squoval-img">
 <input is="squoval-input">
