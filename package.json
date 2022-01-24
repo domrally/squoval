@@ -13,7 +13,7 @@
     "license": "Fair",
     "keywords": [],
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "node ./tests/tests.js",
         "lint": "gts lint",
         "clean": "gts clean",
         "compile": "tsc",
