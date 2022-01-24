@@ -30,6 +30,39 @@ flatter and smoother rounded corners · web components
 npm i squoval
 ```
 
+<br>
+
+build/
+├── code/
+│   ├── modules/
+│   ├── exports/
+│   ╰── index.js
+│
+╰── types/
+    ├── modules/
+    ├── exports/
+    ╰── index.d.ts
+
+code/
+├── modules/
+├── exports/
+╰── index.ts
+
+docs/
+├── modules/
+│   ├── pages/
+│   ╰── fonts/
+│
+├── exports/
+│   ╰── style.css
+│
+╰── index.html
+
+tests/
+├── modules/
+├── exports/
+╰── index.js
+
 <br><br>
 
 [![](https://img.shields.io/npm/v/squoval?style=for-the-badge&label=version&logo=npm&color=CB3837)](./package.json
