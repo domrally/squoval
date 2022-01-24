@@ -6,6 +6,7 @@ flatter and smoother rounded corners
 #### Use as drop-in replacements for built-in elements
 ```html
 <squoval-div></squoval-div>
+<squoval-span></squoval-span>
 <squoval-img src=""></squoval-img>
 <squoval-label>
   <squoval-input></squoval-input>
