@@ -1,5 +1,5 @@
 # Squoval
-flatter and smoother rounded corners
+flatter and smoother rounded corners · web components
 
 <br>
 
