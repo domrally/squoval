@@ -5,11 +5,11 @@ flatter and smoother rounded corners
 
 #### Use on built-in elements
 ```html
-<img is="squoval-img">
-<input is="squoval-input">
-<label is="squoval-label"></label>
-<button is="squoval-button"></button>
-<squoval-element></squoval-element>
+<squoval-img></squoval-img>
+<squoval-input></squoval-input>
+<squoval-label></squoval-label>
+<squoval-button></squoval-button>
+<squoval-div></squoval-div>
 ```
 
 <br>
