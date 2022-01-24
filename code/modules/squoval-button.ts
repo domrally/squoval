@@ -7,8 +7,8 @@ export class SquovalButton extends SquovalElement implements HTMLButtonElement {
   }
 
   async thing() {
-    const cssWait = this.fetchText('./squoval-button.css'),
-      htmlWait = this.fetchText('./squoval-button.html'),
+    const cssWait = this.fetchText('./squoval-button/squoval-button.css'),
+      htmlWait = this.fetchText('./squoval-button/squoval-button.html'),
       [css, html] = await Promise.all([cssWait, htmlWait]);
 
     this.innerHTML = `<style>${css}</style>${html}`;
