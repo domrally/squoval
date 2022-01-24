@@ -8,76 +8,76 @@ export class SquovalButton extends HTMLElement implements HTMLButtonElement {
   }
 
   get button() {
-      return this.firstElementChild as HTMLButtonElement
+    return this.firstElementChild as HTMLButtonElement;
   }
 
-    get disabled() {
-        return this.button.disabled
-    }
+  get disabled() {
+    return this.button.disabled;
+  }
 
-    get form() {
-        return this.button.form
-    }
+  get form() {
+    return this.button.form;
+  }
 
-    get formAction() {
-        return this.button.formAction
-    }
-    
-    get formEnctype() {
-        return this.button.formEnctype
-    }
+  get formAction() {
+    return this.button.formAction;
+  }
 
-    get formMethod() {
-        return this.button.formMethod
-    }
+  get formEnctype() {
+    return this.button.formEnctype;
+  }
 
-    get formNoValidate() {
-        return this.button.formNoValidate
-    }
+  get formMethod() {
+    return this.button.formMethod;
+  }
 
-    get formTarget() {
-        return this.button.formTarget
-    }
+  get formNoValidate() {
+    return this.button.formNoValidate;
+  }
 
-    get name() {
-        return this.button.name
-    }
+  get formTarget() {
+    return this.button.formTarget;
+  }
 
-    get type() {
-        return this.button.type
-    }
+  get name() {
+    return this.button.name;
+  }
 
-    get validationMessage() {
-        return this.button.validationMessage
-    }
+  get type() {
+    return this.button.type;
+  }
 
-    get validity() {
-        return this.button.validity
-    }
+  get validationMessage() {
+    return this.button.validationMessage;
+  }
 
-    get willValidate() {
-        return this.button.willValidate
-    }
+  get validity() {
+    return this.button.validity;
+  }
 
-    get labels() {
-        return this.button.labels
-    }
+  get willValidate() {
+    return this.button.willValidate;
+  }
 
-    get value() {
-        return this.button.value
-    }
+  get labels() {
+    return this.button.labels;
+  }
 
-    checkValidity() {
-        return this.button.checkValidity()
-    }
+  get value() {
+    return this.button.value;
+  }
 
-    reportValidity() {
-        return this.button.reportValidity()
-    }
+  checkValidity() {
+    return this.button.checkValidity();
+  }
 
-    setCustomValidity(error: string) {
-        return this.button.setCustomValidity(error)
-    }
+  reportValidity() {
+    return this.button.reportValidity();
+  }
+
+  setCustomValidity(error: string) {
+    return this.button.setCustomValidity(error);
+  }
 }
 
 customElements.define('squoval-button', SquovalButton);
