@@ -1,3 +1,4 @@
+export const css = `
 button {
     all: unset;
     all: inherit;
@@ -5,3 +6,4 @@ button {
     position: absolute;
     inset: 0;
 }
+`;

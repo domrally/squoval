@@ -2,18 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SquovalButton = void 0;
 const squoval_element_js_1 = require("./squoval-element.js");
+const squoval_button_html_js_1 = require("./squoval-button/squoval-button.html.js");
+const squoval_button_css_js_1 = require("./squoval-button/squoval-button.css.js");
 class SquovalButton extends squoval_element_js_1.SquovalElement {
     constructor() {
         super();
-        this.thing();
-    }
-    async thing() {
-        const cssWait = this.fetchText('./squoval-button/squoval-button.css'), htmlWait = this.fetchText('./squoval-button/squoval-button.html'), [css, html] = await Promise.all([cssWait, htmlWait]);
-        this.innerHTML = `<style>${css}</style>${html}`;
-    }
-    async fetchText(uri) {
-        const thing = await fetch(uri);
-        return thing.text();
+        this.innerHTML = `<style>${squoval_button_css_js_1.css}</style>${squoval_button_html_js_1.html}`;
     }
     get button() {
         return this.firstElementChild;

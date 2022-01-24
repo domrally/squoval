@@ -1,22 +1,12 @@
 import {SquovalElement} from './squoval-element.js';
+import {html} from './squoval-button/squoval-button.html.js';
+import {css} from './squoval-button/squoval-button.css.js';
 
 export class SquovalButton extends SquovalElement implements HTMLButtonElement {
   constructor() {
     super();
-    this.thing();
-  }
-
-  async thing() {
-    const cssWait = this.fetchText('./squoval-button/squoval-button.css'),
-      htmlWait = this.fetchText('./squoval-button/squoval-button.html'),
-      [css, html] = await Promise.all([cssWait, htmlWait]);
 
     this.innerHTML = `<style>${css}</style>${html}`;
-  }
-
-  async fetchText(uri: string) {
-    const thing = await fetch(uri);
-    return thing.text();
   }
 
   get button() {

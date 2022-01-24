@@ -1,8 +1,6 @@
 import { SquovalElement } from './squoval-element.js';
 export declare class SquovalButton extends SquovalElement implements HTMLButtonElement {
     constructor();
-    thing(): Promise<void>;
-    fetchText(uri: string): Promise<string>;
     get button(): HTMLButtonElement;
     get disabled(): boolean;
     get form(): HTMLFormElement | null;
