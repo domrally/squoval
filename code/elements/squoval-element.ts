@@ -1,6 +1,17 @@
-import {SquovalCurve} from './squoval-curve.js';
+import {SquovalCurve} from '../math/squoval-curve.js';
+import {css} from '../components/squoval-element/squoval-element.css.js';
 
-export function observeResizing(htmlElement: HTMLElement) {
+export abstract class SquovalElement extends HTMLElement {
+  constructor(style: string, html: string) {
+    super();
+
+    this.innerHTML = `<style>${css}${style}</style>${html}`;
+
+    observeResizing(this);
+  }
+}
+
+const observeResizing = (htmlElement: HTMLElement) => {
   const onResize = new ResizeObserver(resize(htmlElement));
   onResize.observe(htmlElement);
 }
