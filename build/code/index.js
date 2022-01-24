@@ -5,10 +5,10 @@ var squoval_element_js_1 = require("./modules/squoval-element.js");
 Object.defineProperty(exports, "SquovalElement", { enumerable: true, get: function () { return squoval_element_js_1.SquovalElement; } });
 var squoval_button_js_1 = require("./modules/squoval-button.js");
 Object.defineProperty(exports, "SquovalButton", { enumerable: true, get: function () { return squoval_button_js_1.SquovalButton; } });
-var squoval_label_js_1 = require("./modules/custom-elements/squoval-label.js");
+var squoval_label_js_1 = require("./modules/squoval-label.js");
 Object.defineProperty(exports, "SquovalLabel", { enumerable: true, get: function () { return squoval_label_js_1.SquovalLabel; } });
-var squoval_input_js_1 = require("./modules/custom-elements/squoval-input.js");
+var squoval_input_js_1 = require("./modules/squoval-input.js");
 Object.defineProperty(exports, "SquovalInput", { enumerable: true, get: function () { return squoval_input_js_1.SquovalInput; } });
-var squoval_img_js_1 = require("./modules/custom-elements/squoval-img.js");
+var squoval_img_js_1 = require("./modules/squoval-img.js");
 Object.defineProperty(exports, "SquovalImg", { enumerable: true, get: function () { return squoval_img_js_1.SquovalImg; } });
 //# sourceMappingURL=index.js.map

@@ -1,4 +1,4 @@
-import {observeResizing} from './observe-resizing.js';
+import {observeResizing} from './squoval-element/observe-resizing.js';
 
 export class SquovalInput extends HTMLInputElement {
   constructor() {

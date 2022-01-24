@@ -1,5 +1,5 @@
-import {observeResizing} from './custom-elements/observe-resizing.js';
-import {css} from './custom-elements/squoval-element.css.js';
+import {observeResizing} from './squoval-element/observe-resizing.js';
+import {css} from './squoval-element/squoval-element.css.js';
 
 export class SquovalElement extends HTMLElement {
   constructor(style: string, html: string) {

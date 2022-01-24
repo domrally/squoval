@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SquovalElement = void 0;
-const observe_resizing_js_1 = require("./custom-elements/observe-resizing.js");
-const squoval_element_css_js_1 = require("./custom-elements/squoval-element.css.js");
+const observe_resizing_js_1 = require("./squoval-element/observe-resizing.js");
+const squoval_element_css_js_1 = require("./squoval-element/squoval-element.css.js");
 class SquovalElement extends HTMLElement {
     constructor(style, html) {
         super();

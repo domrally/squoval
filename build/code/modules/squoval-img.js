@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SquovalImg = void 0;
-const observe_resizing_js_1 = require("./observe-resizing.js");
+const observe_resizing_js_1 = require("./squoval-element/observe-resizing.js");
 class SquovalImg extends HTMLImageElement {
     constructor() {
         super();
