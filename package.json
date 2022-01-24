@@ -1,6 +1,6 @@
 {
     "name": "squoval",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "flatter and smoother rounded corners",
     "main": "build/code/index.js",
     "types": "build/types/index.d.ts",
