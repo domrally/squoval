@@ -9,7 +9,7 @@ class SquovalButton extends squoval_element_js_1.SquovalElement {
         super(squoval_button_css_js_1.css, squoval_button_html_js_1.html);
     }
     get button() {
-        return this.firstElementChild;
+        return this.lastElementChild;
     }
     get disabled() {
         return this.button.disabled;

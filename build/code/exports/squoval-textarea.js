@@ -107,7 +107,7 @@ class SquovalTextarea extends squoval_element_js_1.SquovalElement {
         return this.textarea.setCustomValidity(error);
     }
     get textarea() {
-        return this.firstElementChild;
+        return this.lastElementChild;
     }
 }
 exports.SquovalTextarea = SquovalTextarea;

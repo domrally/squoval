@@ -1,6 +1,6 @@
 import {SquovalElement} from '../modules/squoval-element.js';
-import {html} from '../modules/squoval-button/squoval-button.html.js';
-import {css} from '../modules/squoval-button/squoval-button.css.js';
+import {html} from '../modules/squoval-textarea/squoval-textarea.html.js';
+import {css} from '../modules/squoval-textarea/squoval-textarea.css.js';
 
 export class SquovalTextarea
   extends SquovalElement
@@ -145,7 +145,7 @@ export class SquovalTextarea
   }
 
   get textarea() {
-    return this.firstElementChild as HTMLTextAreaElement;
+    return this.lastElementChild as HTMLTextAreaElement;
   }
 }
 

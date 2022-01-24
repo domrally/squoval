@@ -8,7 +8,7 @@ export class SquovalButton extends SquovalElement implements HTMLButtonElement {
   }
 
   get button() {
-    return this.firstElementChild as HTMLButtonElement;
+    return this.lastElementChild as HTMLButtonElement;
   }
 
   get disabled() {

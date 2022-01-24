@@ -9,7 +9,7 @@ class SquovalDiv extends squoval_element_js_1.SquovalElement {
         super(squoval_div_css_js_1.css, squoval_div_html_js_1.html);
     }
     get align() {
-        return this.firstElementChild.align;
+        return this.lastElementChild.align;
     }
 }
 exports.SquovalDiv = SquovalDiv;
