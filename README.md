@@ -3,13 +3,13 @@ flatter and smoother rounded corners
 
 <br>
 
-#### Use on built-in elements
+#### Use as drop-in replacements for built-in elements
 ```html
+<squoval-div></squoval-div>
 <squoval-img></squoval-img>
 <squoval-input></squoval-input>
 <squoval-label></squoval-label>
 <squoval-button></squoval-button>
-<squoval-div></squoval-div>
 ```
 
 <br>
