@@ -1,17 +1,13 @@
 import {observeResizing} from './custom-elements/observe-resizing.js';
+import {css} from './custom-elements/squoval-element.css.js';
 
 export class SquovalElement extends HTMLElement {
-  constructor() {
+  constructor(style: string, html: string) {
     super();
 
-    observeResizing(this);
-  }
+    this.innerHTML = `<style>${css}${style}</style>${html}`;
 
-  static get html() {
-    return '';
-  }
-  static get css() {
-    return '';
+    observeResizing(this);
   }
 }
 

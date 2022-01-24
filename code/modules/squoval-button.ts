@@ -4,9 +4,7 @@ import {css} from './squoval-button/squoval-button.css.js';
 
 export class SquovalButton extends SquovalElement implements HTMLButtonElement {
   constructor() {
-    super();
-
-    this.innerHTML = `<style>${css}</style>${html}`;
+    super(css, html);
   }
 
   get button() {

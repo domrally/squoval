@@ -6,8 +6,7 @@ const squoval_button_html_js_1 = require("./squoval-button/squoval-button.html.j
 const squoval_button_css_js_1 = require("./squoval-button/squoval-button.css.js");
 class SquovalButton extends squoval_element_js_1.SquovalElement {
     constructor() {
-        super();
-        this.innerHTML = `<style>${squoval_button_css_js_1.css}</style>${squoval_button_html_js_1.html}`;
+        super(squoval_button_css_js_1.css, squoval_button_html_js_1.html);
     }
     get button() {
         return this.firstElementChild;
