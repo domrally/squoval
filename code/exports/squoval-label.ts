@@ -1,4 +1,4 @@
-import { SquovalElement } from '../modules/squoval-element.js'
+import {SquovalElement} from '../modules/squoval-element.js';
 
 export class SquovalLabel extends SquovalElement {
   constructor() {

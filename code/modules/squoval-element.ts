@@ -14,7 +14,7 @@ export abstract class SquovalElement extends HTMLElement {
 const observeResizing = (htmlElement: HTMLElement) => {
   const onResize = new ResizeObserver(resize(htmlElement));
   onResize.observe(htmlElement);
-}
+};
 
 const resize = (htmlElement: HTMLElement) => () => {
   const {PI} = Math,
