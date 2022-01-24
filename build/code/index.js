@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.SquovalImg = exports.SquovalInput = exports.SquovalLabel = exports.SquovalButton = exports.SquovalElement = void 0;
 var squoval_element_js_1 = require("./modules/squoval-element.js");
 Object.defineProperty(exports, "SquovalElement", { enumerable: true, get: function () { return squoval_element_js_1.SquovalElement; } });
-var squoval_button_js_1 = require("./modules/custom-elements/squoval-button.js");
+var squoval_button_js_1 = require("./modules/squoval-button.js");
 Object.defineProperty(exports, "SquovalButton", { enumerable: true, get: function () { return squoval_button_js_1.SquovalButton; } });
 var squoval_label_js_1 = require("./modules/custom-elements/squoval-label.js");
 Object.defineProperty(exports, "SquovalLabel", { enumerable: true, get: function () { return squoval_label_js_1.SquovalLabel; } });
