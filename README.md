@@ -32,6 +32,7 @@ npm i squoval
 
 <br>
 
+```
 build/
 ├── code/
 │   ├── modules/
@@ -62,6 +63,7 @@ tests/
 ├── modules/
 ├── exports/
 ╰── index.js
+```
 
 <br><br>
 
