@@ -4,7 +4,7 @@
 <head>
     <title>Squoval —rounded corners</title>
     <meta charset="utf-8">
-    <link href="./web/style.css" rel="stylesheet">
+    <link href="./exports/style.css" rel="stylesheet">
     <script type="module" src="https://cdn.skypack.dev/texte?min"></script>
     <script type="module" src="https://cdn.skypack.dev/squoval?min"></script>
 </head>
@@ -12,10 +12,12 @@
 <body>
     <header>
         <squoval-button class="enter"></squoval-button>
+
+        <squoval-textarea class="notes"></squoval-textarea>
     </header>
 
     <main>
-        <pre is="texte-pre" src="essay.texte"></pre>
+        <pre is="texte-pre" src="./exports/essay.texte"></pre>
     </main>
 
     <footer>
