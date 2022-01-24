@@ -1,7 +1,7 @@
-import {cover} from '../components/squoval-curve/cover.js';
-import {hyperbola} from '../components/squoval-curve/hyperbola.js';
-import {errorFunction} from '../components/squoval-curve/error-function.js';
-import {circle} from '../components/squoval-curve/circle.js';
+import {cover} from '../modules/squoval-curve/cover.js';
+import {hyperbola} from '../modules/squoval-curve/hyperbola.js';
+import {errorFunction} from '../modules/squoval-curve/error-function.js';
+import {circle} from '../modules/squoval-curve/circle.js';
 
 export const SquovalCurve =
   (aspectRatio = 1) =>

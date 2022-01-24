@@ -1,5 +1,5 @@
-import {SquovalCurve} from '../math/squoval-curve.js';
-import {css} from '../components/squoval-element/squoval-element.css.js';
+import {SquovalCurve} from '../exports/squoval-curve.js';
+import {css} from './squoval-element/squoval-element.css.js';
 
 export abstract class SquovalElement extends HTMLElement {
   constructor(style: string, html: string) {
