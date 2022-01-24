@@ -1,0 +1,35 @@
+import { SquovalElement } from '../modules/squoval-element.js';
+export declare class SquovalTextarea extends SquovalElement implements HTMLTextAreaElement {
+    constructor();
+    get autocomplete(): string;
+    get cols(): number;
+    get defaultValue(): string;
+    get dirName(): string;
+    get maxLength(): number;
+    get minLength(): number;
+    get placeholder(): string;
+    get readOnly(): boolean;
+    get required(): boolean;
+    get rows(): number;
+    get selectionDirection(): "none" | "forward" | "backward";
+    get selectionEnd(): number;
+    get selectionStart(): number;
+    get textLength(): number;
+    get wrap(): string;
+    select(): void;
+    setRangeText(replacement: string, start?: number, end?: number, selectionMode?: SelectionMode): void;
+    setSelectionRange(start: number | null, end: number | null, direction?: 'forward' | 'backward' | 'none'): void;
+    get disabled(): boolean;
+    get form(): HTMLFormElement | null;
+    get name(): string;
+    get type(): string;
+    get validationMessage(): string;
+    get validity(): ValidityState;
+    get willValidate(): boolean;
+    get labels(): NodeListOf<HTMLLabelElement>;
+    get value(): string;
+    checkValidity(): boolean;
+    reportValidity(): boolean;
+    setCustomValidity(error: string): void;
+    get textarea(): HTMLTextAreaElement;
+}
