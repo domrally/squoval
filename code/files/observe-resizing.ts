@@ -1,4 +1,4 @@
-import {SquovalCurve} from '../squoval-curve.js';
+import {SquovalCurve} from './squoval-curve.js';
 
 export function observeResizing(htmlElement: HTMLElement) {
   const onResize = new ResizeObserver(resize(htmlElement));

@@ -1,4 +1,4 @@
-import {observeResizing} from '../folders/squoval-element/observe-resizing.js';
+import {observeResizing} from './observe-resizing.js';
 import {css} from '../folders/squoval-element/squoval-element.css.js';
 
 export abstract class SquovalElement extends HTMLElement {

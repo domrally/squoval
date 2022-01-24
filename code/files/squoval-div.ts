@@ -6,8 +6,8 @@ export class SquovalDiv extends SquovalElement implements HTMLDivElement {
   constructor() {
     super(css, html);
   }
-  
-get align() {
+
+  get align() {
     return (this.firstElementChild as HTMLDivElement).align;
   }
 }
