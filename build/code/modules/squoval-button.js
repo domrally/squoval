@@ -8,7 +8,7 @@ class SquovalButton extends squoval_element_js_1.SquovalElement {
         this.thing();
     }
     async thing() {
-        const cssWait = this.fetchText('./squoval-button.css'), htmlWait = this.fetchText('./squoval-button.html'), [css, html] = await Promise.all([cssWait, htmlWait]);
+        const cssWait = this.fetchText('./squoval-button/squoval-button.css'), htmlWait = this.fetchText('./squoval-button/squoval-button.html'), [css, html] = await Promise.all([cssWait, htmlWait]);
         this.innerHTML = `<style>${css}</style>${html}`;
     }
     async fetchText(uri) {
