@@ -48,32 +48,32 @@ npm i squoval
 ```
 build/
 ├── code/
-│   ├── modules/
 │   ├── exports/
+│   ├── modules/
 │   ╰── index.js
 │
 ╰── types/
-    ├── modules/
     ├── exports/
+    ├── modules/
     ╰── index.d.ts
 
 code/
-├── modules/
 ├── exports/
+├── modules/
 ╰── index.ts
 
 docs/
-├── modules/
-│   ├── pages/
-│   ╰── fonts/
-│
 ├── exports/
 │   ╰── style.css
+│
+├── modules/
+│   ├── fonts/
+│   ╰── pages/
 │
 ╰── index.html
 
 tests/
-├── modules/
 ├── exports/
-╰── index.js
+├── modules/
+╰── tests.js
 ```
