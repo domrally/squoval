@@ -2,6 +2,14 @@
 # Squoval
 flatter and smoother rounded corners · web components
 
+```
+╭   ╮         ╭                  ╮
+│ x │         │ cos t  │ csc t │ │
+│   │  =  erf │        │       │ │
+│ y │         │ sin t  │ sec t │ │
+╰   ╯         ╰                  ╯
+```
+
 <br>
 
 **. Use as drop-in replacements for built-in elements**
