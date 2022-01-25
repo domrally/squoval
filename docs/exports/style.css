@@ -7,15 +7,16 @@ button {
 
 body {
     background: url(./favicon.png);
+
     position: fixed;
     inset: 0;
 
     display: grid;
     grid: 
     'head head' 1fr
-    'eq   eq  ' 1fr
-    'eq   eq  ' 1fr
-    'nav  nav ' 1fr
+    'butt butt' 1fr
+    'butt butt' 1fr
+    'foot foot' 1fr
     ;
 
     place-items: center;
@@ -25,42 +26,34 @@ body {
     animation: blur .4s both;
 }
 
-header {
+footer {
+    grid-area: foot;
+}
+
+h1 {
     grid-area: head;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    place-content: center;
-    position: relative;
-    overflow: hidden;
+    font-family: 'Rubik', sans-serif;
+    font-size: 7vh;
+    font-weight: 300;
+    color: black;
 }
 
 h1::after {
     content: 'squoval';
-    font-family: 'Rubik', sans-serif;
-    font-size: 7vh;
-    font-weight: 300;
-    color: white;
-    text-shadow: 0 0 1vh #0003;
 }
 
 main {
-    color: grey;
-    font-size: 2vh;
-
     z-index: -1;
-
     position: fixed;
     inset: 0;
     background: linear-gradient(#fff, #fffe);
 }
 
-.enter {
-    grid-area: eq;
+squoval-button {
+    grid-area: butt;
     font-size: 7vh;
-    width: 5em;
-    height: 2em;
     font-weight: 800;
+    padding: .6em;
     letter-spacing: .06em;
     background: darkred;
     color: snow;
@@ -72,20 +65,20 @@ main {
     place-content: center;
 }
 
-.enter::after {
-    content: 'Enter.';
+squoval-button::after {
+    content: 'Coming Soon';
 }
 
-.enter:hover {
+/* .enter:hover {
     color: black;
     background: salmon;
     cursor: pointer;
-}
+} */
 
-.enter:active {
+/* .enter:active {
     background: black;
     color: white;
-}
+} */
 
 nav {
     grid-area: nav;
