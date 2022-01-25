@@ -8,9 +8,11 @@ export const Curve =
   (aspectRatio = 1) =>
   (t = 0) => {
     //
-    // ╭ x ╮      ╭ cost ╷csct╷ ╮
-    // │   │ = erf│      │    │ │
-    // ╰ y ╯      ╰ sint ╵sect╵ ╯
+    // ╭   ╮         ╭                  ╮
+    // │ x │         │ cos t  │ csc t │ │
+    // │   │  =  erf │        │       │ │
+    // │ y │         │ sin t  │ sec t │ │
+    // ╰   ╯         ╰                  ╯
     const {x: cosine, y: sine} = circle(t),
       {x: cosecant, y: secant} = hyperbola(t),
       x = errorFunction(cosine * cosecant),
