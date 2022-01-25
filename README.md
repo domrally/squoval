@@ -1,4 +1,4 @@
-![readme118](https://user-images.githubusercontent.com/10066435/151022488-9acebdb7-bc07-49ab-8f99-d8c130ce684d.png)
+![Screenshot 2022-01-25 at 09-06-35 Squoval —rounded corners copy](https://user-images.githubusercontent.com/10066435/151048223-a68e95bb-74ab-4574-9e8d-dfea99fcf862.png)
 # Squoval
 flatter and smoother rounded corners · web components
 
