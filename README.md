@@ -1,7 +1,7 @@
 # Squoval
 flatter and smoother rounded corners · web components
 
-![image](https://user-images.githubusercontent.com/10066435/151015149-b4a55b54-9f31-4dbf-987b-8bc06c76720c.png)
+![readmesquoval](https://user-images.githubusercontent.com/10066435/151019400-8cddece5-f683-4c5a-a46c-ee9ae50c4015.png)
 
 <br>
 
