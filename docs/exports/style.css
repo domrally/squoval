@@ -33,7 +33,7 @@ footer {
 h1 {
     grid-area: head;
     font-family: 'Rubik', sans-serif;
-    font-size: 7vh;
+    font-size: 5vh;
     font-weight: 300;
     color: black;
 }
@@ -51,7 +51,7 @@ main {
 
 squoval-button {
     grid-area: butt;
-    font-size: 7vh;
+    font-size: 5vh;
     font-weight: 800;
     padding: .6em;
     letter-spacing: .06em;
