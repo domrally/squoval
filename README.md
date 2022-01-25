@@ -3,9 +3,11 @@
 flatter and smoother rounded corners · web components
 
 ```
-╭ x ╮      ╭ cost ╷csct╷ ╮
-│   │ = erf│      │    │ │
-╰ y ╯      ╰ sint ╵sect╵ ╯
+╭   ╮      ╭                ╮
+│ x │      │ cost  │ csct │ │
+│   │ = erf│       │      │ │
+│ y │      │ sint  │ sect │ │
+╰   ╯      ╰                ╯
 ```
 
 <br>
