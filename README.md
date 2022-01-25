@@ -1,7 +1,6 @@
+![readmesquoval](https://user-images.githubusercontent.com/10066435/151019400-8cddece5-f683-4c5a-a46c-ee9ae50c4015.png)
 # Squoval
 flatter and smoother rounded corners · web components
-
-![readmesquoval](https://user-images.githubusercontent.com/10066435/151019400-8cddece5-f683-4c5a-a46c-ee9ae50c4015.png)
 
 <br>
 
