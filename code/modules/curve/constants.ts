@@ -10,4 +10,4 @@ export const a = (8 * (π - 3)) / (3 * π * (4 - π));
 // 
 // alternate value reduces the maximum
 // relative error to about 0.00013
-// export const a = .147;
+export const aₐ = .147;
