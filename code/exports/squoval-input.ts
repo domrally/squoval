@@ -1,4 +1,4 @@
-import {SquovalElement} from '../modules/squoval-element.js';
+import {SquovalElement} from './squoval-element.js';
 
 export class SquovalInput extends SquovalElement {
   constructor() {

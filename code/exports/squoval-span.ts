@@ -1,4 +1,4 @@
-import {SquovalElement} from '../modules/squoval-element.js';
+import {SquovalElement} from './squoval-element.js';
 // import {html} from './squoval-span/squoval-span.html.js';
 // import {css} from './squoval-span/squoval-span.css.js';
 

@@ -1,5 +1,5 @@
-import {SquovalCurve} from '../exports/squoval-curve.js';
-import {css} from './squoval-element/squoval-element.css.js';
+import {Curve} from './curve.js';
+import {css} from '../modules/squoval-element/squoval-element.css.js';
 
 export abstract class SquovalElement extends HTMLElement {
   constructor(style: string, html: string) {
@@ -19,7 +19,7 @@ const observeResizing = (htmlElement: HTMLElement) => {
 const resize = (htmlElement: HTMLElement) => () => {
   const {PI} = Math,
     {clientWidth, clientHeight, style} = htmlElement,
-    curve = SquovalCurve(clientWidth / clientHeight),
+    curve = Curve(clientWidth / clientHeight),
     step = (2 * PI) / (clientWidth + clientHeight),
     initial = curve(step / 2),
     digits = 3;

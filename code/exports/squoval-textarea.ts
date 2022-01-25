@@ -1,4 +1,4 @@
-import {SquovalElement} from '../modules/squoval-element.js';
+import {SquovalElement} from './squoval-element.js';
 import {html} from '../modules/squoval-textarea/squoval-textarea.html.js';
 import {css} from '../modules/squoval-textarea/squoval-textarea.css.js';
 
