@@ -48,6 +48,8 @@ main {
     color: grey;
     font-size: 2vh;
 
+    z-index: -1;
+
     position: fixed;
     inset: 0;
     background: linear-gradient(#fff, #fffe);
