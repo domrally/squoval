@@ -46,34 +46,34 @@ npm i squoval
 
 
 ```
-build/
-├── code/
-│   ├── exports/
-│   ├── modules/
+build╱
+├── code╱
+│   ├── exports╱
+│   ├── modules╱
 │   ╰── index.js
 │
-╰── types/
-    ├── exports/
-    ├── modules/
+╰── types╱
+    ├── exports╱
+    ├── modules╱
     ╰── index.d.ts
 
-code/
-├── exports/
-├── modules/
+code╱
+├── exports╱
+├── modules╱
 ╰── index.ts
 
-docs/
-├── exports/
+docs╱
+├── exports╱
 │   ╰── style.css
 │
-├── modules/
-│   ├── fonts/
-│   ╰── pages/
+├── modules╱
+│   ├── fonts╱
+│   ╰── pages╱
 │
 ╰── index.html
 
-tests/
-├── exports/
-├── modules/
+tests╱
+├── exports╱
+├── modules╱
 ╰── tests.js
 ```
