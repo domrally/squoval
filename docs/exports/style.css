@@ -6,10 +6,11 @@ button {
 }
 
 body {
+    background: url(./favicon.png);
     position: fixed;
     inset: 0;
 
-    background: url(./favicon.png);
+    background: #fff8;
 
     display: grid;
     grid: 
@@ -47,9 +48,11 @@ h1::after {
 
 main {
     color: grey;
-    grid-area: eq;
     font-size: 2vh;
-    display: none;
+
+    position: fixed;
+    inset: 0;
+    background: #fffe;
 }
 
 .enter {
