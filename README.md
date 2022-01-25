@@ -53,17 +53,6 @@ npm i squoval
 
 
 ```
-build╱
-├── code╱
-│   ├── exports╱
-│   ├── modules╱
-│   ╰── index.js
-│
-╰── types╱
-    ├── exports╱
-    ├── modules╱
-    ╰── index.d.ts
-
 code╱
 ├── exports╱
 ├── modules╱
