@@ -1,6 +1,9 @@
 # Squoval
 flatter and smoother rounded corners · web components
 
+![image](https://user-images.githubusercontent.com/10066435/151013317-e5479156-7470-451d-8f82-90b8e10e6d38.png)
+
+
 <br>
 
 **. Use as drop-in replacements for built-in elements**
