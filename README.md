@@ -62,18 +62,20 @@ npm i squoval
 
 ```
 code╱
+├── exports.ts
 ├── exports╱
-├── modules╱
-╰── exports.ts
+│
+╰── modules╱
 
 docs╱
+├── index.html
 ├── index╱
-│   ╰── style.css
-├── site/
-╰── index.html
+│
+╰── site╱
 
 tests╱
-├── helpers╱
+├── test.js
 ├── test╱
-╰── test.js
+│
+╰── doubles╱
 ```
