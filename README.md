@@ -1,4 +1,4 @@
-![mai119](https://user-images.githubusercontent.com/10066435/151102545-6ab8a286-fee0-4409-819a-29504eb240a1.png)
+![dia119](https://user-images.githubusercontent.com/10066435/151107478-84c4d3a6-4b87-4183-b89c-38e823bc078a.png)
 # Squoval
 flatter and smoother rounded corners · web components
 
