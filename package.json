@@ -1,6 +1,6 @@
 {
     "name": "squoval",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "flatter and smoother rounded corners",
     "main": "build/code/exports.js",
     "types": "build/types/exports.d.ts",
