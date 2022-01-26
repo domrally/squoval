@@ -64,7 +64,7 @@ npm i squoval
 code╱
 ├── exports╱
 ├── modules╱
-╰── index.ts
+╰── exports.ts
 
 docs╱
 ├── exports╱
