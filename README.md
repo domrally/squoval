@@ -55,6 +55,7 @@ npm i squoval
 ) [![](https://img.shields.io/badge/formatter-prettier-f8bc45?style=for-the-badge&logo=prettier)](./.prettierrc.js
 ) [![](https://img.shields.io/npm/l/squoval?style=for-the-badge&color=3DA639&logo=opensourceinitiative)](./LICENSE
 ) [![](https://img.shields.io/badge/scripting-ts-3178c6?logo=typescript&style=for-the-badge)](./tsconfig.json
+) [![](https://img.shields.io/badge/math-oddball-006eff?style=for-the-badge)](https://github.com/domrally/oddball
 ) [![](https://img.shields.io/badge/style-css-264de4?logo=css3&style=for-the-badge&logoColor=264de4)](./code/modules/squoval-element/squoval-element.css
 ) [![](https://img.shields.io/badge/linter-es-4B32C3?logo=eslint&style=for-the-badge&logoColor=4B32C3)](./.eslintrc.json
 ) [![](https://img.shields.io/badge/guide-google-blueviolet?style=for-the-badge&logo=google&logoColor=blueviolet)](https://github.com/google/gts)
