@@ -67,17 +67,13 @@ code╱
 ╰── exports.ts
 
 docs╱
-├── exports╱
+├── index╱
 │   ╰── style.css
-│
-├── modules╱
-│   ├── fonts╱
-│   ╰── pages╱
-│
+├── site/
 ╰── index.html
 
 tests╱
-├── exports╱
-├── modules╱
-╰── tests.js
+├── helpers╱
+├── test╱
+╰── test.js
 ```

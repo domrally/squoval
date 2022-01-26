@@ -1,5 +1,5 @@
 @import 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;800&display=swap';
-@import '../anicons/anicons.css';
+@import '../site/anicons/anicons.css';
 
 button {
     all: unset;
