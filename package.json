@@ -35,7 +35,7 @@
     },
     "homepage": "https://domrally.github.io/squoval",
     "dependencies": {
-        "oddball": ">0.1.0"
+        "oddball": ">=0.1.0"
     },
     "devDependencies": {
         "@types/node": "^14.11.2",
