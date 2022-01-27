@@ -1,5 +1,3 @@
-customElements.define('super-ellipse', SuperEllipse);
-
 class SuperEllipse extends HTMLElement {
     constructor () {
         super()
@@ -10,6 +8,7 @@ class SuperEllipse extends HTMLElement {
         onResize.observe(this)
     }
 }
+customElements.define('super-ellipse', SuperEllipse);
 
 const Resize = (htmlElement) => () => {
     const { clientWidth, clientHeight, style } = htmlElement,
