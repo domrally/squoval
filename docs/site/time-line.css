@@ -5,7 +5,7 @@
     display: grid;
     place-items: center;
     grid: 
-    'sq sq sq sq' 1fr
+    'sq1 sq2 sq3 sq4' 1fr
     'fc fc fc fc' 1fr
     ;
 }
@@ -17,10 +17,19 @@
     font-weight: 300;
     color: black;
 }
-
+.time:nth-child(1) {
+    grid-area: sq1;
+}
+.time:nth-child(2) {
+    grid-area: sq2;
+}
+.time:nth-child(3) {
+    grid-area: sq3;
+}
+.time:nth-child(4) {
+    grid-area: sq4;
+}
 .time {
-    grid-area: sq;
-
     border-radius: 22.5%;
 
     display: grid;
