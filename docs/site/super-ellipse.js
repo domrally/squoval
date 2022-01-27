@@ -1,14 +1,15 @@
-class SuperEllipse extends HTMLElement {
-    constructor () {
-        super()
+const k = 0.196705,
+    { cos, sin, pow } = Math
 
-        const resize = Resize(this),
-            onResize = new ResizeObserver(resize)
+const curve = (t = 0) => {
+    const x = pow(cos(t), k),
+        y = pow(sin(t), k)
 
-        onResize.observe(this)
-    }
+    x++, y++;
+    (x *= 50), (y *= 50)
+
+    return { x, y }
 }
-customElements.define('super-ellipse', SuperEllipse);
 
 const Resize = (htmlElement) => () => {
     const { clientWidth, clientHeight, style } = htmlElement,
@@ -30,15 +31,14 @@ const Resize = (htmlElement) => () => {
     style.clipPath = `polygon(${points})`
 };
 
-const k = 0.196705,
-    { cos, sin, pow } = Math
-    
-const curve = (t = 0) => {
-    const x = pow(cos(t), k),
-        y = pow(sin(t), k);
+class SuperEllipse extends HTMLElement {
+    constructor () {
+        super()
 
-    x++, y++;
-    (x *= 50), (y *= 50);
+        const resize = Resize(this),
+            onResize = new ResizeObserver(resize)
 
-    return { x, y }
+        onResize.observe(this)
+    }
 }
+customElements.define('super-ellipse', SuperEllipse);

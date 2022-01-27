@@ -18,7 +18,7 @@
     color: black;
 }
 
-.timeline > * + * {
+.time {
     grid-area: sq;
 
     border-radius: 22.5%;
