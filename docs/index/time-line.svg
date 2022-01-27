@@ -1,0 +1,9 @@
+<svg>
+    <foreignObject>
+        <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="../site/time-line.css">
+        
+        <div class="squircle" xmlns="http://www.w3.org/1999/xhtml"></div>
+        <div class="squircle apple" xmlns="http://www.w3.org/1999/xhtml"></div>
+        <squoval-div class="squircle" xmlns="http://www.w3.org/1999/xhtml"></squoval-div>
+    </foreignObject>
+</svg>
