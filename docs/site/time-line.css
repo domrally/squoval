@@ -18,7 +18,7 @@
 }
 
 .timeline > * + * {
-    grid-area: squircle;
+    grid-area: sq;
 
     border-radius: 22.5%;
 
