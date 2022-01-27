@@ -1,16 +1,17 @@
 .timeline {
+    grid-area: time;
     width: 50vh;
     margin: auto;
     display: grid;
     place-items: center;
     grid: 
     'sq sq sq sq' 1fr
-    'figcaption' 1fr
+    'fc fc fc fc' 1fr
     ;
 }
 
 .timeline > figcaption {
-    grid-area: figcaption;
+    grid-area: fc;
     font-family: 'Rubik', sans-serif;
     font-size: 5vh;
     font-weight: 300;
