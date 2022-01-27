@@ -1,9 +1,25 @@
 .timeline {
-    display: flex;
-    justify-content: space-around;
+    width: 50vh;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    grid: 
+    'sq sq sq sq' 1fr
+    'figcaption' 1fr
+    ;
 }
 
-.timeline > * {
+.timeline > figcaption {
+    grid-area: figcaption;
+    font-family: 'Rubik', sans-serif;
+    font-size: 5vh;
+    font-weight: 300;
+    color: black;
+}
+
+.timeline > * + * {
+    grid-area: squircle;
+
     border-radius: 22.5%;
 
     display: grid;
