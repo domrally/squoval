@@ -7,29 +7,30 @@ export abstract class SquovalElement extends HTMLElement {
 
     this.innerHTML = `<style>${css}${style}</style>${html}`;
 
-    observeResizing(this);
+    const resize = Resize(this),
+      onResize = new ResizeObserver(resize);
+
+    onResize.observe(this);
   }
 }
 
-const observeResizing = (htmlElement: HTMLElement) => {
-  const onResize = new ResizeObserver(resize(htmlElement));
-  onResize.observe(htmlElement);
-};
-
-const resize = (htmlElement: HTMLElement) => () => {
-  const {PI} = Math,
-    {clientWidth, clientHeight, style} = htmlElement,
+const Resize = (htmlElement: HTMLElement) => () => {
+  const {clientWidth, clientHeight, style} = htmlElement,
     curve = Curve(clientWidth / clientHeight),
-    step = (2 * PI) / (clientWidth + clientHeight),
-    initial = curve(step / 2),
-    digits = 3;
+    step = 1 / (clientWidth + clientHeight),
+    fractionDigits = 2,
+    π2 = Math.PI * 2;
 
-  let polygon = `${initial.x.toFixed(digits)}% ${initial.y.toFixed(digits)}%`;
-  for (let t = (3 * step) / 2; t < 2 * PI; t += step) {
-    const {x, y} = curve(-t);
+  let points = '';
+  for (let t = step / 2; t < π2; t += step) {
+    const {x, y} = curve(-t),
+      X = x.toFixed(fractionDigits),
+      Y = y.toFixed(fractionDigits),
+      // add a comma if this is not the last point
+      comma = π2 - t > step ? ',' : '';
 
-    polygon += `, ${x.toFixed(digits)}% ${y.toFixed(digits)}%`;
+    points += `${X}% ${Y}% ${comma} `;
   }
 
-  style.clipPath = `polygon(${polygon})`;
+  style.clipPath = `polygon(${points})`;
 };
