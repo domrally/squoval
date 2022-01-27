@@ -1,47 +1,47 @@
-const k = 0.196705,
-    { abs,  cos,pow, sign, sin } = Math
+const k = 0.407808,
+  {abs, cos, pow, sign, sin} = Math;
 
 const curve = (t = 0) => {
-    const cosine = cos(t),
-        sine = sin(t);
+  const cosine = cos(t),
+    sine = sin(t);
 
-    let x = pow(abs(cosine), k) * sign(cosine),
-        y = pow(abs(sine), k) * sign(sine);
+  let x = pow(abs(cosine), k) * sign(cosine),
+    y = pow(abs(sine), k) * sign(sine);
 
-    x++, y++;
-    (x *= 50), (y *= 50)
+  x++, y++;
+  (x *= 50), (y *= 50);
 
-    return { x, y }
-}
+  return {x, y};
+};
 
-const Resize = (htmlElement) => () => {
-    const { clientWidth, clientHeight, style } = htmlElement,
-        step = 1 / (clientWidth + clientHeight),
-        fractionDigits = 2,
-        π2 = Math.PI * 2
+const Resize = htmlElement => () => {
+  const {clientWidth, clientHeight, style} = htmlElement,
+    step = 1 / (clientWidth + clientHeight),
+    fractionDigits = 2,
+    π2 = Math.PI * 2;
 
-    let points = ''
-    for (let t = step / 2; t < π2; t += step) {
-        const { x, y } = curve(-t),
-            X = x.toFixed(fractionDigits),
-            Y = y.toFixed(fractionDigits),
-            // add a comma if this is not the last point
-            comma = π2 - t > step ? ',' : ''
+  let points = '';
+  for (let t = step / 2; t < π2; t += step) {
+    const {x, y} = curve(-t),
+      X = x.toFixed(fractionDigits),
+      Y = y.toFixed(fractionDigits),
+      // add a comma if this is not the last point
+      comma = π2 - t > step ? ',' : '';
 
-        points += `${X}% ${Y}% ${comma} `
-    }
+    points += `${X}% ${Y}% ${comma} `;
+  }
 
-    style.clipPath = `polygon(${points})`
+  style.clipPath = `polygon(${points})`;
 };
 
 class SuperEllipse extends HTMLElement {
-    constructor () {
-        super()
+  constructor() {
+    super();
 
-        const resize = Resize(this),
-            onResize = new ResizeObserver(resize)
+    const resize = Resize(this),
+      onResize = new ResizeObserver(resize);
 
-        onResize.observe(this)
-    }
+    onResize.observe(this);
+  }
 }
 customElements.define('super-ellipse', SuperEllipse);
