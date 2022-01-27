@@ -12,9 +12,16 @@ flatter and smoother rounded corners · web components
 
 <br>
 
-## .Use as drop-in replacements for built-in elements
+`` `sh`` 
+```sh
+npm i squoval
+```
 
 `` `html`` 
+```html
+<script src="https://cdn.skypack.dev/squoval?min" type="module"></script>
+```
+
 ```html
 <squoval-div></squoval-div>
 <squoval-span></squoval-span>
@@ -25,24 +32,6 @@ flatter and smoother rounded corners · web components
 </squoval-label>
 
 <squoval-img src=""></squoval-img>
-```
-
-<br>
-
-## .If using in html
-
-`` `html`` 
-```html
-<script src="https://cdn.skypack.dev/squoval?min" type="module"></script>
-```
-
-<br>
-
-## .If using in node
-
-`` `sh`` 
-```sh
-npm i squoval
 ```
 
 <br>
