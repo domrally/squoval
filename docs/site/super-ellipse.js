@@ -2,7 +2,7 @@ const k = 0.196705,
     { cos, sin, pow } = Math
 
 const curve = (t = 0) => {
-    const x = pow(cos(t), k),
+    let x = pow(cos(t), k),
         y = pow(sin(t), k)
 
     x++, y++;
