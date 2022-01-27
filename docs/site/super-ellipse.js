@@ -1,9 +1,12 @@
 const k = 0.196705,
-    { cos, sin, pow } = Math
+    { abs,  cos,pow, sign, sin } = Math
 
 const curve = (t = 0) => {
-    let x = pow(cos(t), k),
-        y = pow(sin(t), k)
+    const cosine = cos(t),
+        sine = sin(t);
+
+    let x = pow(abs(cosine), k) * sign(cosine),
+        y = pow(abs(sine), k) * sign(sine);
 
     x++, y++;
     (x *= 50), (y *= 50)
