@@ -4,7 +4,7 @@ import {squoval} from '../modules/curve/squoval.js';
 
 export class SquovalCurve {
   constructor(
-    public borderRadius: string,
+    public borderRadius: number,
     public width: number,
     public height: number
   ) {}
@@ -12,16 +12,14 @@ export class SquovalCurve {
   at(t: number) {
     let [x, y] = squoval(t);
 
-    [x, y] = round(x, y, (2 * this.radius) / Math.min(this.width, this.height));
+    [x, y] = round(
+      x,
+      y,
+      (2 * this.borderRadius) / Math.min(this.width, this.height)
+    );
     [x, y] = cover(x, y, this.width / this.height);
 
     return this.format(x, y);
-  }
-
-  get radius() {
-    const replaced = this.borderRadius?.replace?.('px', '') ?? 0;
-
-    return parseFloat(replaced);
   }
 
   format(x: number, y: number): `${string}% ${string}%` {

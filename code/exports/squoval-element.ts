@@ -21,13 +21,12 @@ export abstract class SquovalElement extends HTMLElement {
   }
 
   draw(shadowRoot: ShadowRoot) {
-    const {clientHeight, clientWidth} = this,
-      curve = new SquovalCurve(
-        getComputedStyle(this).borderTopLeftRadius,
-        clientWidth,
-        clientHeight
+    const curve = new SquovalCurve(
+        this.borderTopLeftRadius,
+        this.width,
+        this.height
       ),
-      step = 1 / (clientWidth + clientHeight),
+      step = 1 / (this.width + this.height),
       halfStep = step / 2,
       π2 = Math.PI * 2;
 
@@ -47,4 +46,21 @@ export abstract class SquovalElement extends HTMLElement {
     }
     `;
   }
+
+  get borderTopLeftRadius() {
+    const style = this.computedStyle.borderTopLeftRadius?.replace?.('px', '');
+    return parseFloat(style ?? 0);
+  }
+
+  get width() {
+    const style = this.computedStyle.width?.replace?.('px', '');
+    return parseFloat(style ?? 0);
+  }
+
+  get height() {
+    const style = this.computedStyle.height?.replace?.('px', '');
+    return parseFloat(style ?? 0);
+  }
+
+  computedStyle = getComputedStyle(this);
 }

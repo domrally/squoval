@@ -2,7 +2,6 @@ import {errorFunction} from 'oddball';
 import {Point} from './point.js';
 
 export function round(x: number, y: number, radius: number): Point {
-  radius = 0.45;
   const scale = min(max(0, radius / k), 1),
     offset = 1 - scale;
 
