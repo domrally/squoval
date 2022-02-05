@@ -1,15 +1,19 @@
 import {errorFunction} from 'oddball';
 import {Point} from './point.js';
 
-export function round(x: number, y: number, roundness: number): Point {
-  // k = (2 + √2) (1 - erf 1)
-  const k = (2 + Math.sqrt(2)) * (1 - errorFunction(1));
-  roundness *= k;
+export function round(x: number, y: number, radius: number): Point {
+  const offset = 1 - radius,
+    scale = radius / k;
 
-  const squareness = 1 - roundness;
+  x += offset * sign(x);
+  x *= scale;
 
-  x = roundness * x + squareness * Math.sign(x);
-  y = roundness * y + squareness * Math.sign(y);
+  y += offset * sign(y);
+  y *= scale;
 
   return [x, y];
 }
+
+const {sign, sqrt} = Math,
+  // k = (2 + √2) (1 - erf 1)
+  k = (2 + sqrt(2)) * (1 - errorFunction(1));
