@@ -21,8 +21,12 @@ export abstract class SquovalElement extends HTMLElement {
   }
 
   draw(shadowRoot: ShadowRoot) {
-    const {clientHeight, clientWidth, style} = this,
-      curve = new SquovalCurve(style.borderRadius, clientWidth, clientHeight),
+    const {clientHeight, clientWidth} = this,
+      curve = new SquovalCurve(
+        getComputedStyle(this).borderTopLeftRadius,
+        clientWidth,
+        clientHeight
+      ),
       step = 1 / (clientWidth + clientHeight),
       halfStep = step / 2,
       π2 = Math.PI * 2;
