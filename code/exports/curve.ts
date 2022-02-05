@@ -6,14 +6,15 @@ export class SquovalCurve {
   constructor(
     public borderRadius: number,
     public width: number,
-    public height: number
+    public height: number,
+    public aspectRatio: number,
   ) {}
 
   at(t: number) {
     let [x, y] = squoval(t);
 
     [x, y] = round(x, y, this.borderRadius);
-    [x, y] = cover(x, y, this.width / this.height);
+    [x, y] = cover(x, y, this.aspectRatio);
 
     return this.format(x, y);
   }

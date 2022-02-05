@@ -24,7 +24,8 @@ export abstract class SquovalElement extends HTMLElement {
     const curve = new SquovalCurve(
         this.borderTopLeftRadius,
         this.width,
-        this.height
+        this.height,
+        this.clientWidth / this.clientHeight,
       ),
       step = 1 / (this.width + this.height),
       halfStep = step / 2,
