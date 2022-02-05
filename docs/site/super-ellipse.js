@@ -44,8 +44,8 @@ class SuperEllipse extends HTMLElement {
   constructor() {
     super();
 
-    const shadowRoot = this.attachShadow({ mode: 'closed' })
-      shadowRoot.innerHTML = `<style></style>`;
+    const shadowRoot = this.attachShadow({ mode: 'open' })
+      shadowRoot.innerHTML = `<style></style><slot></slot>`;
 
     const resize = Resize(this, shadowRoot),
       onResize = new ResizeObserver(resize);

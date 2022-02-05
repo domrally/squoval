@@ -53,10 +53,6 @@
     content: '1981';
 }
 
-super-ellipse.time::after {
-    content: '1818';
-}
-
 .iOS7.time::after {
     content: '2013';
 }
