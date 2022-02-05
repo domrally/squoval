@@ -31,12 +31,21 @@ const Resize = htmlElement => () => {
     points += `${X}% ${Y}% ${comma} `;
   }
 
-  style.clipPath = `polygon(${points})`;
+    if (!this.firstChild) return
+
+    this.firstChild.textContent = `
+    :host {
+      clip-path: polygon(${points});
+    }
+    `;
 };
 
 class SuperEllipse extends HTMLElement {
   constructor() {
     super();
+
+    const shadowRoot = this.attachShadow({ mode: 'open' })
+      shadowRoot.innerHTML = `<style></style>`;
 
     const resize = Resize(this),
       onResize = new ResizeObserver(resize);
