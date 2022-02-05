@@ -14,7 +14,7 @@ const curve = (t = 0) => {
   return {x, y};
 };
 
-const Resize = htmlElement => () => {
+const Resize = (htmlElement, shadowRoot) => () => {
   const {clientWidth, clientHeight, style} = htmlElement,
     step = 1 / (clientWidth + clientHeight),
     fractionDigits = 2,
@@ -31,9 +31,9 @@ const Resize = htmlElement => () => {
     points += `${X}% ${Y}% ${comma} `;
   }
 
-    if (!this.shadowRoot?.firstChild) return
+    if (!shadowRoot.firstChild) return
 
-    this.shadowRoot.firstChild.textContent = `
+    shadowRoot.firstChild.textContent = `
     :host {
       clip-path: polygon(${points});
     }
@@ -47,7 +47,7 @@ class SuperEllipse extends HTMLElement {
     const shadowRoot = this.attachShadow({ mode: 'open' })
       shadowRoot.innerHTML = `<style></style>`;
 
-    const resize = Resize(this),
+    const resize = Resize(this, shadowRoot),
       onResize = new ResizeObserver(resize);
 
     onResize.observe(this);
