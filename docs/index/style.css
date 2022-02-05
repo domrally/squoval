@@ -57,6 +57,7 @@ squoval-button {
     font-size: 5vh;
     font-weight: 800;
     padding: .6em;
+    border-radius: 1em;
     letter-spacing: .06em;
     background: darkred;
     color: snow;
