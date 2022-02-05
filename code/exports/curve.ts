@@ -7,7 +7,7 @@ export class SquovalCurve {
     public borderRadius: number,
     public width: number,
     public height: number,
-    public aspectRatio: number,
+    public aspectRatio: number
   ) {}
 
   at(t: number) {

@@ -25,7 +25,7 @@ export abstract class SquovalElement extends HTMLElement {
         this.borderTopLeftRadius,
         this.width,
         this.height,
-        this.clientWidth / this.clientHeight,
+        this.clientWidth / this.clientHeight
       ),
       step = 1 / (this.width + this.height),
       halfStep = step / 2,
