@@ -31,9 +31,9 @@ const Resize = htmlElement => () => {
     points += `${X}% ${Y}% ${comma} `;
   }
 
-    if (!this.firstChild) return
+    if (!this.shadowRoot?.firstChild) return
 
-    this.firstChild.textContent = `
+    this.shadowRoot.firstChild.textContent = `
     :host {
       clip-path: polygon(${points});
     }
