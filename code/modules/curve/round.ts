@@ -5,11 +5,11 @@ export function round(x: number, y: number, radius: number): Point {
   const scale = radius / k,
     offset = 1 - scale;
 
-  x += offset * sign(x);
   x *= scale;
+  x += offset * sign(x);
 
-  y += offset * sign(y);
   y *= scale;
+  y += offset * sign(y);
 
   return [x, y];
 }
