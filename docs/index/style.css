@@ -15,6 +15,7 @@ body {
     display: grid;
     grid: 
     'head head' 1fr
+    'sub sub' 1fr
     'butt butt' 1fr
     'butt butt' 1fr
     'time time' 1fr
@@ -40,8 +41,8 @@ h1 {
     color: black;
 }
 
-h1::after {
-    content: 'squoval';
+h2 {
+    grid-area: sub;
 }
 
 main {

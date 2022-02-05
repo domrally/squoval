@@ -1,13 +1,12 @@
 import {SquovalElement} from './squoval-element.js';
-import {html} from '../modules/squoval-textarea/squoval-textarea.html.js';
-import {css} from '../modules/squoval-textarea/squoval-textarea.css.js';
+import { html } from '../modules/elements/squoval-textarea.html.js';
 
 export class SquovalTextarea
   extends SquovalElement
   implements HTMLTextAreaElement
 {
   constructor() {
-    super(css, html);
+    super(html);
   }
 
   get autocomplete() {

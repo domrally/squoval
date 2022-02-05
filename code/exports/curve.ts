@@ -1,22 +1,35 @@
-import {errorFunction} from 'oddball';
 import {cover} from '../modules/curve/cover.js';
-import {circle} from '../modules/curve/circle.js';
-import {hyperbola} from '../modules/curve/hyperbola.js';
+import {round} from '../modules/curve/round.js';
+import {squoval} from '../modules/curve/squoval.js';
 
-// https://domrally.github.io/squoval
-const k = 1.06563394423898334607794393531990560241311032270502186985589866460684381517;
-export const Curve =
-  (aspectRatio = 1) =>
-  (t = 0) => {
-    // ╭   ╮         ╭                  ╮
-    // │ x │         │ cos t  │ csc t │ │
-    // │   │  =  erf │        │       │ │
-    // │ y │         │ sin t  │ sec t │ │
-    // ╰   ╯         ╰                  ╯
-    const {x: cosine, y: sine} = circle(t),
-      {x: cosecant, y: secant} = hyperbola(t),
-      x = errorFunction(k * cosine * cosecant),
-      y = errorFunction(k * sine * secant);
+export class SquovalCurve {
+  constructor(
+    public borderRadius: string,
+    public width: number,
+    public height: number
+  ) {}
 
-    return cover(aspectRatio, x, y);
-  };
+  at(t: number) {
+    let [x, y] = squoval(t);
+
+    [x, y] = round(x, y, (2 * this.radius) / Math.min(this.width, this.height));
+    [x, y] = cover(x, y, this.width / this.height);
+
+    return this.format(x, y);
+  }
+
+  get radius() {
+    const {replace} = this.borderRadius,
+      replaced = replace('px', '');
+
+    return parseFloat(replaced);
+  }
+
+  format(x: number, y: number): `${string}% ${string}%` {
+    const fractionDigits = 2,
+      xx_xx = x.toFixed(fractionDigits),
+      yy_yy = y.toFixed(fractionDigits);
+
+    return `${xx_xx}% ${yy_yy}%`;
+  }
+}

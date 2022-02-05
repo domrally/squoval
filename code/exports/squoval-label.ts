@@ -2,7 +2,7 @@ import {SquovalElement} from './squoval-element.js';
 
 export class SquovalLabel extends SquovalElement {
   constructor() {
-    super('', '');
+    super('');
   }
 }
 

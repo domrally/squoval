@@ -1,10 +1,9 @@
 import {SquovalElement} from './squoval-element.js';
-import {html} from '../modules/squoval-button/squoval-button.html.js';
-import {css} from '../modules/squoval-button/squoval-button.css.js';
+import {html} from '../modules/elements/squoval-button.html.js';
 
 export class SquovalButton extends SquovalElement implements HTMLButtonElement {
   constructor() {
-    super(css, html);
+    super(html);
   }
 
   get button() {

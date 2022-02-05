@@ -1,4 +1,6 @@
-export const cover = (aspectRatio = 1, x = 0, y = 0) => {
+import {Point} from './point.js';
+
+export function cover(x: number, y: number, aspectRatio: number): Point {
   const {sign} = Math;
 
   if (aspectRatio > 1) {
@@ -12,5 +14,5 @@ export const cover = (aspectRatio = 1, x = 0, y = 0) => {
   x++, y++;
   (x *= 50), (y *= 50);
 
-  return {x, y};
-};
+  return [x, y];
+}

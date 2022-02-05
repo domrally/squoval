@@ -4,7 +4,7 @@ import {SquovalElement} from './squoval-element.js';
 
 export class Squovalspan extends SquovalElement implements HTMLSpanElement {
   constructor() {
-    super('', '');
+    super('');
   }
 }
 

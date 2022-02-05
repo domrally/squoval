@@ -1,10 +1,9 @@
 import {SquovalElement} from './squoval-element.js';
-import {html} from '../modules/squoval-div/squoval-div.html.js';
-import {css} from '../modules/squoval-div/squoval-div.css.js';
+import {html} from '../modules/elements/squoval-div.html.js';
 
 export class SquovalDiv extends SquovalElement implements HTMLDivElement {
   constructor() {
-    super(css, html);
+    super(html);
   }
 
   get align() {

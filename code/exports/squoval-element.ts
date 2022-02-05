@@ -1,36 +1,41 @@
-import {Curve} from './curve.js';
-import {css} from '../modules/squoval-element/squoval-element.css.js';
+import {SquovalCurve} from './curve.js';
 
 export abstract class SquovalElement extends HTMLElement {
-  constructor(style: string, html: string) {
+  constructor(template: string) {
     super();
 
-    this.innerHTML = `<style>${css}${style}</style>${html}`;
+    const shadowRoot = this.attachShadow({mode: 'open'});
+    shadowRoot.innerHTML = `<style></style>${template}`;
 
-    const resize = Resize(this),
-      onResize = new ResizeObserver(resize);
+    const draw = this.draw.bind(this, shadowRoot),
+      onResize = new ResizeObserver(draw),
+      onMutate = new MutationObserver(draw);
 
     onResize.observe(this);
+    onMutate.observe(this);
+  }
+
+  draw(shadowRoot: ShadowRoot) {
+    const {clientHeight, clientWidth, style} = this,
+      curve = new SquovalCurve(style.borderRadius, clientWidth, clientHeight),
+      step = 1 / (clientWidth + clientHeight),
+      halfStep = step / 2,
+      π2 = Math.PI * 2;
+
+    let points = '';
+    for (let t = halfStep; t < π2; t += step) {
+      // value of parametric equation of squoval at t
+      points += curve.at(-t);
+      // add a comma if this is not the last point
+      points += t + step < π2 ? ', ' : '';
+    }
+
+    if (!shadowRoot.firstChild) return;
+
+    shadowRoot.firstChild.textContent = `
+    :host {
+      clip-path: polygon(${points});
+    }
+    `;
   }
 }
-
-const Resize = (htmlElement: HTMLElement) => () => {
-  const {clientWidth, clientHeight, style} = htmlElement,
-    curve = Curve(clientWidth / clientHeight),
-    step = 1 / (clientWidth + clientHeight),
-    fractionDigits = 2,
-    π2 = Math.PI * 2;
-
-  let points = '';
-  for (let t = step / 2; t < π2; t += step) {
-    const {x, y} = curve(-t),
-      X = x.toFixed(fractionDigits),
-      Y = y.toFixed(fractionDigits),
-      // add a comma if this is not the last point
-      comma = π2 - t > step ? ',' : '';
-
-    points += `${X}% ${Y}% ${comma} `;
-  }
-
-  style.clipPath = `polygon(${points})`;
-};
