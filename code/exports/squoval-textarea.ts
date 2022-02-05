@@ -1,5 +1,5 @@
 import {SquovalElement} from './squoval-element.js';
-import { html } from '../modules/elements/squoval-textarea.html.js';
+import {html} from '../modules/elements/squoval-textarea.html.js';
 
 export class SquovalTextarea
   extends SquovalElement

@@ -12,7 +12,7 @@ export abstract class SquovalElement extends HTMLElement {
       onMutate = new MutationObserver(draw);
 
     onResize.observe(this);
-    onMutate.observe(this);
+    onMutate.observe(this, {subtree: true});
   }
 
   draw(shadowRoot: ShadowRoot) {

@@ -19,8 +19,7 @@ export class SquovalCurve {
   }
 
   get radius() {
-    const {replace} = this.borderRadius,
-      replaced = replace('px', '');
+    const replaced = this.borderRadius?.replace?.('px', '') ?? 0;
 
     return parseFloat(replaced);
   }
