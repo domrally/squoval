@@ -69,10 +69,6 @@ squoval-button {
     place-content: center;
 }
 
-squoval-button::after {
-    content: 'Coming Soon';
-}
-
 /* .enter:hover {
     color: black;
     background: salmon;
