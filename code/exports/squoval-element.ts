@@ -48,8 +48,19 @@ export abstract class SquovalElement extends HTMLElement {
   }
 
   get borderTopLeftRadius() {
-    const style = this.computedStyle.borderTopLeftRadius?.replace?.('px', '');
-    return parseFloat(style ?? 0);
+    const {borderTopLeftRadius} = this.computedStyle;
+    let radius = 0;
+
+    if (borderTopLeftRadius?.includes('px')) {
+      const style = borderTopLeftRadius?.replace?.('px', '');
+      radius = parseFloat(style ?? 0);
+      radius = (2 * radius) / Math.min(this.width, this.height);
+    } else if (borderTopLeftRadius?.includes('%')) {
+      const style = borderTopLeftRadius?.replace?.('%', '');
+      radius = parseFloat(style ?? 0) / 50;
+    }
+
+    return radius;
   }
 
   get width() {

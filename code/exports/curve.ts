@@ -12,11 +12,7 @@ export class SquovalCurve {
   at(t: number) {
     let [x, y] = squoval(t);
 
-    [x, y] = round(
-      x,
-      y,
-      (2 * this.borderRadius) / Math.min(this.width, this.height)
-    );
+    [x, y] = round(x, y, this.borderRadius);
     [x, y] = cover(x, y, this.width / this.height);
 
     return this.format(x, y);
