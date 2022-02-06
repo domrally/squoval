@@ -43,15 +43,7 @@ export abstract class SquovalElement extends HTMLElement {
 
     shadowRoot.firstChild.textContent = `
     :host {
-      position: relative;
       clip-path: polygon(${points});
-    }
-
-    :host > * {
-      all: unset;
-      
-      inset: 0;
-      position: absolute;
     }
     `;
   }

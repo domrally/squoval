@@ -1,5 +1,16 @@
 export const html = `
-<button>
-    <slot></slot>
-</button>
+<style>
+  :host {
+    position: relative;
+  }
+
+  button {
+    all: unset;
+
+    inset: 0;
+    position: absolute;
+  }
+</style>
+<button></button>
+<slot></slot>
 `;

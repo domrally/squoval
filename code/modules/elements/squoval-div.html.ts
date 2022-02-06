@@ -1,5 +1,8 @@
 export const html = `
-<div>
-  <slot></slot>
-</div>
+<style>
+  :host {
+    display: block;
+  }
+</style>
+<slot></slot>
 `;
