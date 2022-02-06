@@ -13,8 +13,8 @@ export class SquovalCurve {
   at(t: number) {
     let [x, y] = squoval(t);
 
-    [x, y] = round(x, y, this.borderRadius);
     [x, y] = cover(x, y, this.aspectRatio);
+    [x, y] = round(x, y, this.borderRadius);
 
     return this.format(x, y);
   }
