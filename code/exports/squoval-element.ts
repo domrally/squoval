@@ -45,6 +45,10 @@ export abstract class SquovalElement extends HTMLElement {
     :host {
       clip-path: polygon(${points});
     }
+
+    :host > * {
+      all: inherit;
+    }
     `;
   }
 

@@ -1,1 +1,5 @@
-export const html = '<slot></slot>';
+export const html = `
+<div>
+  <slot></slot>
+</div>
+`;
