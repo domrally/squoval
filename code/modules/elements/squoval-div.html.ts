@@ -1,4 +1,4 @@
-export const html = `
+export const html = () => `
 <style>
   :host {
     display: block;

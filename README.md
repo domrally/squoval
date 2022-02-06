@@ -25,12 +25,7 @@ npm i squoval
 ```html
 <squoval-div></squoval-div>
 <squoval-span></squoval-span>
-
 <squoval-button></squoval-button>
-<squoval-label>
-  <squoval-input></squoval-input>
-</squoval-label>
-
 <squoval-img src=""></squoval-img>
 ```
 

@@ -1,11 +1,11 @@
 import {SquovalCurve} from './curve.js';
 
 export abstract class SquovalElement extends HTMLElement {
-  constructor(template: string) {
+  constructor(html: (that: HTMLElement) => string) {
     super();
 
     const shadowRoot = this.attachShadow({mode: 'open'});
-    shadowRoot.innerHTML = `<style></style>${template}`;
+    shadowRoot.innerHTML = `<style></style>${html(this)}`;
 
     const draw = this.draw.bind(this, shadowRoot),
       onResize = new ResizeObserver(draw),
