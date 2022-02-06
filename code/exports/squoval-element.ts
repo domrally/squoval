@@ -47,6 +47,7 @@ export abstract class SquovalElement extends HTMLElement {
     }
 
     :host > * {
+      all: unset;
       all: inherit;
     }
     `;
