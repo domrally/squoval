@@ -6,17 +6,17 @@ export class SquovalLabel extends SquovalElement implements HTMLLabelElement {
     super(html);
   }
   get label() {
-      return this.querySelector('label')!;
+    return this.querySelector('label')!;
   }
-    get control(): typeof HTMLLabelElement.prototype.control {
-        return this.label.control;
-    }
-    get form(): typeof HTMLLabelElement.prototype.form {
-        return this.label.form;
-    }
-    get htmlFor(): typeof HTMLLabelElement.prototype.htmlFor {
-        return this.label.htmlFor;
-    }
+  get control(): typeof HTMLLabelElement.prototype.control {
+    return this.label.control;
+  }
+  get form(): typeof HTMLLabelElement.prototype.form {
+    return this.label.form;
+  }
+  get htmlFor(): typeof HTMLLabelElement.prototype.htmlFor {
+    return this.label.htmlFor;
+  }
 }
 
 customElements.define('squoval-label', SquovalLabel);
