@@ -1,19 +1,8 @@
 $$
-\begin{pmatrix} 
-  x \\ 
-  y
-\end{pmatrix}
-= \mathrm{erf}
-\begin{pmatrix} 
-  \begin{matrix} 
-    \mathrm{cos} t \\ 
-    \mathrm{sin} t
-  \end{matrix} &
-  \begin{vmatrix} 
-    \mathrm{csc} t \\ 
-    \mathrm{sec} t
-  \end{vmatrix}
-\end{pmatrix}
+\begin{align*}
+  x &= \mathrm{erf}\ \mathrm{atanh}\ \mathrm{cos}\ t \\
+  y &= \mathrm{erf}\ \mathrm{atanh}\ \mathrm{sin}\ t
+\end{align*}
 $$
 
 # Squoval
