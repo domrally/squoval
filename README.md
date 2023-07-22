@@ -27,10 +27,7 @@ npm i squoval
 ```
 
 ```html
-<squoval-div></squoval-div>
-<squoval-span></squoval-span>
-<squoval-button></squoval-button>
-<squoval-img src=""></squoval-img>
+<squoval-element></squoval-element>
 ```
 
 ```
@@ -52,3 +49,34 @@ tests╱
 │
 ╰── doubles╱
 ```
+
+## proof notes
+
+let us say that
+f(t) = erf(cot(t))
+h(t) = erf t
+h'(t) = 2 e^(-z^2) / √π
+g(t) = cot t
+g'(t) = csc² t
+
+the chain rule states that f'(x) = h'(g(t))g'(t)
+so
+f'(t) = (2 / √π) e^(-cot² t) csc² t
+
+the product rule states that (uv)' = u'v + uv'
+so
+u' = (e^(-cot² t))' = -2 cot(t) csc²(t) e^(-cot² t)
+
+u' = -2 cot(t) csc²(t) u
+
+f⁽ⁿ⁾(t) ∝ u ∝ e^(-cot² t)
+
+therefore
+f(t) is flat wherever e^(-cot² t) = 0
+
+limit of e^(-cot² t) as t -> 0 = 0
+
+limit of e^(-cot² t) as t -> nπ = 0
+
+f(t) is asymptotically flat at nπ
+where n is an integer

@@ -1,12 +1,11 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: 'If you use this software, please cite it as below.'
 authors:
-  - family-names: "Mandy"
-    given-names: "Dom"
-    orcid: "https://orcid.org/0000-0001-9378-6548"
-title: "squoval"
-version: 0.0.4
+  - family-names: 'Mandy'
+    given-names: 'Dom'
+    orcid: 'https://orcid.org/0000-0001-9378-6548'
+title: 'squoval'
 date-released: 2022-01-22
-url: "https://domrally.github.io/squoval"
-license: Fair
-repository-code: "https://github.com/domrally/squoval"
+url: 'https://domrally.github.io/squoval'
+license: MIT
+repository-code: 'https://github.com/domrally/squoval'

@@ -1,3 +1,14 @@
 {
-  "extends": "./node_modules/gts/"
+	"extends": ["prettier"],
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 2015
+	},
+	"rules": {
+		"max-classes-per-file": ["error", 1],
+		"no-return-assign": ["error", "except-parens"],
+		"object-shorthand": ["error", "always"],
+		"one-var": ["error", "consecutive"],
+		"radix": ["error", "as-needed"]
+	}
 }
