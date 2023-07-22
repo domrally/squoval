@@ -5,18 +5,34 @@
 
 		<meta charset="utf-8" />
 
-		<script src="../index.js" type="module"></script>
+		<script src="index.js" type="module"></script>
 
-		<script src="https://cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/clipboard/dist/clipboard.js"></script>
 		<script>
 			new ClipboardJS('button')
 		</script>
 	</head>
 
 	<body>
-		<header>
-			<h1>Squoval</h1>
-		</header>
+		<style>
+			main {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: space-around;
+			}
+
+			squoval-element {
+				min-width: 62%;
+				min-height: 25%;
+			}
+
+			button {
+				all: unset;
+				inset: 0;
+				position: absolute;
+			}
+		</style>
 
 		<main>
 			<squoval-element>
