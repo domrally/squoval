@@ -23,7 +23,7 @@ export class SquovalElement extends HTMLElement {
 
 			points = points.slice(0, -2)
 
-			element.shadowRoot.style.clipPath = `polygon(${points})`
+			this.shadowRoot.style.clipPath = `polygon(${points})`
 		}).observe(this)
 	}
 }
