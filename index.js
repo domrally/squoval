@@ -6,7 +6,7 @@ export class SquovalElement extends HTMLElement {
 
 		const shadowRoot = this.attachShadow({ mode: 'open' })
 		shadowRoot.innerHTML = '<slot></slot>'
-		shadowRoot.style.display = 'block'
+		const style = shadowRoot.appendChild(document.createElement('style'))
 
 		new ResizeObserver(() => {
 			const { clientHeight, clientWidth } = this,
@@ -26,7 +26,7 @@ export class SquovalElement extends HTMLElement {
 
 			points = points.slice(0, -2)
 
-			shadowRoot.style.clipPath = `polygon(${points})`
+			style.textContent = `:host { clip-path: polygon(${points}) }`
 		}).observe(this)
 	}
 }
