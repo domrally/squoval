@@ -4,7 +4,10 @@ export class SquovalElement extends HTMLElement {
 	constructor() {
 		super()
 
-		this.attachShadow({ mode: 'open' }).innerHTML = '<slot></slot>'
+		const shadowRoot = this.attachShadow({ mode: 'open' })
+		shadowRoot.innerHTML = '<slot></slot>'
+		shadowRoot.style.display = 'block'
+
 		new ResizeObserver(() => {
 			const { clientHeight, clientWidth } = this,
 				curve = new Curve(clientWidth / clientHeight),
@@ -23,7 +26,7 @@ export class SquovalElement extends HTMLElement {
 
 			points = points.slice(0, -2)
 
-			this.shadowRoot.style.clipPath = `polygon(${points})`
+			shadowRoot.style.clipPath = `polygon(${points})`
 		}).observe(this)
 	}
 }
