@@ -5,12 +5,12 @@
 	"author": "Dom Mandy",
 	"license": "SEE LICENSE IN LICENSE",
 	"type": "module",
-	"main": "index.js",
+	"main": "docs/index.js",
 	"exports": {
-		".": "./index.js"
+		".": "./docs/index.js"
 	},
 	"files": [
-		"index.js"
+		"docs/index.js"
 	],
 	"scripts": {
 		"start": "eslint --fix && prettier --write .",
