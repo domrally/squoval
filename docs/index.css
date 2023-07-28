@@ -54,6 +54,7 @@ main {
 	background: #111;
 	width: 100%;
 	height: 24vh;
+	padding: 0 19vw;
 	justify-content: space-evenly;
 	position: relative;
 }
@@ -66,12 +67,15 @@ h1 {
 	width: 100%;
 }
 h2 {
-	font-size: 3vw;
+	font-size: 6vh;
 	font-family: serif;
+}
+h3 {
+	width: 100%;
 }
 header {
 	width: 90%;
-	height: 24vw;
+	height: 30vh;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -80,7 +84,7 @@ header {
 squoval-element {
 	stroke: none;
 	background: #333;
-	width: 62%;
+	width: 100%;
 	display: grid;
 	align-content: center;
 	position: relative;
@@ -148,6 +152,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 	font-size: 2vh;
 }
 
