@@ -1,32 +1,33 @@
 import { ErrorFunction } from 'oddball'
 
-export class SquovalElement extends HTMLElement {
+class SquovalElement extends HTMLElement {
 	constructor() {
 		super()
 
 		const shadowRoot = this.attachShadow({ mode: 'open' })
-		shadowRoot.innerHTML = '<slot></slot>'
-		const style = shadowRoot.appendChild(document.createElement('style'))
 
 		new ResizeObserver(() => {
 			const { clientHeight, clientWidth } = this,
 				curve = new Curve(clientWidth / clientHeight),
-				step = 0.5 / (clientHeight + clientWidth),
+				step = 12 / (clientHeight + clientWidth),
 				halfStep = 0.5 * step,
 				π2 = Math.PI * 2
 
-			let points = ''
+			let points = '',
+				percents = ''
 			for (let t = halfStep; t < π2; t += step) {
 				const [x, y] = curve(-t),
-					xx_xx = x.toFixed(2),
-					yy_yy = y.toFixed(2)
+					xx_xx = ((x * clientWidth) / 100).toFixed(2),
+					yy_yy = ((y * clientHeight) / 100).toFixed(2)
 
-				points += `${xx_xx}% ${yy_yy}%, `
+				points += `${xx_xx},${yy_yy} `
+				percents += `${x.toFixed(2)}% ${y.toFixed(2)}%, `
 			}
 
-			points = points.slice(0, -2)
+			points = points.slice(0, -1)
+			percents = percents.slice(0, -2)
 
-			style.textContent = `:host { clip-path: polygon(${points}) }`
+			shadowRoot.innerHTML = `<style>:host { clip-path: polygon(${percents}) } svg, polygon { position: absolute; inset: 0;}</style><svg viewBox="0 0 ${clientWidth} ${clientHeight}"><polygon points="${points}" /></svg><slot></slot>`
 		}).observe(this)
 	}
 }

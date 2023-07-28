@@ -1,0 +1,146 @@
+nav a[href*='github'] {
+	background: url(./github.svg) no-repeat;
+}
+
+nav a[href*='npm'] {
+	background: url(./npm.svg) no-repeat;
+}
+
+@font-face {
+	font-family: 'Unica One';
+	src: url(./UnicaOne-Regular.ttf);
+}
+
+@font-face {
+	font-family: 'Courier Prime';
+	src: url(./CourierPrime-Regular.ttf);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	-webkit-font-smoothing: auto;
+	-moz-osx-font-smoothing: auto;
+}
+
+body {
+	--dark: #333;
+	background: var(--dark);
+	font-family: 'Unica One';
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	inset: 0;
+	margin: 0;
+	color: #fff;
+}
+
+multi-color {
+	--background-top-left-color: #0df;
+	--background-top-right-color: #0ff;
+	--background-bottom-left-color: #f90;
+	--background-bottom-right-color: #fb0;
+	position: absolute;
+	inset: 0;
+	z-index: -1;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: #111;
+	width: 100%;
+	height: 24vh;
+	justify-content: space-evenly;
+	position: relative;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	font-size: 12vw;
+	width: 100%;
+}
+squoval-element {
+	stroke: none;
+	background: #333;
+	width: 62%;
+	display: grid;
+	align-content: center;
+	position: relative;
+	fill: none;
+}
+header squoval-element {
+	place-content: center;
+	background: #111;
+	width: 12vw;
+	height: 12vw;
+	fill: none;
+	stroke: #fff;
+	stroke-width: 1vw;
+	margin: 0;
+	padding: 0;
+}
+main squoval-element {
+	stroke: #fff;
+	stroke-width: 4px;
+	stroke-dasharray: 2000;
+	stroke-dashoffset: 2000;
+	transition: stroke-dashoffset 1s;
+}
+main squoval-element:hover {
+	stroke-dashoffset: 0;
+}
+
+@keyframes squoval {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+nav {
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: 3rem;
+}
+
+nav a {
+	width: 2rem;
+	padding-top: 3rem;
+	display: grid;
+	place-content: center;
+}
+
+button {
+	all: unset;
+	font-size: 1.6vw;
+	font-family: 'Courier Prime';
+	width: 100%;
+	padding: 1vw;
+	z-index: 1;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+button:active * {
+	background: #fa0;
+}
+
+footer {
+	display: grid;
+	place-items: center;
+	font-size: 2vh;
+}
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}

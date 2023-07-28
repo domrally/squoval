@@ -3,55 +3,57 @@
 	<head>
 		<title>Squoval • rounded corners</title>
 		<meta charset="utf-8" />
-		<script src="https://cdn.skypack.dev/squoval?min" type="module"></script>
+		<link rel="stylesheet" href="./index.css" />
+
+		<!-- <script src="https://cdn.skypack.dev/squoval?min" type="module"></script> -->
+		<script type="importmap">
+			{
+				"imports": {
+					"oddball": "https://cdn.skypack.dev/oddball?min"
+				}
+			}
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script>
+		<script
+			type="module"
+			src="https://cdn.jsdelivr.net/npm/@domrally/multi-color/index.js"
+		></script>
+		<script src="./index.js" type="module"></script>
 	</head>
 
 	<body>
-		<style>
-			main {
-				width: 100%;
-				height: 62vh;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: space-around;
-			}
+		<multi-color></multi-color>
 
-			squoval-element {
-				min-width: 62%;
-				height: 25vh;
-				background: #000;
-				display: block;
-				position: relative;
-			}
-
-			button {
-				all: unset;
-				inset: 0;
-				position: absolute;
-				display: grid;
-				place-content: center;
-				font-size: 4vh;
-				color: #fff;
-			}
-
-			footer {
-				display: grid;
-				place-items: center;
-			}
-		</style>
+		<header>
+			<squoval-element>s</squoval-element>
+			<squoval-element>q</squoval-element>
+			<squoval-element>u</squoval-element>
+			<squoval-element>o</squoval-element>
+			<squoval-element>v</squoval-element>
+			<squoval-element>a</squoval-element>
+			<squoval-element>l</squoval-element>
+		</header>
 
 		<main>
-			<squoval-element>
-				<button>npm i squoval</button>
-			</squoval-element>
+			<squoval-element
+				><button data-clipboard-text="npm i squoval">
+					<span>npm i squoval</span>
+				</button></squoval-element
+			>
 
 			<squoval-element>
 				<button>
-					&ltscript src="https://cdn.skypack.dev/squoval?min"&gt&lt/script&gt
+					<span>
+						&ltscript src="https://cdn.skypack.dev/squoval?min"&gt&lt/script&gt
+					</span>
 				</button>
 			</squoval-element>
 		</main>
+
+		<nav>
+			<a href="https://github.com/domrally/squoval" target="_blank">github</a>
+			<a href="https://www.npmjs.com/package/squoval" target="_blank">npm</a>
+		</nav>
 
 		<footer
 			xmlns:cc="http://creativecommons.org/ns#"
@@ -62,6 +64,7 @@
 				property="dct:title"
 				rel="cc:attributionURL"
 				href="https://domrally.github.io/squoval"
+				target="_blank"
 			>
 				project</a
 			>
@@ -70,7 +73,8 @@
 			<a
 				rel="cc:attributionURL dct:creator"
 				property="cc:attributionName"
-				href="https://github.com/domrally/squoval"
+				href="https://github.com/domrally"
+				target="_blank"
 			>
 				Dom Mandy</a
 			>

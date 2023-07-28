@@ -10,14 +10,17 @@
 		".": "./index.js"
 	},
 	"scripts": {
-		"test": "eslint --fix && prettier --write ."
+		"start": "eslint --fix && prettier --write .",
+		"test": "node test.js"
 	},
 	"dependencies": {
 		"oddball": "*"
 	},
 	"devDependencies": {
+		"@fastify/static": "*",
 		"eslint": "*",
 		"eslint-config-prettier": "*",
+		"fastify": "*",
 		"prettier": "*"
 	},
 	"homepage": "https://domrally.github.io/squoval",
