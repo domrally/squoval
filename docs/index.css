@@ -62,7 +62,6 @@ main {
 	padding: 0 19vw;
 	justify-content: space-evenly;
 	position: relative;
-	backdrop-filter: grayscale(9%) hue-rotate(18deg) brightness(0.5);
 }
 
 h1 {
