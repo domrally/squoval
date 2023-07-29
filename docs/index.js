@@ -36,9 +36,9 @@ customElements.define('squoval-element', SquovalElement)
 
 const Curve = function (aspectRatio) {
 	return t => {
-		let point = Squoval(t),
-			{ sign } = Math,
-			[x, y] = point
+		let { atanh, cos, sin, sign } = Math,
+			x = ErrorFunction(atanh(cos(t))),
+			y = ErrorFunction(atanh(sin(t)))
 
 		if (aspectRatio > 1) {
 			x += sign(x) * (aspectRatio - 1)
@@ -48,15 +48,6 @@ const Curve = function (aspectRatio) {
 			y *= aspectRatio
 		}
 
-		x++
-		y++
-		x *= 50
-		y *= 50
-		return [x, y]
+		return [(x + 1) * 50, (y + 1) * 50]
 	}
-}
-
-function Squoval(t = 0) {
-	const { atanh, cos, sin } = Math
-	return [ErrorFunction(atanh(cos(t))), ErrorFunction(atanh(sin(t)))]
 }
