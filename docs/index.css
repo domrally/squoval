@@ -32,14 +32,13 @@ body {
 	--dark: #333;
 	background: var(--dark);
 	font-family: 'Unica One';
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
-	position: absolute;
-	inset: 0;
-	margin: 0;
+	display: grid;
+	place-items: center;
+	gap: 6vh;
+	width: 100%;
+	padding: 3vh 0;
 	color: #fff;
+	position: relative;
 }
 
 multi-color {
@@ -82,7 +81,7 @@ h3 {
 }
 header {
 	width: 90%;
-	height: 38vh;
+	min-height: 38vh;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
