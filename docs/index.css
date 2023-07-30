@@ -29,8 +29,7 @@ nav a[href*='npm'] {
 }
 
 body {
-	--dark: #333;
-	background: var(--dark);
+	background: linear-gradient(#fb0, #0df);
 	font-family: 'Unica One';
 	display: grid;
 	place-items: center;
@@ -39,16 +38,6 @@ body {
 	padding: 3vh 0;
 	color: #fff;
 	position: relative;
-}
-
-multi-color {
-	--background-top-left-color: #0df;
-	--background-top-right-color: #0ff;
-	--background-bottom-left-color: #f90;
-	--background-bottom-right-color: #fb0;
-	position: absolute;
-	inset: 0;
-	z-index: -1;
 }
 
 main {
