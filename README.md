@@ -14,7 +14,8 @@ flatter and smoother rounded corners · web components
 [![](https://img.shields.io/badge/-html-e44d26?logo=html5&style=for-the-badge&labelColor=000)](./index.html)
 [![](https://img.shields.io/badge/-CC%20BY--ND%204.0-f8722a?logo=creativecommons&style=for-the-badge&labelColor=000)](https://domrally.github.io/squoval)
 [![](https://img.shields.io/badge/-prettier-f8bc45?style=for-the-badge&logo=prettier&labelColor=000)](./.prettierrc.js)
-[![](https://img.shields.io/npm/l/squoval?style=for-the-badge&logo=opensourceinitiative&labelColor=000&label)](./LICENSE)
+[![](https://img.shields.io/github/license/domrally/squoval?style=for-the-badge&logo=opensourceinitiative&labelColor=000&label)
+](./LICENSE)
 [![](https://img.shields.io/badge/-eslint-4B32C3?logo=eslint&style=for-the-badge&logoColor=4B32C3&labelColor=000)](./.eslintrc.json)
 
 ```sh
@@ -31,6 +32,12 @@ npm i squoval
 
 ## proof notes
 
+### smoothness
+
+Derivatives exist at every point. Maybe want to show upper bound on derivatives.
+
+### flatness
+
 $$
 \Huge
 \begin{align*}
@@ -46,7 +53,6 @@ x^ {\rm (n)}_ {t} &\propto e^ {-{\rm atanh}^ {2} \cos t} \\
 \text{The function is flat wherever} & \text{ the exponential term is equal to zero.} \\
 \forall\ m \in \mathbb{N}\text{, } \lim_{t\ \to\ m \pi} e^ {-{\rm atanh}^ {2} \cos t} &= 0 \\
 \text{So the function} & \text{ is periodically flat.} \\
-t &= m \pi \\
-\therefore\ x^ {\rm (n)}_ {t} &= 0 \\
+\therefore\ x^ {\rm (n)}_ {t} (m \pi) &= 0 \\
 \end{align*}
 $$
