@@ -1,11 +1,12 @@
+# Squoval
+
 $$
+\Huge
 \begin{align*}
-  x &= \mathrm{erf}\ \mathrm{atanh}\ \mathrm{cos}\ t \\
-  y &= \mathrm{erf}\ \mathrm{atanh}\ \mathrm{sin}\ t
+  x &= \text{erf atanh cos } t \\
+  y &= \text{erf atanh sin } t
 \end{align*}
 $$
-
-# Squoval
 
 flatter and smoother rounded corners · web components
 
@@ -30,31 +31,22 @@ npm i squoval
 
 ## proof notes
 
-let us say that
-f(t) = erf(cot(t))
-h(t) = erf t
-h'(t) = 2 e^(-z^2) / √π
-g(t) = cot t
-g'(t) = csc² t
-
-the chain rule states that f'(x) = h'(g(t))g'(t)
-so
-f'(t) = (2 / √π) e^(-cot² t) csc² t
-
-the product rule states that (uv)' = u'v + uv'
-so
-u' = (e^(-cot² t))' = -2 cot(t) csc²(t) e^(-cot² t)
-
-u' = -2 cot(t) csc²(t) u
-
-f⁽ⁿ⁾(t) ∝ u ∝ e^(-cot² t)
-
-therefore
-f(t) is flat wherever e^(-cot² t) = 0
-
-limit of e^(-cot² t) as t -> 0 = 0
-
-limit of e^(-cot² t) as t -> nπ = 0
-
-f(t) is asymptotically flat at nπ
-where n is an integer
+$$
+\Huge
+\begin{align*}
+\text{A function is flat at a point if} & \text{ every derivative goes to zero at that point:} \\
+\forall\ {\rm n} \in \mathbb{N}\text{, } \lim_{t\to 0} f^ {\rm (n)}_ {t} &= 0 \\
+\\
+x(t)     &= \text{erf atanh cos } t \\ 
+x'_ {t}  &= e^ {-{\rm atanh}^ {2} \cos t}\ g(t) \\
+x''_ {t} &= e^ {-{\rm atanh}^ {2} \cos t}\ (g'_ {t} + g^ {2}(t)) \\
+&\dots \\
+x^ {\rm (n)}_ {t} &\propto e^ {-{\rm atanh}^ {2} \cos t} \\
+\\
+\text{The function is flat wherever} & \text{ the exponential term is equal to zero.} \\
+\forall\ m \in \mathbb{N}\text{, } \lim_{t\ \to\ m \pi} e^ {-{\rm atanh}^ {2} \cos t} &= 0 \\
+\text{So the function} & \text{ is periodically flat.} \\
+t &= m \pi \\
+\therefore\ x^ {\rm (n)}_ {t} &= 0 \\
+\end{align*}
+$$
